@@ -1,121 +1,47 @@
 tasks:
-  - id: RESEARCH_PROMPT_001
-    title: "Add ChatGPT live market research prompt"
-    description: "Create the exact prompt the Human Supreme can paste into ChatGPT (with live web access) to produce a structured JSON or CSV research package for the last two completed trading days. The package must request: ticker symbol, exchange or market, company or instrument name, entry date, exit date, entry close price, exit close price, percent return, return multiple, data source, source link, fetch timestamp, and notes about splits, missing data, or uncertainty. The prompt must instruct saving the result as reports/live_market_snapshot.json. Do not use fictional market data in the prompt artifact itself."
-    test_command: "python -m pytest tests/test_research_prompt.py"
-    lint_command: ""
-    ui_required: false
-    allowed_files:
-      - "agent_workspace/prompts/RESEARCH_PROMPT_001_live_market_snapshot.md"
-      - "tests/test_research_prompt.py"
-    forbidden_files:
-      - "scripts/create_worktree.py"
-      - "scripts/judge_gate.py"
-      - "AI_NATION_COMMAND.md"
-      - ".github/workflows/ci.yml"
-      - "agent_workspace/tasks/tasks.yaml"
-    required_evidence:
-      - "test_results.txt"
-      - "lint_results.txt"
-
   - id: IMPORT_001
-    title: "Add live market snapshot importer"
-    description: "Implement importer and validation for reports/live_market_snapshot.json (or the agreed export path) produced by external ChatGPT research. The application must not invent prices: reject or flag rows missing required price fields. Use only small fixture JSON in automated tests. Cursor agents must not rely on live internet for this workflow."
-    test_command: "python -m pytest tests/test_live_snapshot_import.py"
+    title: "Import and validate live_market_snapshot.json"
+    description: "Load reports/live_market_snapshot.json as the source of truth. Validate required top-level fields: scan_mode, entry_day, exit_day, starting_cash, target_cash, required_multiple, fetch_timestamp, universe_description, best_result, ranked_results, limitations. Do not overwrite the research package. Do not invent prices. Do not fetch live internet inside Cursor. Use small fixture JSON in tests only."
+    test_command: "python -m pytest tests/test_snapshot_importer.py"
     lint_command: ""
     ui_required: false
     allowed_files:
-      - "stock_reality_scanner/live_snapshot_import.py"
-      - "tests/test_live_snapshot_import.py"
+      - "stock_reality_scanner/snapshot_importer.py"
+      - "tests/test_snapshot_importer.py"
     forbidden_files:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
       - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
+      - "reports/live_market_snapshot.json"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
 
-  - id: HINDSIGHT_001
-    title: "Add real historical hindsight calculation engine"
-    description: "From validated imported rows only: compute best real hindsight performer, what configurable starting cash (default $100) would become on that pick, required multiple to reach default target ($100,000,000), achieved multiple, target achieved yes/no, distance from target, ranked top movers, and warning if the universe is incomplete. Label the analytical mode as real historical hindsight scan. Do not claim results without source prices in the import. No broker connections or trades."
-    test_command: "python -m pytest tests/test_hindsight_engine.py"
+  - id: CALC_001
+    title: "Verify hindsight math from imported snapshot"
+    description: "From imported snapshot data: verify/calculate best result alignment, return percentage, return multiple, ending cash from starting cash, target achieved yes/no, distance from target, required multiple, and gap between achieved multiple and required multiple. Must reflect imported figures honestly (no fabrication). No broker connections or trades."
+    test_command: "python -m pytest tests/test_hindsight_calculator.py"
     lint_command: ""
     ui_required: false
     allowed_files:
-      - "stock_reality_scanner/hindsight_engine.py"
-      - "tests/test_hindsight_engine.py"
+      - "stock_reality_scanner/hindsight_calculator.py"
+      - "tests/test_hindsight_calculator.py"
     forbidden_files:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
       - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
-    required_evidence:
-      - "test_results.txt"
-      - "lint_results.txt"
-
-  - id: STRATEGY_001
-    title: "Add walk-forward strategy signal engine"
-    description: "Optional secondary mode: signal logic using only information available before each simulated trade (no look-ahead). Distinct from imported hindsight scan. Include tests that prevent look-ahead leakage."
-    test_command: "python -m pytest tests/test_strategy.py"
-    lint_command: ""
-    ui_required: false
-    allowed_files:
-      - "stock_reality_scanner/strategy.py"
-      - "tests/test_strategy.py"
-    forbidden_files:
-      - "scripts/create_worktree.py"
-      - "scripts/judge_gate.py"
-      - "AI_NATION_COMMAND.md"
-      - ".github/workflows/ci.yml"
-      - "agent_workspace/tasks/tasks.yaml"
-    required_evidence:
-      - "test_results.txt"
-      - "lint_results.txt"
-
-  - id: BACKTEST_001
-    title: "Add configurable historical paper backtester"
-    description: "Walk-forward paper backtester (optional): starting cash default $100, real imported or fixture paths only in tests; no live internet dependency inside Cursor. No broker connections."
-    test_command: "python -m pytest tests/test_backtester.py"
-    lint_command: ""
-    ui_required: false
-    allowed_files:
-      - "stock_reality_scanner/backtester.py"
-      - "tests/test_backtester.py"
-    forbidden_files:
-      - "scripts/create_worktree.py"
-      - "scripts/judge_gate.py"
-      - "AI_NATION_COMMAND.md"
-      - ".github/workflows/ci.yml"
-      - "agent_workspace/tasks/tasks.yaml"
-    required_evidence:
-      - "test_results.txt"
-      - "lint_results.txt"
-
-  - id: RISK_001
-    title: "Add performance stats including target gap and multiples"
-    description: "Risk and performance helpers compatible with hindsight outputs: drawdown where applicable, return multiple, win rate, best/worst day, distance to configurable target. Tests for normal and empty inputs."
-    test_command: "python -m pytest tests/test_risk.py"
-    lint_command: ""
-    ui_required: false
-    allowed_files:
-      - "stock_reality_scanner/risk.py"
-      - "tests/test_risk.py"
-    forbidden_files:
-      - "scripts/create_worktree.py"
-      - "scripts/judge_gate.py"
-      - "AI_NATION_COMMAND.md"
-      - ".github/workflows/ci.yml"
-      - "agent_workspace/tasks/tasks.yaml"
+      - "reports/live_market_snapshot.json"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
 
   - id: SERVER_001
-    title: "Add local browser server"
-    description: "Simple local Python web server that serves the Stock Reality Scanner dashboard and static assets in a normal browser. Expose or serve JSON under reports/ including reports/live_market_snapshot.json and other generated scanner outputs. No broker connections, trades, or real-money orders. Include tests for URL path handling and report file loading."
+    title: "Local browser server for dashboard and snapshot JSON"
+    description: "Small local Python web server serving the dashboard static assets and reports/live_market_snapshot.json (read-only serve from reports/). No broker connections, no trades, no real-money orders. Include tests for routes and snapshot file handling."
     test_command: "python -m pytest tests/test_web_server.py"
     lint_command: ""
     ui_required: false
@@ -126,15 +52,15 @@ tasks:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
-      - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
+      - "reports/live_market_snapshot.json"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
 
   - id: DASHBOARD_001
-    title: "Add browser-based Stock Reality dashboard"
-    description: "Browser UI (web/index.html, styles.css, app.js): load the imported live market snapshot (via local server or file workflow), display ranked movers and best hindsight performer, starting/target cash inputs, scan period selection, editable ticker universe display, run/load scan result affordances, entry/exit dates and prices, return percentage and multiple, ending cash, distance from target, target achieved, data source and fetch timestamp per result, incomplete-universe warning, and clear distinction between real historical hindsight scan and walk-forward strategy mode. No fabricated production data."
+    title: "Browser dashboard for live_market_snapshot.json"
+    description: "Browser UI (web/index.html, styles.css, app.js) loading the snapshot: scan mode; entry/exit days; starting/target cash; best ticker; entry/exit close; return percentage and multiple; ending cash; target achieved and shortfall; top 25 ranked results; universe description; source links; fetch timestamp; caveats and limitations. Prominent label: Historical hindsight scan — not a future prediction. Do not replace snapshot data with invented prices."
     test_command: "python -c \"from pathlib import Path; required=['web/index.html','web/styles.css','web/app.js']; missing=[p for p in required if not Path(p).exists()]; assert not missing, missing; print('browser dashboard files exist')\""
     lint_command: ""
     ui_required: true
@@ -146,28 +72,29 @@ tasks:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
-      - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
+      - "reports/live_market_snapshot.json"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
       - "ui_proof.png"
 
   - id: EVIDENCE_001
-    title: "Add evidence export for research snapshot and calculations"
-    description: "Export JSON (or agreed format) recording which research snapshot file was used, its fetch timestamp(s), source links from the import, derived calculations, mode label (real historical hindsight scan vs walk-forward), and incomplete-universe warnings. Tests use small local fixtures only."
+    title: "Validation summary export to reports/validation_summary.json"
+    description: "Implement validation/export writing reports/validation_summary.json with: input snapshot path, fetch timestamp from snapshot, best ticker, ending cash, target achieved, source count (e.g. ranked rows or distinct sources), limitations count, validation timestamp. Tests use fixtures only; do not mutate reports/live_market_snapshot.json."
     test_command: "python -m pytest tests/test_evidence_export.py"
     lint_command: ""
     ui_required: false
     allowed_files:
       - "stock_reality_scanner/evidence_export.py"
       - "tests/test_evidence_export.py"
+      - "reports/validation_summary.json"
     forbidden_files:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
-      - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
+      - "reports/live_market_snapshot.json"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
