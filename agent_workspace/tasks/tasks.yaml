@@ -1,31 +1,5 @@
 # Task definitions for AI Nation governance V1.
 # Each task maps to branch task/<id> and worktree ../worktrees/<repo-name>__<id>
+# See agent_workspace/tasks/examples.yaml for sample tasks.
 
-tasks:
-  - id: GOV_SMOKE
-    title: Governance smoke test
-    description: Validate governance scripts without touching application source.
-    test_command: python -c "print('governance smoke test pass')"
-    lint_command: ""
-    ui_required: false
-    allowed_files: []
-    forbidden_files: []
-    required_evidence:
-      - test_results.txt
-      - lint_results.txt
-
-  - id: DOCS_001
-    title: "Add governance quick-start section"
-    description: "Add a short quick-start section to AI_NATION_COMMAND.md explaining the V1 smoke-tested workflow."
-    test_command: "python scripts/status_report.py"
-    lint_command: ""
-    ui_required: false
-    allowed_files:
-      - "AI_NATION_COMMAND.md"
-    forbidden_files:
-      - ".github/workflows/ci.yml"
-      - "scripts/create_worktree.py"
-      - "scripts/cleanup_worktree.py"
-    required_evidence:
-      - test_results.txt
-      - lint_results.txt
+tasks: []

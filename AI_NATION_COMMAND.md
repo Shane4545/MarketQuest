@@ -66,3 +66,11 @@ This repository ships a **verification-first** governance layer for controlled m
 ## Fail-closed summary
 
 Missing receipt, missing evidence, test/lint failure, forbidden file touched, receipt not matching `git` reality, or invalid YAML/JSON → **failure**. Scripts exit non-zero where specified.
+
+## Using This Folder as a Template
+
+- Copy this repository folder to a new project directory and rename it as needed for your codebase.
+- Do **not** copy sibling **`../worktrees/<repo-name>__<task_id>`** folders unless you intentionally migrate work in progress; fresh projects should create worktrees with `scripts/create_worktree.py` after defining tasks.
+- Start with **`agent_workspace/tasks/tasks.yaml`** empty (`tasks: []`). Example task shapes live in **`agent_workspace/tasks/examples.yaml`**—copy patterns from there into **`tasks.yaml`** for real work.
+- Add **project-specific tasks** only to **`tasks.yaml`** (one task id per planned worktree).
+- For each active task, run **`scripts/create_worktree.py`**, then **`collect_evidence.py`**, **`verify_receipt.py`**, and **`judge_gate.py`** as documented above so evidence, receipts, and judge output stay accurate.
