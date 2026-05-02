@@ -1,0 +1,62 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Time Traveller: serve dashboard (DASHBOARD_001 worktree)",
+      "type": "shell",
+      "command": "python -m http.server 8000 --bind 127.0.0.1",
+      "options": {
+        "cwd": "${workspaceFolder}/../worktrees/AI NATATION V1 -Stock Market__DASHBOARD_001",
+        "env": {}
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "http-server",
+        "pattern": { "regexp": "^$" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".",
+          "endsPattern": "Serving HTTP"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "showReuseMessage": false
+      }
+    },
+    {
+      "label": "Time Traveller: open Simple Browser (Cursor / VS Code)",
+      "type": "shell",
+      "command": "echo ${input:ttOpenSimpleBrowser}",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "echo": false,
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Time Traveller: serve + open in Cursor Simple Browser",
+      "dependsOn": [
+        "Time Traveller: serve dashboard (DASHBOARD_001 worktree)",
+        "Time Traveller: open Simple Browser (Cursor / VS Code)"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "ttOpenSimpleBrowser",
+      "type": "command",
+      "command": "simpleBrowser.show",
+      "args": ["http://127.0.0.1:8000/web/index.html"]
+    }
+  ]
+}
