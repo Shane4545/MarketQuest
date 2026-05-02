@@ -1,0 +1,12 @@
+---
+description: One task per worktree; workers stay inside the assigned path.
+globs: "**/*"
+alwaysApply: true
+---
+
+# Worktree Scope
+
+- Branch naming: `task/<task_id>`.
+- Worktree path pattern: `../worktrees/<repo-name>__<task_id>`.
+- Workers edit only inside that worktree for the assigned task.
+- Do not start nested subagents for the same task.

@@ -1,0 +1,15 @@
+# Task definitions for AI Nation governance V1.
+# Each task maps to branch task/<id> and worktree ../worktrees/<repo-name>__<id>
+
+tasks:
+  - id: GOV_SMOKE
+    title: Governance smoke test
+    description: Validate governance scripts without touching application source.
+    test_command: python -c "print('governance smoke test pass')"
+    lint_command: ""
+    ui_required: false
+    allowed_files: []
+    forbidden_files: []
+    required_evidence:
+      - test_results.txt
+      - lint_results.txt

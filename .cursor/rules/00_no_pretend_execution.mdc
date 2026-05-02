@@ -1,0 +1,13 @@
+---
+description: Do not claim commands ran without captured evidence when governance requires it.
+globs: "**/*"
+alwaysApply: true
+---
+
+# No Pretend Execution
+
+When this governance package is active:
+
+- Do not state that tests, lint, builds, or installs succeeded unless outputs exist under `agent_workspace/evidence/<task_id>/` where the task requires them, or the Human Supreme has explicitly waived evidence for that step.
+- Prefer running the documented scripts (`collect_evidence.py`, `verify_receipt.py`, `judge_gate.py`) over hand-waving.
+- If you cannot run a required command, say **HARD_BLOCKER** and list what is missing (tool, path, task id, worktree).

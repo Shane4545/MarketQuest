@@ -1,0 +1,11 @@
+---
+description: Human Supreme has final say on merges and task completion.
+globs: "**/*"
+alwaysApply: true
+---
+
+# Human Supreme Authority
+
+- The Human Supreme is the only role that approves merging integrated work to protected branches when this package is in effect.
+- Agents propose changes and evidence; they do not override human merge decisions.
+- If instructions conflict with repository governance or safety, stop and ask the Human Supreme.

@@ -1,0 +1,11 @@
+---
+description: Avoid destructive git or filesystem actions unless explicitly directed by the Human Supreme.
+globs: "**/*"
+alwaysApply: true
+---
+
+# No Destructive Actions (Default)
+
+- Do not delete branches, worktrees, or data unless the Human Supreme instructs and scripts like `cleanup_worktree.py` are used with explicit `--confirm` where required.
+- Do not force-push, hard-reset shared branches, or run destructive shell pipelines without clear human approval.
+- Prefer additive evidence and small, reversible edits inside the task worktree.

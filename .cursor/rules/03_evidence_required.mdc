@@ -1,0 +1,11 @@
+---
+description: Evidence and receipts are mandatory inputs to verification; fail closed when missing.
+globs: "**/*"
+alwaysApply: true
+---
+
+# Evidence Required
+
+- Each task should have a receipt at `agent_workspace/receipts/<task_id>.json` before final verification.
+- Evidence directories live under `agent_workspace/evidence/<task_id>/` as produced by agreed commands.
+- Do not invent receipt contents or screenshot files. If UI proof is required and absent, record that fact in a note file created by `collect_evidence.py`, not a fake image.

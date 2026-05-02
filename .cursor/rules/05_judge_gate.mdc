@@ -1,0 +1,11 @@
+---
+description: Judge gate output must pass before treating work as integration-ready.
+globs: "**/*"
+alwaysApply: true
+---
+
+# Judge Gate
+
+- Run `scripts/judge_gate.py --task-id <id>` after evidence collection and receipt verification.
+- Treat `agent_workspace/judge/<task_id>.json` with `"pass": true` as the automation-friendly gate signal; Human Supreme still approves merges.
+- If the judge fails, fix issues before claiming the task is done.
