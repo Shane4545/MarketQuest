@@ -1,72 +1,93 @@
-# Stock Reality Scanner
+# Time Traveller Stock Optimizer (Stock Reality Scanner)
 
-Real-market-data scanner and historical backtesting for the AI Nation governance system. The core goal is **market reverse-engineering** using **real** historical data—not fictional sample prices.
+This project is a **Time Traveller Stock Optimizer**: you **pretend** you already know **future historical** market outcomes (because they are **past** completed prices), go back to chosen dates with a chosen dollar amount, and ask:
 
-## External research workflow (no live internet inside Cursor)
+**“Knowing what actually happened in the market, what stock or sequence of stocks should I have bought to make the most money?”**
 
-Development agents in Cursor **must not** rely on live internet market research in this environment.
+This is **perfect hindsight optimization** using **real historical market data**.
 
-1. A human asks **ChatGPT** (with live web access) to research the **last two completed trading days** and return a structured package (JSON or CSV) with at least: ticker symbol, exchange/market, instrument name, entry date, exit date, entry close, exit close, percent return, return multiple, data source, source link, fetch timestamp, and notes (splits, gaps, uncertainty).
-2. The human saves that output as **`reports/live_market_snapshot.json`** (project convention).
-3. Stock Reality Scanner **imports** that file, validates it, and runs **real historical hindsight scan** calculations only from rows that contain the required prices.
-4. The app **must not invent** market data, **must not** claim a result without source prices, and must show **source and timestamp** for every displayed result. Use **small fake fixtures only in automated tests**, never as the main production outcome.
+It is **not** future prediction.  
+It is **not** financial advice.  
+It is **not** real trading or broker automation.
 
-The analytical mode label for this path is **real historical hindsight scan**.
+---
 
-## Core question (Hindsight Optimizer)
+## Data reality (Cursor and imports)
 
-“If I had **$100** two **completed** trading days ago, and I could choose the **best real market instrument** after knowing what happened, what would I have had **by yesterday**?”
+Cursor may **not** have reliable live internet. The application must therefore **import externally generated** market packages (for example from ChatGPT with live web access or another approved collector).
 
-This is a **hindsight optimizer**: it scans real historical data and finds the **best actual move** over a **selected completed period** (default: latest two completed trading days). It does **not** force any outcome (for example, it does **not** force $100,000,000).
+Supported inputs include:
 
-### Target and gap (transparent reporting)
+- `reports/live_market_snapshot.json`
+- `reports/historical_market_data.json`
+- `reports/historical_market_data.csv`
 
-- Optional aspirational **target cash** (default **$100,000,000** from **$100**).
-- **Required multiple** to hit that target from the starting stake: **1,000,000×** (for the defaults).
-- The app **calculates** whether the scanned universe could actually reach the target from real data.
-- If **no** instrument in the scan reaches the target, the UI and exports must state that clearly and show the **gap** (distance to target), **best real result**, and **achieved multiple**.
-- If the honest answer is “nothing in the scanned universe came close,” the application must say so.
+Imports must include enough fields to compute factual results (ticker, exchange/market, name, dates, OHLC where available, adjusted close where available, volume where available, source name, source link, fetch timestamp, caveats).
 
-### Report fields (best real hindsight pick)
+The application **must never invent prices**. It **must never claim** a factual result unless the imported data contains the **required prices**. It **must** surface limited-universe warnings.
 
-For the winning instrument over the period, outputs should include where applicable:
+Use **small synthetic fixtures only in automated tests**, never as the production source of truth.
 
-- Symbol  
-- Entry date, exit date  
-- Entry price, exit price  
-- Percent return, **return multiple**  
-- **Ending value** from the configured starting cash (e.g. $100)  
-- **Distance** from the configured target (e.g. $100,000,000)  
-- Data **source** and **fetch timestamp**  
-- Warning if the **scan universe is limited**
+---
 
-## Two modes (must be visually distinct)
+## Mode 1 — Latest One-Day Time Traveller Scan
 
-### 1. Real historical hindsight scan (prioritized)
+Answers exactly:
 
-Uses **imported** research rows (from ChatGPT-produced snapshots) to find the **best actual** result over the **completed** period encoded in the file. Allowed to “know the answer” because it looks backward. Used to reverse-engineer what would have worked.
+**“If I went back to yesterday’s market close with $100 and already knew today’s market result, what stock or instrument should I have bought yesterday to have the most money today?”**
 
-### 2. Walk-forward strategy mode
+Behavior:
 
-Uses **only** information available **before** each simulated trade, then checks what happened next. Tests whether a **rule** could have made money **without** future knowledge.
+- Uses the **two most recent completed trading days** present in the imported data as **start** (previous session) and **end** (latest session).
+- **Holding period:** one completed trading day.
+- **Perfect hindsight:** ranks **actual** one-day movers in the scanned universe; shows **best pick**, entry/exit dates, closes, **percent return**, **return multiple**, ending value from chosen starting cash, **target cash** comparison, **sources**, **timestamps**, **caveats**, **skipped tickers**.
+- Results must be labeled **known historical outcome**, not a prediction.
 
-**Labels**
+**Dashboard:** include a **Latest One-Day Time Traveller Scan** preset control that selects those two dates, runs the one-day scan, ranks movers, and shows ending cash vs target.
 
-- Hindsight Optimizer = “best possible past choice **after** knowing what happened.”  
-- Walk-forward = “rule-based historical test **without** future leakage.”
+---
+
+## Mode 2 — Historical Time Traveller Path Optimizer
+
+User selects starting cash, target cash, start date, end date, and universe (from imported data).
+
+Answers:
+
+**“If I had this starting cash on the historical start date and already knew all prices after that, what exact stock or sequence would maximize ending value by the end date?”**
+
+### A. Single Best Trade
+
+- Buy **one** instrument on **start date**, sell on **end date**.  
+- Pick the instrument with the **best actual** return in the scanned universe over that span.
+
+### B. Perfect Daily Switching
+
+- Each session: pick the instrument with the **best actual next-day** return, invest **full** cash (fractional shares by default), sell next completed session, repeat through **end date**.  
+- Output the **full trade path** (trade #, ticker, name, entry/exit dates, closes, returns, multiples, cash before/after, sources, links, caveats).
+
+### Summary outputs
+
+Starting cash, target cash, ending cash, target reached, required vs achieved multiple, distance from target, best single-trade path vs daily-switching path, ranked opportunities where applicable, skipped tickers / missing data, sources and timestamps, **warning** that results apply **only** to the scanned universe.
+
+---
+
+## Walk-forward strategy (separate, optional)
+
+**Walk-forward** uses **only** information available **before** each simulated decision—**no** peeking at future prices. It is **not** Time Traveller mode and must stay visually and logically separate.
+
+---
+
+## User interface (expectations)
+
+- **Title:** Time Traveller Stock Optimizer  
+- **Mode selector:** Latest One-Day Time Traveller Scan · Single Best Trade · Perfect Daily Switching · Walk-forward (optional/later)  
+- Starting cash (default **100**), target cash (default **1,000,000**), date pickers, file loader for imported data, universe summary, run control, best pick, ending cash, target reached, multiples, distance, trade-path table, ranked table, sources/timestamps, caveats/missing data.  
+- **Banner:** *Perfect hindsight mode uses already-known historical outcomes. It is not a future prediction.*
+
+---
 
 ## Constraints
 
-- **Real** market data at runtime for production paths; do not use fictional prices as the main source.  
-- Do **not** connect to broker accounts, place trades, or execute real-money orders.  
-- Do **not** bypass paywalls, authentication, rate limits, or site restrictions.  
-- Cache only small local evidence snapshots for testing and repeatability.
+Do **not** connect to broker accounts, place trades, or execute real-money orders. Do **not** bypass site terms, paywalls, or rate limits when gathering data outside this app.
 
-## Dashboard expectations (summary)
-
-- Starting cash input (default **$100**), target cash input (default **$100,000,000**).  
-- Lookback: default **latest two completed trading days**.  
-- Ticker universe scanned; **warning** if the universe is limited.  
-- Best real hindsight pick; ending value; required target multiple; achieved multiple; **target achieved** yes/no; source and timestamp.  
-
-Purpose: **prove what the real historical data says**—including when the answer is that nothing in the universe came close to the target.
+Purpose: show **what the imported historical data implies** under explicit hindsight rules—including when the universe is incomplete or the target is unreachable.

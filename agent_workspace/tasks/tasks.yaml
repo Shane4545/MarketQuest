@@ -1,47 +1,64 @@
 tasks:
-  - id: IMPORT_001
-    title: "Import and validate live_market_snapshot.json"
-    description: "Load reports/live_market_snapshot.json as the source of truth. Validate required top-level fields: scan_mode, entry_day, exit_day, starting_cash, target_cash, required_multiple, fetch_timestamp, universe_description, best_result, ranked_results, limitations. Do not overwrite the research package. Do not invent prices. Do not fetch live internet inside Cursor. Use small fixture JSON in tests only."
-    test_command: "python -m pytest tests/test_snapshot_importer.py"
+  - id: DATA_IMPORT_001
+    title: "Import real historical market data packages"
+    description: "Import and validate real historical market data from reports/live_market_snapshot.json, reports/historical_market_data.json, or reports/historical_market_data.csv. The importer must validate ticker, date, close price, source, timestamp, and caveats. It must reject missing required price data and must never invent prices."
+    test_command: "python -m pytest tests/test_data_import.py"
     lint_command: ""
     ui_required: false
     allowed_files:
-      - "stock_reality_scanner/snapshot_importer.py"
-      - "tests/test_snapshot_importer.py"
+      - "stock_reality_scanner/data_import.py"
+      - "tests/test_data_import.py"
     forbidden_files:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
       - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
-      - "reports/live_market_snapshot.json"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
 
-  - id: CALC_001
-    title: "Verify hindsight math from imported snapshot"
-    description: "From imported snapshot data: verify/calculate best result alignment, return percentage, return multiple, ending cash from starting cash, target achieved yes/no, distance from target, required multiple, and gap between achieved multiple and required multiple. Must reflect imported figures honestly (no fabrication). No broker connections or trades."
-    test_command: "python -m pytest tests/test_hindsight_calculator.py"
+  - id: TIME_TRAVEL_001
+    title: "Add perfect hindsight time-traveller optimizer"
+    description: "Create the perfect hindsight optimizer. It must support latest one-day scan, single best trade, and perfect daily switching using real imported historical market data. It must calculate the full trade path from starting cash to end date, show whether the target cash was reached, and report all dates, tickers, prices, returns, cash before and after each trade, source links, and caveats."
+    test_command: "python -m pytest tests/test_time_traveller.py"
     lint_command: ""
     ui_required: false
     allowed_files:
-      - "stock_reality_scanner/hindsight_calculator.py"
-      - "tests/test_hindsight_calculator.py"
+      - "stock_reality_scanner/time_traveller.py"
+      - "tests/test_time_traveller.py"
     forbidden_files:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
       - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
-      - "reports/live_market_snapshot.json"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+
+  - id: RESULTS_001
+    title: "Add time-traveller result models and report generation"
+    description: "Create result models and report generation for time-traveller calculations, including best pick summary, full trade path, ranked opportunities, target achievement, source links, caveats, and missing data."
+    test_command: "python -m pytest tests/test_results.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/results.py"
+      - "tests/test_results.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
 
   - id: SERVER_001
-    title: "Local browser server for dashboard and snapshot JSON"
-    description: "Small local Python web server serving the dashboard static assets and reports/live_market_snapshot.json (read-only serve from reports/). No broker connections, no trades, no real-money orders. Include tests for routes and snapshot file handling."
+    title: "Add local browser server"
+    description: "Create a simple local Python web server that serves the Time Traveller Stock Optimizer dashboard and generated JSON reports in a normal web browser. It must not connect to brokers or place trades. Include tests for server path handling and report-file loading."
     test_command: "python -m pytest tests/test_web_server.py"
     lint_command: ""
     ui_required: false
@@ -52,15 +69,15 @@ tasks:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
-      - "reports/live_market_snapshot.json"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
 
   - id: DASHBOARD_001
-    title: "Browser dashboard for live_market_snapshot.json"
-    description: "Browser UI (web/index.html, styles.css, app.js) loading the snapshot: scan mode; entry/exit days; starting/target cash; best ticker; entry/exit close; return percentage and multiple; ending cash; target achieved and shortfall; top 25 ranked results; universe description; source links; fetch timestamp; caveats and limitations. Prominent label: Historical hindsight scan — not a future prediction. Do not replace snapshot data with invented prices."
+    title: "Add browser-based Time Traveller Stock Optimizer dashboard"
+    description: "Create a polished browser-based dashboard that supports Latest One-Day Time Traveller Scan, Single Best Trade, and Perfect Daily Switching. It must load imported historical market data, allow starting cash and target cash inputs, show the best pick, full trade path, ranked opportunities, source links, caveats, target reached status, achieved multiple, required multiple, and distance from target. It must clearly label perfect hindsight mode as already-known historical outcome, not prediction."
     test_command: "python -c \"from pathlib import Path; required=['web/index.html','web/styles.css','web/app.js']; missing=[p for p in required if not Path(p).exists()]; assert not missing, missing; print('browser dashboard files exist')\""
     lint_command: ""
     ui_required: true
@@ -72,29 +89,47 @@ tasks:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
-      - "reports/live_market_snapshot.json"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
       - "ui_proof.png"
 
   - id: EVIDENCE_001
-    title: "Validation summary export to reports/validation_summary.json"
-    description: "Implement validation/export writing reports/validation_summary.json with: input snapshot path, fetch timestamp from snapshot, best ticker, ending cash, target achieved, source count (e.g. ranked rows or distinct sources), limitations count, validation timestamp. Tests use fixtures only; do not mutate reports/live_market_snapshot.json."
+    title: "Add time-traveller evidence snapshot export"
+    description: "Create evidence export logic that writes JSON snapshots containing imported data file, ticker universe, source used, fetch timestamps, input price dates, selected ticker, calculation path, account result, target result, and caveats. Include tests using local objects."
     test_command: "python -m pytest tests/test_evidence_export.py"
     lint_command: ""
     ui_required: false
     allowed_files:
       - "stock_reality_scanner/evidence_export.py"
       - "tests/test_evidence_export.py"
-      - "reports/validation_summary.json"
     forbidden_files:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
       - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
       - "agent_workspace/tasks/tasks.yaml"
-      - "reports/live_market_snapshot.json"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+
+  - id: WALK_FORWARD_001
+    title: "Add walk-forward strategy test mode"
+    description: "Create optional walk-forward strategy testing logic that uses only information available before each simulated trade. This mode must be separate from Time Traveller Mode and must include tests that prevent future-data leakage."
+    test_command: "python -m pytest tests/test_walk_forward.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/walk_forward.py"
+      - "tests/test_walk_forward.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
     required_evidence:
       - "test_results.txt"
       - "lint_results.txt"
