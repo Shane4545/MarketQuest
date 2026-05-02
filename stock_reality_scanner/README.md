@@ -2,6 +2,17 @@
 
 Real-market-data scanner and historical backtesting for the AI Nation governance system. The core goal is **market reverse-engineering** using **real** historical data—not fictional sample prices.
 
+## External research workflow (no live internet inside Cursor)
+
+Development agents in Cursor **must not** rely on live internet market research in this environment.
+
+1. A human asks **ChatGPT** (with live web access) to research the **last two completed trading days** and return a structured package (JSON or CSV) with at least: ticker symbol, exchange/market, instrument name, entry date, exit date, entry close, exit close, percent return, return multiple, data source, source link, fetch timestamp, and notes (splits, gaps, uncertainty).
+2. The human saves that output as **`reports/live_market_snapshot.json`** (project convention).
+3. Stock Reality Scanner **imports** that file, validates it, and runs **real historical hindsight scan** calculations only from rows that contain the required prices.
+4. The app **must not invent** market data, **must not** claim a result without source prices, and must show **source and timestamp** for every displayed result. Use **small fake fixtures only in automated tests**, never as the main production outcome.
+
+The analytical mode label for this path is **real historical hindsight scan**.
+
 ## Core question (Hindsight Optimizer)
 
 “If I had **$100** two **completed** trading days ago, and I could choose the **best real market instrument** after knowing what happened, what would I have had **by yesterday**?”
@@ -31,9 +42,9 @@ For the winning instrument over the period, outputs should include where applica
 
 ## Two modes (must be visually distinct)
 
-### 1. Hindsight Optimizer mode (prioritized for now)
+### 1. Real historical hindsight scan (prioritized)
 
-Uses **already-known** historical data to find the **best actual** result over a **completed** period. Allowed to “know the answer” because it looks backward. Used to reverse-engineer what would have worked.
+Uses **imported** research rows (from ChatGPT-produced snapshots) to find the **best actual** result over the **completed** period encoded in the file. Allowed to “know the answer” because it looks backward. Used to reverse-engineer what would have worked.
 
 ### 2. Walk-forward strategy mode
 

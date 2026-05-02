@@ -1,13 +1,13 @@
 tasks:
-  - id: DATA_001
-    title: "Add legal real-market data adapter"
-    description: "Create a data adapter framework that can fetch recent daily market data from configured legal public application programming interfaces or public web endpoints. It must prefer configured API keys where available, must record source and fetch timestamp, and must include tests using mocked responses so the judge does not depend on live internet."
-    test_command: "python -m pytest tests/test_data_adapter.py"
+  - id: RESEARCH_PROMPT_001
+    title: "Add ChatGPT live market research prompt"
+    description: "Create the exact prompt the Human Supreme can paste into ChatGPT (with live web access) to produce a structured JSON or CSV research package for the last two completed trading days. The package must request: ticker symbol, exchange or market, company or instrument name, entry date, exit date, entry close price, exit close price, percent return, return multiple, data source, source link, fetch timestamp, and notes about splits, missing data, or uncertainty. The prompt must instruct saving the result as reports/live_market_snapshot.json. Do not use fictional market data in the prompt artifact itself."
+    test_command: "python -m pytest tests/test_research_prompt.py"
     lint_command: ""
     ui_required: false
     allowed_files:
-      - "stock_reality_scanner/data_adapter.py"
-      - "tests/test_data_adapter.py"
+      - "agent_workspace/prompts/RESEARCH_PROMPT_001_live_market_snapshot.md"
+      - "tests/test_research_prompt.py"
     forbidden_files:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
@@ -18,15 +18,34 @@ tasks:
       - "test_results.txt"
       - "lint_results.txt"
 
-  - id: SCANNER_001
-    title: "Add hindsight optimizer two-day (configurable) scan"
-    description: "Implement HINDSIGHT OPTIMIZER MODE (prioritized): scan real historical data over a configurable completed period defaulting to the latest two completed trading days. Answer what $100 at period start would become using the single best actual instrument in the universe—no fictional prices as main source, no forced $100M outcome. Compute achieved multiple versus required 1,000,000x to default target ($100 to $100,000,000), target achieved yes/no, distance/gap when not achieved, plus symbol, dates, prices, percent return, ending value, source, fetch timestamp, and warning if universe is limited. Label outputs clearly as hindsight."
-    test_command: "python -m pytest tests/test_scanner.py"
+  - id: IMPORT_001
+    title: "Add live market snapshot importer"
+    description: "Implement importer and validation for reports/live_market_snapshot.json (or the agreed export path) produced by external ChatGPT research. The application must not invent prices: reject or flag rows missing required price fields. Use only small fixture JSON in automated tests. Cursor agents must not rely on live internet for this workflow."
+    test_command: "python -m pytest tests/test_live_snapshot_import.py"
     lint_command: ""
     ui_required: false
     allowed_files:
-      - "stock_reality_scanner/scanner.py"
-      - "tests/test_scanner.py"
+      - "stock_reality_scanner/live_snapshot_import.py"
+      - "tests/test_live_snapshot_import.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+
+  - id: HINDSIGHT_001
+    title: "Add real historical hindsight calculation engine"
+    description: "From validated imported rows only: compute best real hindsight performer, what configurable starting cash (default $100) would become on that pick, required multiple to reach default target ($100,000,000), achieved multiple, target achieved yes/no, distance from target, ranked top movers, and warning if the universe is incomplete. Label the analytical mode as real historical hindsight scan. Do not claim results without source prices in the import. No broker connections or trades."
+    test_command: "python -m pytest tests/test_hindsight_engine.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/hindsight_engine.py"
+      - "tests/test_hindsight_engine.py"
     forbidden_files:
       - "scripts/create_worktree.py"
       - "scripts/judge_gate.py"
@@ -39,7 +58,7 @@ tasks:
 
   - id: STRATEGY_001
     title: "Add walk-forward strategy signal engine"
-    description: "Create signal logic that ranks tickers using only information available before the next simulated trade (walk-forward; no look-ahead). Secondary to hindsight optimizer for now. Include tests that prevent look-ahead leakage."
+    description: "Optional secondary mode: signal logic using only information available before each simulated trade (no look-ahead). Distinct from imported hindsight scan. Include tests that prevent look-ahead leakage."
     test_command: "python -m pytest tests/test_strategy.py"
     lint_command: ""
     ui_required: false
@@ -58,7 +77,7 @@ tasks:
 
   - id: BACKTEST_001
     title: "Add configurable historical paper backtester"
-    description: "Walk-forward paper backtester starting from configurable cash (default $100): apply signals to real historical prices, track curve, fees/slippage parameters, tests. Distinct from hindsight optimizer; no future leakage."
+    description: "Walk-forward paper backtester (optional): starting cash default $100, real imported or fixture paths only in tests; no live internet dependency inside Cursor. No broker connections."
     test_command: "python -m pytest tests/test_backtester.py"
     lint_command: ""
     ui_required: false
@@ -77,7 +96,7 @@ tasks:
 
   - id: RISK_001
     title: "Add performance stats including target gap and multiples"
-    description: "Risk and performance helpers: max drawdown, return multiple, win rate, best/worst day, achieved versus required multiple (e.g. 1,000,000x to default target), distance from configurable starting cash to configurable target ($100 to $100,000,000). Tests for normal and empty inputs."
+    description: "Risk and performance helpers compatible with hindsight outputs: drawdown where applicable, return multiple, win rate, best/worst day, distance to configurable target. Tests for normal and empty inputs."
     test_command: "python -m pytest tests/test_risk.py"
     lint_command: ""
     ui_required: false
@@ -96,7 +115,7 @@ tasks:
 
   - id: SERVER_001
     title: "Add local browser server"
-    description: "Create a simple local Python web server that serves the Stock Reality Scanner dashboard and generated JSON reports in a normal web browser. It must not connect to brokers or place trades. Include tests for server path handling and report-file loading."
+    description: "Simple local Python web server that serves the Stock Reality Scanner dashboard and static assets in a normal browser. Expose or serve JSON under reports/ including reports/live_market_snapshot.json and other generated scanner outputs. No broker connections, trades, or real-money orders. Include tests for URL path handling and report file loading."
     test_command: "python -m pytest tests/test_web_server.py"
     lint_command: ""
     ui_required: false
@@ -115,7 +134,7 @@ tasks:
 
   - id: DASHBOARD_001
     title: "Add browser-based Stock Reality dashboard"
-    description: "Create a polished browser-based dashboard that runs in a normal web browser and shows the best real hindsight result found, starting cash, target cash, achieved multiple, required multiple, ending cash, source, timestamp, and whether the target was achieved. It must clearly label hindsight mode versus walk-forward mode."
+    description: "Browser UI (web/index.html, styles.css, app.js): load the imported live market snapshot (via local server or file workflow), display ranked movers and best hindsight performer, starting/target cash inputs, scan period selection, editable ticker universe display, run/load scan result affordances, entry/exit dates and prices, return percentage and multiple, ending cash, distance from target, target achieved, data source and fetch timestamp per result, incomplete-universe warning, and clear distinction between real historical hindsight scan and walk-forward strategy mode. No fabricated production data."
     test_command: "python -c \"from pathlib import Path; required=['web/index.html','web/styles.css','web/app.js']; missing=[p for p in required if not Path(p).exists()]; assert not missing, missing; print('browser dashboard files exist')\""
     lint_command: ""
     ui_required: true
@@ -135,8 +154,8 @@ tasks:
       - "ui_proof.png"
 
   - id: EVIDENCE_001
-    title: "Add scanner and backtest evidence snapshot export"
-    description: "Export JSON snapshots: ticker universe, source, fetch timestamps, price dates, selected symbol, calculation inputs, ending value, achieved/required multiple, target achieved, distance to target, mode (hindsight vs walk-forward), limited-universe warning. Tests with local objects."
+    title: "Add evidence export for research snapshot and calculations"
+    description: "Export JSON (or agreed format) recording which research snapshot file was used, its fetch timestamp(s), source links from the import, derived calculations, mode label (real historical hindsight scan vs walk-forward), and incomplete-universe warnings. Tests use small local fixtures only."
     test_command: "python -m pytest tests/test_evidence_export.py"
     lint_command: ""
     ui_required: false
