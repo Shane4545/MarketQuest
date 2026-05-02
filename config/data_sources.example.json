@@ -1,0 +1,30 @@
+{
+  "preferred_sources": [
+    {
+      "name": "alpha_vantage",
+      "type": "api",
+      "requires_api_key": true,
+      "environment_variable": "ALPHA_VANTAGE_API_KEY",
+      "purpose": "daily historical open high low close volume data"
+    },
+    {
+      "name": "nasdaq_data_link",
+      "type": "api",
+      "requires_api_key": true,
+      "environment_variable": "NASDAQ_DATA_LINK_API_KEY",
+      "purpose": "configured historical or delayed market datasets"
+    },
+    {
+      "name": "public_http_source",
+      "type": "public_web_endpoint",
+      "requires_api_key": false,
+      "purpose": "fallback source only when legal and allowed by terms"
+    }
+  ],
+  "rules": [
+    "Do not bypass paywalls or login requirements.",
+    "Do not scrape aggressively.",
+    "Respect rate limits.",
+    "Record source name and fetch timestamp in every output snapshot."
+  ]
+}

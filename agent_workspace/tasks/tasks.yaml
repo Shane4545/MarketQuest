@@ -1,5 +1,135 @@
-# Task definitions for AI Nation governance V1.
-# Each task maps to branch task/<id> and worktree ../worktrees/<repo-name>__<id>
-# See agent_workspace/tasks/examples.yaml for sample tasks.
+tasks:
+  - id: DATA_001
+    title: "Add legal real-market data adapter"
+    description: "Create a data adapter framework that can fetch recent daily market data from configured legal public application programming interfaces or public web endpoints. It must prefer configured API keys where available, must record source and fetch timestamp, and must include tests using mocked responses so the judge does not depend on live internet."
+    test_command: "python -m pytest tests/test_data_adapter.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/data_adapter.py"
+      - "tests/test_data_adapter.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
 
-tasks: []
+  - id: SCANNER_001
+    title: "Add hindsight optimizer two-day (configurable) scan"
+    description: "Implement HINDSIGHT OPTIMIZER MODE (prioritized): scan real historical data over a configurable completed period defaulting to the latest two completed trading days. Answer what $100 at period start would become using the single best actual instrument in the universe—no fictional prices as main source, no forced $100M outcome. Compute achieved multiple versus required 1,000,000x to default target ($100 to $100,000,000), target achieved yes/no, distance/gap when not achieved, plus symbol, dates, prices, percent return, ending value, source, fetch timestamp, and warning if universe is limited. Label outputs clearly as hindsight."
+    test_command: "python -m pytest tests/test_scanner.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/scanner.py"
+      - "tests/test_scanner.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+
+  - id: STRATEGY_001
+    title: "Add walk-forward strategy signal engine"
+    description: "Create signal logic that ranks tickers using only information available before the next simulated trade (walk-forward; no look-ahead). Secondary to hindsight optimizer for now. Include tests that prevent look-ahead leakage."
+    test_command: "python -m pytest tests/test_strategy.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/strategy.py"
+      - "tests/test_strategy.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+
+  - id: BACKTEST_001
+    title: "Add configurable historical paper backtester"
+    description: "Walk-forward paper backtester starting from configurable cash (default $100): apply signals to real historical prices, track curve, fees/slippage parameters, tests. Distinct from hindsight optimizer; no future leakage."
+    test_command: "python -m pytest tests/test_backtester.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/backtester.py"
+      - "tests/test_backtester.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+
+  - id: RISK_001
+    title: "Add performance stats including target gap and multiples"
+    description: "Risk and performance helpers: max drawdown, return multiple, win rate, best/worst day, achieved versus required multiple (e.g. 1,000,000x to default target), distance from configurable starting cash to configurable target ($100 to $100,000,000). Tests for normal and empty inputs."
+    test_command: "python -m pytest tests/test_risk.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/risk.py"
+      - "tests/test_risk.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+
+  - id: DASHBOARD_001
+    title: "Add interactive Stock Reality dashboard"
+    description: "Polished local dashboard loading scanner/backtest JSON: distinct styling for Hindsight Optimizer vs Walk-forward; inputs for starting cash ($100 default), target cash ($100,000,000 default), lookback (default two completed trading days); universe list; best hindsight pick; ending value; required vs achieved multiple; target achieved; gap to target; source and timestamp; limited-universe warning."
+    test_command: "python -c \"from pathlib import Path; required=['web/index.html','web/styles.css','web/app.js']; missing=[p for p in required if not Path(p).exists()]; assert not missing, missing; print('dashboard files exist')\""
+    lint_command: ""
+    ui_required: true
+    allowed_files:
+      - "web/index.html"
+      - "web/styles.css"
+      - "web/app.js"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+      - "ui_proof.png"
+
+  - id: EVIDENCE_001
+    title: "Add scanner and backtest evidence snapshot export"
+    description: "Export JSON snapshots: ticker universe, source, fetch timestamps, price dates, selected symbol, calculation inputs, ending value, achieved/required multiple, target achieved, distance to target, mode (hindsight vs walk-forward), limited-universe warning. Tests with local objects."
+    test_command: "python -m pytest tests/test_evidence_export.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/evidence_export.py"
+      - "tests/test_evidence_export.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
