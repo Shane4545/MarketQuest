@@ -94,10 +94,29 @@ tasks:
       - "test_results.txt"
       - "lint_results.txt"
 
+  - id: SERVER_001
+    title: "Add local browser server"
+    description: "Create a simple local Python web server that serves the Stock Reality Scanner dashboard and generated JSON reports in a normal web browser. It must not connect to brokers or place trades. Include tests for server path handling and report-file loading."
+    test_command: "python -m pytest tests/test_web_server.py"
+    lint_command: ""
+    ui_required: false
+    allowed_files:
+      - "stock_reality_scanner/web_server.py"
+      - "tests/test_web_server.py"
+    forbidden_files:
+      - "scripts/create_worktree.py"
+      - "scripts/judge_gate.py"
+      - "AI_NATION_COMMAND.md"
+      - ".github/workflows/ci.yml"
+      - "agent_workspace/tasks/tasks.yaml"
+    required_evidence:
+      - "test_results.txt"
+      - "lint_results.txt"
+
   - id: DASHBOARD_001
-    title: "Add interactive Stock Reality dashboard"
-    description: "Polished local dashboard loading scanner/backtest JSON: distinct styling for Hindsight Optimizer vs Walk-forward; inputs for starting cash ($100 default), target cash ($100,000,000 default), lookback (default two completed trading days); universe list; best hindsight pick; ending value; required vs achieved multiple; target achieved; gap to target; source and timestamp; limited-universe warning."
-    test_command: "python -c \"from pathlib import Path; required=['web/index.html','web/styles.css','web/app.js']; missing=[p for p in required if not Path(p).exists()]; assert not missing, missing; print('dashboard files exist')\""
+    title: "Add browser-based Stock Reality dashboard"
+    description: "Create a polished browser-based dashboard that runs in a normal web browser and shows the best real hindsight result found, starting cash, target cash, achieved multiple, required multiple, ending cash, source, timestamp, and whether the target was achieved. It must clearly label hindsight mode versus walk-forward mode."
+    test_command: "python -c \"from pathlib import Path; required=['web/index.html','web/styles.css','web/app.js']; missing=[p for p in required if not Path(p).exists()]; assert not missing, missing; print('browser dashboard files exist')\""
     lint_command: ""
     ui_required: true
     allowed_files:
