@@ -1,0 +1,13 @@
+{
+  "actual_changed_files": [],
+  "failed_checks": [],
+  "lint_exit_code": null,
+  "message": "OK",
+  "pass": true,
+  "required_evidence_checked": [
+    "test_results.txt",
+    "lint_results.txt"
+  ],
+  "task_id": "GOV_SMOKE",
+  "test_exit_code": 0
+}

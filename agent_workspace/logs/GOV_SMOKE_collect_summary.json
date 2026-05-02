@@ -1,0 +1,10 @@
+{
+  "task_id": "GOV_SMOKE",
+  "worktree": "C:\\Cursor Projects\\worktrees\\AI NATATION V1__GOV_SMOKE",
+  "test_command": "python -c \"print('governance smoke test pass')\"",
+  "test_exit_code": 0,
+  "lint_command": null,
+  "lint_exit_code": null,
+  "evidence_dir": "C:\\Cursor Projects\\AI NATATION V1\\agent_workspace\\evidence\\GOV_SMOKE",
+  "failed": false
+}
