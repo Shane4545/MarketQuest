@@ -26,6 +26,18 @@
       }
     },
     {
+      "label": "Time Traveller: open Cursor Simple Browser",
+      "type": "shell",
+      "command": "echo ${input:ttOpenSimpleBrowser}",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "echo": false,
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
       "label": "Time Traveller: open dashboard in default browser (Edge/Chrome)",
       "type": "shell",
       "command": "powershell -NoProfile -Command \"Start-Sleep -Seconds 1; Start-Process 'http://127.0.0.1:8000/web/index.html'\"",
@@ -38,10 +50,10 @@
       }
     },
     {
-      "label": "Time Traveller: serve + open in default browser",
+      "label": "Time Traveller: serve + open in Cursor Simple Browser",
       "dependsOn": [
         "Time Traveller: serve dashboard (DASHBOARD_001 worktree)",
-        "Time Traveller: open dashboard in default browser (Edge/Chrome)"
+        "Time Traveller: open Cursor Simple Browser"
       ],
       "dependsOrder": "sequence",
       "problemMatcher": [],
@@ -49,6 +61,23 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Time Traveller: serve + open in default browser",
+      "dependsOn": [
+        "Time Traveller: serve dashboard (DASHBOARD_001 worktree)",
+        "Time Traveller: open dashboard in default browser (Edge/Chrome)"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "ttOpenSimpleBrowser",
+      "type": "command",
+      "command": "simpleBrowser.show",
+      "args": ["http://127.0.0.1:8000/web/index.html"]
     }
   ]
 }
