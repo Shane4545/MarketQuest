@@ -1,0 +1,8 @@
+{
+  "task_id": "DASHBOARD_001",
+  "changed_files": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.js"
+  ]
+}
