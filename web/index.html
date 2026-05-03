@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Time Traveller Stock Optimizer · Portfolio Allocation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="war-room">
+  <a class="skip-link" href="#main-controls">Skip to controls</a>
+
+  <header class="command-header" id="commandHeader">
+    <div class="command-header-top">
+      <div class="brand-lockup">
+        <div class="brand-title">Time Traveller Stock Optimizer</div>
+        <div class="brand-sub">Two-Day Hindsight Scan · Mission control</div>
+      </div>
+      <div class="command-header-chips" id="commandHeaderChips"></div>
+      <div class="command-header-meta" id="commandHeaderMeta"></div>
+    </div>
+    <p class="universe-line" id="universeSummary">Load <code>reports/live_market_snapshot.json</code> to arm the console.</p>
+  </header>
+
+  <section class="banner-scope" id="scopeBanner" role="status">
+    <div class="banner-scope-inner">
+      <strong>Scope (this build):</strong>
+      <span class="scope-supported">
+        Supported: Portfolio Allocation Optimizer (six modes), dollar-accurate splits summing to starting cash, full <code>ranked_results</code> table with recomputed multiples, targets &amp; comparison.
+      </span>
+      <span class="scope-unsupported">
+        Not yet supported: arbitrary historical dates, multi-day daily switching, long-horizon path optimization.
+      </span>
+      <span class="scope-note">
+        Data comes only from the imported JSON (<code>ranked_results</code> closes). One two-day window per file.
+      </span>
+    </div>
+  </section>
+
+  <section class="banner-split-math" role="note">
+    <p class="banner-lead">
+      <strong>Portfolio Allocation Optimizer:</strong>
+      Split starting cash across tickers any way that sums to your stake — e.g. $0.01 here, $10 there — using only imported entry/exit closes. Ending cash per line is <code>allocated × (exit ÷ entry)</code>; portfolio ending is the sum.
+    </p>
+    <p>
+      <strong>Important:</strong> For a single two-day period, if there are no allocation constraints, perfect hindsight usually puts all cash into the highest-returning instrument.
+      Splitting matters when you impose realism constraints such as maximum dollars per stock, maximum percent per stock, minimum number of holdings, or manual diversification.
+    </p>
+  </section>
+
+  <section class="banner-hindsight" role="alert">
+    <strong>Two-day perfect hindsight uses already-known closes. It is not a future prediction.</strong>
+    Not financial advice. No brokers. No trades. No real-money orders.
+  </section>
+
+  <main id="main-controls">
+    <section class="panel panel-controls" aria-labelledby="import-heading">
+      <h2 id="import-heading" class="panel-heading">Import &amp; targets</h2>
+      <div class="controls-grid controls-grid-tight">
+        <label class="ctl-file ctl-file-span">
+          Import snapshot JSON
+          <input type="file" id="fileInput" accept=".json,application/json" />
+          <span class="ctl-hint">
+            Use <code>reports/live_market_snapshot.json</code> from this project (picker copy). All allocations use <code>ranked_results</code> only.
+          </span>
+        </label>
+        <label>
+          Starting cash ($)
+          <input type="number" id="startCash" value="100" min="0.01" step="any" />
+        </label>
+        <label>
+          Target cash ($)
+          <input type="number" id="targetCash" value="1000000" min="0.01" step="any" />
+        </label>
+        <div class="quick-targets">
+          <span class="quick-label">Quick targets</span>
+          <button type="button" class="btn btn-ghost" id="btnTarget1M">1,000,000</button>
+          <button type="button" class="btn btn-ghost" id="btnTarget100M">100,000,000</button>
+        </div>
+      </div>
+      <p class="load-status" id="loadStatus"><strong>File:</strong> not loaded</p>
+    </section>
+
+    <section class="panel panel-controls panel-optimizer" aria-labelledby="optimizer-heading">
+      <h2 id="optimizer-heading" class="panel-heading">Portfolio Allocation Optimizer</h2>
+      <p class="panel-sub optimizer-intro">
+        Choose how dollars are spread across scanned stocks (must sum to starting cash for manual mode). Compare unconstrained maximum return against capped, minimum-holdings, equal-weight, and manual portfolios.
+      </p>
+      <div class="controls-grid controls-grid-wide">
+        <label>
+          Allocation mode
+          <select id="allocMode">
+            <option value="unconstrained_max">1 · Unconstrained maximum return</option>
+            <option value="max_dollars">2 · Maximum dollars per stock</option>
+            <option value="max_pct">3 · Maximum percent per stock</option>
+            <option value="min_stocks">4 · Minimum number of stocks</option>
+            <option value="equal">5 · Equal weight top N</option>
+            <option value="manual">6 · Manual allocation ($)</option>
+          </select>
+        </label>
+        <label id="wrapAllocMaxDollars">
+          Max $ per stock (rank-order greedy fill)
+          <input type="number" id="allocMaxDollars" value="20" min="0.01" step="any" />
+        </label>
+        <label id="wrapAllocMaxPct">
+          Max % per stock (weight cap)
+          <input type="number" id="allocMaxPct" value="25" min="0.01" max="100" step="0.1" />
+        </label>
+        <label id="wrapAllocMinStocks">
+          Minimum stocks (must hold ≥ this many)
+          <input type="number" id="allocMinStocks" value="5" min="1" step="1" />
+        </label>
+        <label id="wrapAllocTopN">
+          N · equal weight top N by rank
+          <input type="number" id="allocTopN" value="5" min="1" step="1" />
+        </label>
+        <div class="alloc-actions ctl-span">
+          <button type="button" class="btn btn-secondary" id="btnNormalize">Normalize to starting cash</button>
+          <span class="alloc-total" id="allocTotalDisplay">Manual allocation total: —</span>
+          <span class="alloc-warn" id="allocWarn" hidden></span>
+        </div>
+        <div class="btn-row-actions ctl-span">
+          <button type="button" class="btn btn-primary" id="btnRun">Run calculation</button>
+          <button type="button" class="btn btn-secondary" id="btnReset">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel panel-objective" id="missionObjectivePanel">
+      <h2 class="panel-heading">Mission objective</h2>
+      <p class="objective-lead" id="missionObjectiveText">
+        Load the snapshot, then allocate starting cash across all scanned stocks using the optimizer.
+      </p>
+    </section>
+
+    <section class="panel panel-hidden" id="comparisonSection">
+      <h2 class="panel-heading">Allocation comparison (all modes)</h2>
+      <p class="panel-sub">
+        Same imported multiples as the ranked table. Largest allocation shows dollars to a single name under each method.
+      </p>
+      <div class="table-scroll">
+        <table class="data-table dense" id="comparisonTable">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th># stocks</th>
+              <th>Largest allocation ($)</th>
+              <th>Ending cash</th>
+              <th>Return multiple</th>
+              <th>% return</th>
+              <th>Target achieved</th>
+              <th>Distance from target</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel panel-hidden panel-target-any" id="targetAnyModeSection">
+      <h2 class="panel-heading">Target · all modes</h2>
+      <div id="targetAnyModeBanner" class="target-any-banner"></div>
+    </section>
+
+    <section class="panel panel-hidden panel-target-failure" id="targetFailureSection" aria-labelledby="target-failure-heading">
+      <h2 id="target-failure-heading" class="panel-heading">Target failure analysis</h2>
+      <p class="panel-sub">
+        Below applies when your target cash is not met using only the imported two-day outcomes and the tested allocation rules.
+      </p>
+      <div id="targetFailureInner" class="target-failure-inner"></div>
+    </section>
+
+    <section class="panel panel-hidden panel-search-harder" id="searchHarderSection" aria-labelledby="search-harder-heading">
+      <h2 id="search-harder-heading" class="panel-heading">What data would be needed to search harder?</h2>
+      <p class="panel-sub">
+        The dashboard does not implement these capabilities unless they are explicitly added as tasks. This is a checklist for future data or product scope, not an offer of functionality.
+      </p>
+      <ul class="search-harder-list">
+        <li>Broader stock universe</li>
+        <li>Penny stocks / microcaps if allowed</li>
+        <li>Global equities</li>
+        <li>Options data</li>
+        <li>Leveraged products if explicitly allowed</li>
+        <li>Intraday open/high/low/close data</li>
+        <li>Longer date ranges</li>
+        <li>Daily switching across many days</li>
+        <li>Short-selling mode if explicitly allowed</li>
+        <li>Leverage mode if explicitly allowed</li>
+      </ul>
+    </section>
+
+    <section class="panel panel-hidden" id="bestCommandSection">
+      <h2 class="panel-heading">Optimizer results</h2>
+      <div id="bestCommandInner" class="optimizer-results-wrap"></div>
+      <div id="calcWarnings" class="calc-warnings" hidden></div>
+    </section>
+
+    <section class="panel panel-hidden" id="allocationDetailSection">
+      <h2 class="panel-heading">Allocation line items (active mode)</h2>
+      <p class="panel-sub">
+        <code>return_multiple = exit_close ÷ entry_close</code>;
+        <code>ending_cash = allocated_cash × return_multiple</code>;
+        <code>profit = ending_cash − allocated_cash</code>.
+      </p>
+      <div class="table-scroll">
+        <table class="data-table dense data-table-wide" id="allocationDetailTable">
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th>Name</th>
+              <th>Rank</th>
+              <th>Allocated ($)</th>
+              <th>Alloc %</th>
+              <th>Entry close</th>
+              <th>Exit close</th>
+              <th>Return multiple</th>
+              <th>Ending ($)</th>
+              <th>Profit ($)</th>
+              <th>Caveats</th>
+            </tr>
+          </thead>
+          <tbody id="allocationDetailBody"></tbody>
+        </table>
+      </div>
+      <div id="allocationPortfolioSummary" class="allocation-portfolio-summary"></div>
+    </section>
+
+    <section class="panel panel-hidden" id="targetRealitySection">
+      <h2 class="panel-heading">Target reality check (active mode)</h2>
+      <div id="targetRealityInner" class="reality-grid"></div>
+      <p class="target-status-line" id="targetStatusLine" aria-live="polite"></p>
+      <p class="panel-sub target-million-note">
+        Example: $100 → $1,000,000 requires a <strong>10,000×</strong> portfolio multiple (<code>target ÷ start</code>). The dashboard evaluates whether any comparison mode reaches the target using imported outcomes only.
+      </p>
+    </section>
+
+    <section class="panel panel-hidden" id="rankedSection">
+      <div class="ranked-toolbar">
+        <h2 class="panel-heading inline-heading">Ranked results (full import)</h2>
+        <label class="search-wrap">
+          Highlight filter
+          <input type="search" id="rankedSearch" placeholder="Filter rows (all rows stay in DOM)…" autocomplete="off" />
+        </label>
+        <label>
+          Sort display by
+          <select id="rankedSort">
+            <option value="rank">Rank</option>
+            <option value="ticker">Ticker (A–Z)</option>
+            <option value="pct_desc">Percentage return (high → low)</option>
+            <option value="cash_desc">Ending cash (high → low)</option>
+          </select>
+        </label>
+      </div>
+      <p class="ranked-note">Every <code>ranked_results</code> row is listed. Multiples are recomputed from imported closes. Enter <strong>Manual ($)</strong> when manual mode is selected; totals must match starting cash.</p>
+      <div class="table-scroll table-scroll-tall">
+        <table class="data-table dense" id="rankedTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Ticker</th>
+              <th>Name</th>
+              <th>Exchange</th>
+              <th>Entry close</th>
+              <th>Exit close</th>
+              <th>% return</th>
+              <th>Return multiple</th>
+              <th>Ending cash (100% hypothetical)</th>
+              <th>Manual ($)</th>
+              <th>Source</th>
+              <th>Caveats</th>
+            </tr>
+          </thead>
+          <tbody id="rankedBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel panel-hidden" id="sourceAuditSection">
+      <h2 class="panel-heading">Source audit</h2>
+      <div class="audit-columns" id="sourceAuditInner"></div>
+    </section>
+
+    <section class="panel panel-data-integrity">
+      <h2 class="panel-heading">Data integrity</h2>
+      <pre id="integrityBody" class="mono-block"></pre>
+    </section>
+
+    <section class="panel panel-governance">
+      <h2 class="panel-heading">Governance evidence · DASHBOARD_001</h2>
+      <div id="governanceInner" class="gov-grid"></div>
+    </section>
+  </main>
+
+  <footer class="war-footer">
+    <p>
+      All prices and ranks come from the imported JSON only. Nothing is invented here.
+      Vendor closes are not official exchange settlement unless the source states otherwise.
+    </p>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
