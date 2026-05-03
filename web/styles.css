@@ -141,6 +141,41 @@ body.war-room {
   max-width: 85ch;
 }
 
+.banner-goal-reality {
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  background: rgba(248, 113, 113, 0.07);
+  border-radius: 4px;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-dim);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-goal-reality p {
+  margin: 0 0 0.65rem;
+}
+
+.banner-goal-reality p:last-child {
+  margin-bottom: 0;
+}
+
+.banner-goal-reality strong {
+  color: var(--text);
+}
+
+.goal-reality-inner .goal-tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bad);
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
 .banner-scope {
   margin-bottom: 1rem;
   padding: 0.85rem 1rem;
@@ -484,6 +519,18 @@ main {
   color: var(--text);
 }
 
+.target-failure-intro {
+  margin: 0 0 0.75rem;
+  font-size: 0.84rem;
+  color: var(--text-dim);
+}
+
+.metric-hint {
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
 .panel-search-harder {
   border-color: rgba(56, 189, 248, 0.22);
 }
@@ -693,6 +740,43 @@ select {
   margin: 0.85rem 0 0;
   font-size: 0.85rem;
   color: var(--text-dim);
+}
+
+.load-status .load-err {
+  margin: 0.5rem 0 0;
+  padding: 0.6rem 0.75rem;
+  border-left: 3px solid var(--bad);
+  background: rgba(248, 113, 113, 0.08);
+  color: var(--text);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.load-pending {
+  color: var(--accent);
+}
+
+.load-hint {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  line-height: 1.45;
+}
+
+.import-expectations {
+  margin: 0.65rem 0 0;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+  border: 1px solid var(--border-accent);
+  border-radius: 4px;
+  background: var(--bg-elevated);
+}
+
+.import-expectations strong {
+  color: var(--text);
 }
 
 .objective-lead {

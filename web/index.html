@@ -21,6 +21,8 @@
     <p class="universe-line" id="universeSummary">Load <code>reports/live_market_snapshot.json</code> to arm the console.</p>
   </header>
 
+  <section class="banner-goal-reality panel-hidden" id="goalRealityBanner" role="region" aria-label="Goal versus maximum achievable in loaded data"></section>
+
   <section class="banner-scope" id="scopeBanner" role="status">
     <div class="banner-scope-inner">
       <strong>Scope (this build):</strong>
@@ -77,6 +79,7 @@
           <button type="button" class="btn btn-ghost" id="btnTarget100M">100,000,000</button>
         </div>
       </div>
+      <p class="import-expectations" id="importExpectations" role="status"></p>
       <p class="load-status" id="loadStatus"><strong>File:</strong> not loaded</p>
     </section>
 
@@ -162,7 +165,7 @@
     </section>
 
     <section class="panel panel-hidden panel-target-failure" id="targetFailureSection" aria-labelledby="target-failure-heading">
-      <h2 id="target-failure-heading" class="panel-heading">Target failure analysis</h2>
+      <h2 id="target-failure-heading" class="panel-heading">Target Failure Analysis</h2>
       <p class="panel-sub">
         Below applies when your target cash is not met using only the imported two-day outcomes and the tested allocation rules.
       </p>

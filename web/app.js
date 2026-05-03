@@ -28,6 +28,10 @@ const diagnostics = {
   recomputedTopMatchesImport: null,
   maxDollarsRemainder: 0,
   minStocksNote: null,
+  /** `?demo=1` fetch to /reports/live_market_snapshot.json */
+  demoLoadPending: false,
+  demoLoadFailed: false,
+  demoLoadError: null,
 };
 
 function $(id) {
@@ -660,40 +664,46 @@ function renderTargetFailureAnalysis(rowsSortedRank, rowsSortedMult, multMap) {
     return;
   }
 
+  const reqMultDisplay =
+    Number.isFinite(reqMult) && reqMult >= 1000 && Math.abs(reqMult - Math.round(reqMult)) < 1e-6
+      ? Math.round(reqMult).toLocaleString() + "×"
+      : fmtNum(reqMult, 8) + "×";
+
   inner.innerHTML =
     '<p class="target-failure-callout">Target not reached in the loaded data.</p>' +
+    '<p class="target-failure-intro">Using only this imported two-day long-only scan (current starting and target cash):</p>' +
     '<div class="target-failure-metrics">' +
-    "<dl><dt>Starting cash</dt><dd>$" +
+    "<dl><dt>1. Starting cash</dt><dd>$" +
     fmtMoney(startCash) +
     "</dd></dl>" +
-    "<dl><dt>Target cash</dt><dd>$" +
+    "<dl><dt>2. Target cash</dt><dd>$" +
     fmtMoney(targetCash) +
     "</dd></dl>" +
-    "<dl><dt>Required multiple (target ÷ start)</dt><dd>" +
-    fmtNum(reqMult, 8) +
-    "×</dd></dl>" +
-    "<dl><dt>Best multiple found in imported data</dt><dd>≈ " +
+    "<dl><dt>3. Required multiple</dt><dd>" +
+    reqMultDisplay +
+    " <span class=\"metric-hint\">(target ÷ start)</span></dd></dl>" +
+    "<dl><dt>4. Best multiple found in imported data</dt><dd>≈ " +
     fmtNum(bestMult, 4) +
     "×</dd></dl>" +
-    "<dl><dt>Best ending cash (unconstrained optimum)</dt><dd>≈ $" +
+    "<dl><dt>5. Best ending cash</dt><dd>≈ $" +
     fmtMoney(bestEnding) +
-    "</dd></dl>" +
-    "<dl><dt>Dollar shortfall vs target (at best multiple)</dt><dd>≈ $" +
+    " <span class=\"metric-hint\">(all cash in best multiple)</span></dd></dl>" +
+    "<dl><dt>6. Dollar shortfall</dt><dd>≈ $" +
     fmtMoney(shortfall) +
-    "</dd></dl>" +
-    "<dl><dt>Ranked stocks inspected</dt><dd>" +
+    " <span class=\"metric-hint\">(target − best ending)</span></dd></dl>" +
+    "<dl><dt>7. Number of ranked stocks inspected</dt><dd>" +
     nRanked +
     "</dd></dl>" +
-    "<dl><dt>Allocation modes tested</dt><dd>" +
+    "<dl><dt>8. Number of allocation modes tested</dt><dd>" +
     NUM_ALLOCATION_MODES +
     "</dd></dl>" +
-    "<dl><dt>Target-reaching allocations found</dt><dd>" +
+    "<dl><dt>9. Number of target-reaching allocations found</dt><dd>" +
     hitCount +
     "</dd></dl>" +
     "</div>" +
     '<p class="target-failure-explain">' +
-    "<strong>Single two-day scan and weighted averages:</strong> " +
-    "For a single two-day long-only scan, splitting money across multiple stocks creates a weighted average of returns. " +
+    "<strong>Weighted average limit (single two-day long-only scan):</strong> " +
+    "Splitting money across multiple stocks creates a weighted average of returns. " +
     "A weighted average cannot exceed the highest individual return unless extra mechanisms are introduced, " +
     "such as leverage, options, short selling, intraday high/low timing, or a different/broader universe.</p>";
 }
@@ -970,6 +980,63 @@ function renderManualTotal(rowsSortedRank) {
   }
 }
 
+function renderGoalRealityBanner() {
+  const sec = $("goalRealityBanner");
+  if (!sec) return;
+  if (!snapshotData) {
+    sec.classList.add("panel-hidden");
+    sec.innerHTML = "";
+    return;
+  }
+  sec.classList.remove("panel-hidden");
+  const { startCash, targetCash } = getInputs();
+  const enriched = enrichRanked(snapshotData);
+  const rowsSortedRank = sortByRankAsc(enriched);
+  const winner = findBestMultipleRow(rowsSortedRank);
+  const bestMult = winner && Number.isFinite(winner.mult) ? winner.mult : NaN;
+  const bestEnd = Number.isFinite(bestMult) ? startCash * bestMult : NaN;
+  const needMult = startCash > 0 ? targetCash / startCash : NaN;
+  let compoundPara = "";
+  if (
+    Number.isFinite(bestMult) &&
+    bestMult > 1.001 &&
+    Number.isFinite(needMult) &&
+    needMult > bestMult + 1e-12
+  ) {
+    const nSteps = Math.log(needMult) / Math.log(bestMult);
+    compoundPara =
+      "<p><strong>Compound illustration (not a forecast):</strong> If you could repeat this file’s best multiple (" +
+      fmtNum(bestMult, 4) +
+      "×) every identical two-day period with no losses, reaching a <strong>" +
+      fmtNum(needMult, 4) +
+      "×</strong> goal would take on the order of <strong>" +
+      fmtNum(nSteps, 1) +
+      "</strong> such periods — not one trade, and not achievable as a guarantee in real markets.</p>";
+  }
+  sec.innerHTML =
+    '<div class="goal-reality-inner">' +
+    '<span class="goal-tag">Goal vs one-step maximum</span>' +
+    "<p><strong>Best stock / allocation in this imported list:</strong> For this entry→exit window, the highest return multiple is <strong>" +
+    escapeHtml(winner ? winner.ticker : "—") +
+    "</strong> at about <strong>" +
+    fmtNum(bestMult, 4) +
+    "×</strong>, so the best long-only ending cash from <strong>$" +
+    fmtMoney(startCash) +
+    "</strong> is about <strong>$" +
+    fmtMoney(bestEnd) +
+    "</strong> (put 100% in that name — “Unconstrained maximum return”). No other symbol in <code>ranked_results</code> has a higher multiple here; mixing names only lowers the weighted return toward smaller multiples.</p>" +
+    "<p><strong>About turning $100 into $1,000,000:</strong> That requires a <strong>10,000×</strong> portfolio gain. No realistic two-day <em>daily close</em> move among liquid equities is on that scale. This dashboard cannot “pick different stocks” inside the same JSON to invent a 10,000× — the file’s best is the cap. To pursue large wealth growth you need <strong>many periods</strong>, different instruments, or different risk (see scope banner: multi-day paths are not implemented here).</p>" +
+    "<p><strong>Your current target</strong> ($" +
+    fmtMoney(targetCash) +
+    ") implies <strong>" +
+    fmtNum(needMult, 4) +
+    "×</strong> on starting cash. Compare to this file’s best <strong>" +
+    fmtNum(bestMult, 4) +
+    "×</strong>.</p>" +
+    compoundPara +
+    "</div>";
+}
+
 function renderHeaderAndMeta() {
   const chips = $("commandHeaderChips");
   const meta = $("commandHeaderMeta");
@@ -1007,6 +1074,44 @@ function renderHeaderAndMeta() {
   }
   const u = $("universeSummary");
   if (u) u.textContent = d.universe_description || "—";
+}
+
+function renderImportExpectations() {
+  const el = $("importExpectations");
+  if (!el) return;
+  const { startCash, targetCash } = getInputs();
+  if (!snapshotData) {
+    el.innerHTML =
+      "<strong>Why results look “stuck” until you load data:</strong> " +
+      "The optimizer only runs after <code>ranked_results</code> is loaded. " +
+      "Choose the JSON file, or open with <code>?demo=1</code> on a local server. " +
+      "<strong>About a $1,000,000 target from $100:</strong> that needs a <strong>10,000×</strong> portfolio return. " +
+      "A typical two-day long-only file delivers a best multiple near <strong>1–2×</strong>, so you will <em>not</em> see ending cash at a million — that is a limitation of the data, not a bug.";
+    return;
+  }
+  const enriched = enrichRanked(snapshotData);
+  const rowsSortedRank = sortByRankAsc(enriched);
+  const winner = findBestMultipleRow(rowsSortedRank);
+  const bestMult = winner && Number.isFinite(winner.mult) ? winner.mult : NaN;
+  const bestEnd = Number.isFinite(bestMult) ? startCash * bestMult : NaN;
+  const needMult = startCash > 0 ? targetCash / startCash : NaN;
+  el.innerHTML =
+    "<strong>Loaded data — what’s possible in one two-day step:</strong> " +
+    "Best return multiple in this file is <strong>≈ " +
+    fmtNum(bestMult, 4) +
+    "×</strong>, so the best long-only ending from <strong>$" +
+    fmtMoney(startCash) +
+    "</strong> is about <strong>$" +
+    fmtMoney(bestEnd) +
+    "</strong>. " +
+    "Your target <strong>$" +
+    fmtMoney(targetCash) +
+    "</strong> would need <strong>" +
+    fmtNum(needMult, 4) +
+    "×</strong>. " +
+    (Number.isFinite(needMult) && Number.isFinite(bestMult) && needMult > bestMult + 1e-9
+      ? "This file cannot reach that target; see <strong>Target failure analysis</strong> below."
+      : "Adjust targets to compare outcomes.");
 }
 
 function renderMissionObjective(startCash) {
@@ -1229,6 +1334,11 @@ function renderSourceAudit() {
 
 function renderPanels() {
   if (!snapshotData) {
+    const gb = $("goalRealityBanner");
+    if (gb) {
+      gb.classList.add("panel-hidden");
+      gb.innerHTML = "";
+    }
     [
       "comparisonSection",
       "targetAnyModeSection",
@@ -1313,16 +1423,41 @@ function renderPanels() {
 
 function renderAll() {
   renderHeaderAndMeta();
+  renderGoalRealityBanner();
   renderGovernance();
 
   const loadEl = $("loadStatus");
   if (loadEl) {
-    loadEl.innerHTML =
-      "<strong>File:</strong> " +
-      (diagnostics.fileLoaded
-        ? "loaded (" + escapeHtml(diagnostics.sourcePath || "") + ")"
-        : "not loaded");
+    if (diagnostics.fileLoaded) {
+      loadEl.innerHTML =
+        "<strong>File:</strong> loaded (" + escapeHtml(diagnostics.sourcePath || "") + ")";
+    } else {
+      let extra = "";
+      try {
+        const sp = new URLSearchParams(typeof location !== "undefined" ? location.search : "");
+        if (sp.get("demo") === "1") {
+          if (diagnostics.demoLoadPending) {
+            extra =
+              ' <span class="load-pending">Loading demo snapshot from <code>/reports/live_market_snapshot.json</code>…</span>';
+          } else if (diagnostics.demoLoadFailed) {
+            extra =
+              '<p class="load-err">Demo could not load: ' +
+              escapeHtml(diagnostics.demoLoadError || "unknown") +
+              ". Serve the site from the <strong>project root</strong> (e.g. <code>python -m http.server 8000</code>) so that URL is reachable, or use the file picker.</p>";
+          }
+        }
+      } catch (e) {
+        extra = "";
+      }
+      if (!diagnostics.demoLoadPending && !diagnostics.demoLoadFailed) {
+        extra +=
+          ' <span class="load-hint">Use the file picker, or add <code>?demo=1</code> to the address bar when using a local server. Until a file loads, target and starting cash only update the text above — no allocation math runs.</span>';
+      }
+      loadEl.innerHTML = "<strong>File:</strong> not loaded." + extra;
+    }
   }
+
+  renderImportExpectations();
 
   const { startCash } = getInputs();
   renderMissionObjective(startCash);
@@ -1369,6 +1504,9 @@ function resetDashboard() {
   diagnostics.recomputedTopMatchesImport = null;
   diagnostics.maxDollarsRemainder = 0;
   diagnostics.minStocksNote = null;
+  diagnostics.demoLoadPending = false;
+  diagnostics.demoLoadFailed = false;
+  diagnostics.demoLoadError = null;
   const fi = $("fileInput");
   if (fi) fi.value = "";
   const sc = $("startCash");
@@ -1388,18 +1526,20 @@ function resetDashboard() {
 }
 
 function wireEvents() {
+  function onCashOrAllocInput() {
+    renderAll();
+  }
   ["startCash", "targetCash", "allocTopN", "allocMaxPct", "allocMaxDollars", "allocMinStocks"].forEach((id) => {
     const el = $(id);
     if (!el) return;
-    el.addEventListener("input", () => {
-      if (snapshotData) renderAll();
-    });
+    el.addEventListener("input", onCashOrAllocInput);
+    el.addEventListener("change", onCashOrAllocInput);
   });
 
   const allocModeEl = $("allocMode");
   if (allocModeEl) {
     allocModeEl.addEventListener("change", () => {
-      if (snapshotData) renderAll();
+      renderAll();
     });
   }
 
@@ -1411,12 +1551,12 @@ function wireEvents() {
 
   $("btnTarget1M").addEventListener("click", () => {
     $("targetCash").value = "1000000";
-    if (snapshotData) renderAll();
+    renderAll();
   });
 
   $("btnTarget100M").addEventListener("click", () => {
     $("targetCash").value = "100000000";
-    if (snapshotData) renderAll();
+    renderAll();
   });
 
   $("rankedSearch").addEventListener("input", () => {
@@ -1448,8 +1588,8 @@ function wireEvents() {
 function boot() {
   try {
     wireEvents();
-    renderAll();
     tryDemoQueryLoad();
+    renderAll();
   } catch (err) {
     diagnostics.lastError = String(err && err.stack ? err.stack : err);
     const pre = $("integrityBody");
@@ -1461,18 +1601,31 @@ function tryDemoQueryLoad() {
   try {
     var sp = new URLSearchParams(location.search);
     if (sp.get("demo") !== "1") return;
+    diagnostics.demoLoadFailed = false;
+    diagnostics.demoLoadError = null;
+    diagnostics.demoLoadPending = true;
     fetch("/reports/live_market_snapshot.json", { cache: "no-store" })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.text();
       })
       .then(function (t) {
+        diagnostics.demoLoadPending = false;
         parseSnapshot(t, "/reports/live_market_snapshot.json (?demo=1)");
         renderAll();
       })
-      .catch(function () {});
+      .catch(function (err) {
+        diagnostics.demoLoadPending = false;
+        diagnostics.demoLoadFailed = true;
+        diagnostics.demoLoadError = String(err && err.message ? err.message : err);
+        renderAll();
+      });
   } catch (e) {
     diagnostics.lastError = String(e);
+    diagnostics.demoLoadPending = false;
+    diagnostics.demoLoadFailed = true;
+    diagnostics.demoLoadError = String(e && e.message ? e.message : e);
+    renderAll();
   }
 }
 
