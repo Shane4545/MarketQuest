@@ -1,5 +1,19 @@
 # Receipt — RUN_LAUNCHER_001 (acceptance verification)
 
+## Governance registration repair (2026-05-08)
+
+The launcher was **verified manually** (HTTP smoke, artifacts) **before** `RUN_LAUNCHER_001` existed in `agent_workspace/tasks/tasks.yaml`, so **`verify_receipt.py` / `judge_gate.py` / `collect_evidence.py` were blocked** until registration.
+
+**Repair performed (metadata + wiring only):**
+
+- Added `RUN_LAUNCHER_001` to `tasks.yaml` with whitelist/forbidden lists and scoped `test_command`. Comment in YAML states registration followed functional verification.
+- Added **`agent_workspace/receipts/RUN_LAUNCHER_001.json`** for automation (alongside this markdown receipt).
+- Created **git worktree** `../worktrees/<repo>__RUN_LAUNCHER_001` on `task/RUN_LAUNCHER_001`.
+- **`governance_links.json`** added under `launcher_fixture_acceptance` and `launcher_dryrun_acceptance` run dirs pointing to evidence and this receipt.
+- **No functional launcher logic changes** during registration; one **packaging** commit added **`openbb_adapter.py`**, **`schema_mapper.py`**, **`exporter.py`** to git because **`acquisition/__init__.py`** imports `openbb_adapter` — files already existed on disk; imports/tests failed in the worktree until those paths were tracked.
+
+Post-repair automation: **`collect_evidence` ❯ `verify_receipt` ❯ `judge_gate`** all **pass** (see `agent_workspace/evidence/RUN_LAUNCHER_001/governance_registration_repair.md`).
+
 ## Scope
 
 Acceptance verification only: real HTTP smoke, artifact inspection, pytest, evidence lock. No strategy/threshold changes; no broker execution or trade UI.
@@ -65,11 +79,14 @@ Confirmed **false/false/false/true/true** for trading / broker execution / live 
 
 - `agent_workspace/evidence/RUN_LAUNCHER_001/*` (evidence bundle listed in task requirements)
 - `agent_workspace/receipts/RUN_LAUNCHER_001.md` (this file)
+- `agent_workspace/receipts/RUN_LAUNCHER_001.json` (governance / `verify_receipt.py`)
+- `agent_workspace/tasks/tasks.yaml` (RUN_LAUNCHER_001 task block)
+- `app/data/acquisition_runs/launcher_*_acceptance/governance_links.json` (governance links for Run Viewer)
 
 ## Remaining limitations / blockers
 
-- **Judge gate**: `RUN_LAUNCHER_001` not registered in `tasks.yaml`; Human Supreme may still accept based on manual evidence review.
-- Governance evidence/receipt linking still optional unless `governance_links.json` populated (viewer reports honestly).
+- Unrelated local modifications and untracked files remain in the working tree (see `git_status_after_governance_registration.txt`); they are **outside** the RUN_LAUNCHER_001 allowlist and were not part of the governed commit set.
+- Full repository pytest may include tests beyond the task’s scoped `test_command` in `tasks.yaml` (see `pytest_after_governance_registration.txt` vs `test_results.txt`).
 
 ## Human Supreme note
 
