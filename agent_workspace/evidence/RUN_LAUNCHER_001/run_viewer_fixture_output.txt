@@ -1,0 +1,68 @@
+{
+  "run_id": "launcher_fixture_acceptance",
+  "provider": "fixture",
+  "start_date": "2026-01-01",
+  "end_date": "2026-01-10",
+  "symbols_requested": [
+    "TEST_A",
+    "TEST_B"
+  ],
+  "symbols_returned": [
+    "TEST_A",
+    "TEST_B"
+  ],
+  "symbols_skipped": [],
+  "normalized_rows": 12,
+  "rejected_rows": 1,
+  "skipped_symbols_count": 0,
+  "rejected_rows_count": 1,
+  "candidate_count": 1,
+  "rejected_candidate_count": 1,
+  "partial_coverage": true,
+  "full_coverage_claimed": false,
+  "ready_for_pipeline": true,
+  "overall_pipeline_status": "COMPLETE",
+  "pipeline_status": "PIPELINE_COMPLETE",
+  "no_candidates_message": null,
+  "source_log_rows_returned": 13,
+  "provider_source_reference": "fixture://openbb_historical_sample",
+  "limitations": [
+    "Row-level source_url not available for all rows; provider-level reference used.",
+    "Governance evidence/receipt paths are not recorded for this run_id (no entries in pipeline_terminal_status.json, manifest, governance_links.json, or run_viewer_governance_map.json)."
+  ],
+  "warnings": [
+    "Some rows were rejected due to missing required fields."
+  ],
+  "paths": {
+    "run_dir": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance",
+    "acquisition_plan_json": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\acquisition_plan.json",
+    "acquisition_result_json": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\acquisition_result.json",
+    "openbb_acquisition_manifest_json": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\openbb_acquisition_manifest.json",
+    "openbb_source_log_json": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\openbb_source_log.json",
+    "openbb_normalized_prices_csv": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\openbb_normalized_prices.csv",
+    "openbb_skipped_symbols_csv": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\openbb_skipped_symbols.csv",
+    "openbb_rejected_rows_csv": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\openbb_rejected_rows.csv",
+    "pipeline_terminal_status_json": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\pipeline_terminal_status.json",
+    "governance_links_json": "",
+    "launcher_request_json": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\launcher_request.json",
+    "launcher_status_json": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\launcher_status.json",
+    "evidence_folder": "not linked to run_id",
+    "receipt_file": "not linked to run_id"
+  },
+  "governance": {
+    "evidence": {
+      "link_status": "not_recorded",
+      "entries": [],
+      "primary_display": "not linked to run_id"
+    },
+    "receipt": {
+      "link_status": "not_recorded",
+      "entries": [],
+      "primary_display": "not linked to run_id"
+    },
+    "limitations": [
+      "Governance evidence/receipt paths are not recorded for this run_id (no entries in pipeline_terminal_status.json, manifest, governance_links.json, or run_viewer_governance_map.json)."
+    ]
+  },
+  "missing_artifacts": []
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "launcher_fixture_acceptance",
+  "created_at": "2026-05-08T18:31:09.396839+00:00",
+  "mode": "fixture",
+  "provider": "fixture",
+  "symbols": [
+    "TEST_A",
+    "TEST_B"
+  ],
+  "symbol_source": "launcher_symbols_arg",
+  "start_date": "2026-01-01",
+  "end_date": "2026-01-10",
+  "as_of_date": "2026-01-08",
+  "review_date": "2026-01-08",
+  "rule": "momentum_volume_pressure",
+  "basket_name": "acceptance_fixture_basket",
+  "amount": 10000.0,
+  "fixture_path": "tests/fixtures/openbb_historical_sample.json",
+  "market_cap_fixture": "tests/fixtures/openbb_market_cap_sample.json",
+  "requested_by": "local_user",
+  "full_coverage_claimed": false,
+  "output_csv_relative": "app/data/raw/launcher_launcher_fixture_acceptance_prices.csv",
+  "run_purpose": "paper_research",
+  "trading_enabled": false,
+  "broker_execution_enabled": false,
+  "live_orders_enabled": false,
+  "approval_required_for_orders": true,
+  "max_loss_limit": null,
+  "max_position_size": null,
+  "paper_only": true
+}

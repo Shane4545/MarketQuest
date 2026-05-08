@@ -1,0 +1,30 @@
+{
+  "run_purpose": "research",
+  "trading_enabled": false,
+  "broker_execution_enabled": false,
+  "live_orders_enabled": false,
+  "approval_required_for_orders": true,
+  "max_loss_limit": null,
+  "max_position_size": null,
+  "paper_only": true,
+  "run_id": "launcher_dryrun_acceptance",
+  "status": "completed",
+  "started_at": "2026-05-08T18:31:29.429312+00:00",
+  "completed_at": "2026-05-08T18:31:30.632398+00:00",
+  "commands_or_functions_called": [
+    "C:\\Users\\sgordon\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\scripts\\acquire_openbb_prices.py --provider yfinance --start-date 2026-01-01 --end-date 2026-01-10 --output app/data/raw/launcher_launcher_dryrun_acceptance_prices.csv --run-id launcher_dryrun_acceptance --mode dry-run --symbols TEST_A"
+  ],
+  "acquisition_status": "PASS",
+  "validation_status": "NOT_RUN",
+  "scan_status": "NOT_RUN",
+  "basket_status": "NOT_RUN",
+  "review_status": "NOT_RUN",
+  "overall_pipeline_status": "ACQUISITION_PROVENANCE_ONLY",
+  "terminal_status_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_dryrun_acceptance\\pipeline_terminal_status.json",
+  "acquisition_result_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_dryrun_acceptance\\acquisition_result.json",
+  "launcher_request_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_dryrun_acceptance\\launcher_request.json",
+  "launcher_status_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_dryrun_acceptance\\launcher_status.json",
+  "viewer_url": "/run-viewer?run_id=launcher_dryrun_acceptance",
+  "errors": [],
+  "warnings": []
+}

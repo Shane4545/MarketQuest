@@ -1,0 +1,31 @@
+{
+  "available_providers": [
+    "fixture",
+    "tmx",
+    "yfinance"
+  ],
+  "available_modes": [
+    "dry_run",
+    "fixture",
+    "live"
+  ],
+  "available_rules": [
+    "momentum_volume_pressure"
+  ],
+  "allowed_run_purpose": [
+    "paper_research",
+    "research"
+  ],
+  "default_dates_fixture": {
+    "start_date": "2026-01-01",
+    "end_date": "2026-01-10"
+  },
+  "default_fixture_relative_paths": {
+    "fixture": "tests/fixtures/openbb_historical_sample.json",
+    "market_cap_fixture": "tests/fixtures/openbb_market_cap_sample.json"
+  },
+  "warnings": [
+    "Live smoke mode proves connectivity only. It does not prove broad coverage or strategy quality.",
+    "Do not treat launcher output as trading advice."
+  ]
+}

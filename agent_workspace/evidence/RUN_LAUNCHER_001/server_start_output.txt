@@ -1,0 +1,5 @@
+Run Viewer API listening on http://127.0.0.1:8010/run-viewer
+
+Evidence capture:
+- Server used for smoke: python app/scripts/run_viewer_api.py --port 8010
+- Prior background run may have buffered stdout when redirected; functional verification via GET /api/run-launcher/options (200, JSON) and POST launcher flows documented in companion evidence files.

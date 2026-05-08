@@ -1,0 +1,24 @@
+{
+  "http_status": 200,
+  "body": {
+    "accepted": false,
+    "run_id": "launcher_1b04a8f3cecc",
+    "status": "rejected",
+    "run_dir": "",
+    "viewer_url": "",
+    "errors": [
+      "provider is required",
+      "rule is required",
+      "basket_name is required",
+      "start_date is required",
+      "end_date is required",
+      "as_of_date is required",
+      "review_date is required",
+      "amount must be a positive number",
+      "live mode requires non-empty symbols (comma-separated)"
+    ],
+    "warnings": [
+      "Live smoke mode proves connectivity only. It does not prove broad coverage or strategy quality."
+    ]
+  }
+}

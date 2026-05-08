@@ -1,0 +1,31 @@
+{
+  "run_purpose": "paper_research",
+  "trading_enabled": false,
+  "broker_execution_enabled": false,
+  "live_orders_enabled": false,
+  "approval_required_for_orders": true,
+  "max_loss_limit": null,
+  "max_position_size": null,
+  "paper_only": true,
+  "run_id": "launcher_fixture_acceptance",
+  "status": "completed",
+  "started_at": "2026-05-08T18:31:09.410137+00:00",
+  "completed_at": "2026-05-08T18:31:29.395116+00:00",
+  "commands_or_functions_called": [
+    "C:\\Users\\sgordon\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\scripts\\acquire_openbb_prices.py --provider fixture --start-date 2026-01-01 --end-date 2026-01-10 --output app/data/raw/launcher_launcher_fixture_acceptance_prices.csv --run-id launcher_fixture_acceptance --mode fixture --fixture tests/fixtures/openbb_historical_sample.json --market-cap-fixture tests/fixtures/openbb_market_cap_sample.json --symbols TEST_A,TEST_B",
+    "C:\\Users\\sgordon\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\scripts\\run_openbb_acquired_pipeline.py --provider fixture --start-date 2026-01-01 --end-date 2026-01-10 --as-of 2026-01-08 --rule momentum_volume_pressure --basket-name acceptance_fixture_basket --amount 10000 --review-date 2026-01-08 --run-id launcher_fixture_acceptance --output app/data/raw/launcher_launcher_fixture_acceptance_prices.csv --fixture tests/fixtures/openbb_historical_sample.json --symbols TEST_A,TEST_B"
+  ],
+  "acquisition_status": "PASS",
+  "validation_status": "PASS",
+  "scan_status": "PASS_WITH_CANDIDATES",
+  "basket_status": "PASS",
+  "review_status": "PASS",
+  "overall_pipeline_status": "COMPLETE",
+  "terminal_status_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\pipeline_terminal_status.json",
+  "acquisition_result_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\acquisition_result.json",
+  "launcher_request_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\launcher_request.json",
+  "launcher_status_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\acquisition_runs\\launcher_fixture_acceptance\\launcher_status.json",
+  "viewer_url": "/run-viewer?run_id=launcher_fixture_acceptance",
+  "errors": [],
+  "warnings": []
+}

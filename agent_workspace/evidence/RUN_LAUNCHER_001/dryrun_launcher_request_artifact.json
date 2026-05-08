@@ -1,0 +1,30 @@
+{
+  "run_id": "launcher_dryrun_acceptance",
+  "created_at": "2026-05-08T18:31:29.423152+00:00",
+  "mode": "dry_run",
+  "provider": "yfinance",
+  "symbols": [
+    "TEST_A"
+  ],
+  "symbol_source": "launcher_symbols_arg",
+  "start_date": "2026-01-01",
+  "end_date": "2026-01-10",
+  "as_of_date": "2026-01-08",
+  "review_date": "2026-01-08",
+  "rule": "momentum_volume_pressure",
+  "basket_name": "acceptance_dryrun_basket",
+  "amount": 5000.0,
+  "fixture_path": null,
+  "market_cap_fixture": null,
+  "requested_by": "local_user",
+  "full_coverage_claimed": false,
+  "output_csv_relative": "app/data/raw/launcher_launcher_dryrun_acceptance_prices.csv",
+  "run_purpose": "research",
+  "trading_enabled": false,
+  "broker_execution_enabled": false,
+  "live_orders_enabled": false,
+  "approval_required_for_orders": true,
+  "max_loss_limit": null,
+  "max_position_size": null,
+  "paper_only": true
+}

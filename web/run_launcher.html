@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+  <title>Run Launcher</title>
+  <style>
+    body { font-family: Segoe UI, Arial, sans-serif; margin: 24px; background: #f7f8fb; color: #111; max-width: 920px; }
+    h1 { margin-bottom: 8px; }
+    .sub { color: #444; margin-bottom: 16px; line-height: 1.45; }
+    .panel { background: #fff; border: 1px solid #d9dbe2; border-radius: 8px; padding: 14px; margin-bottom: 14px; }
+    label { display: block; font-size: 13px; color: #555; margin-bottom: 4px; }
+    input, select, textarea { width: 100%; box-sizing: border-box; padding: 8px 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; }
+    textarea { min-height: 72px; font-family: inherit; }
+    button { padding: 10px 16px; border-radius: 6px; border: 1px solid #1257bf; background: #1257bf; color: #fff; font-size: 14px; cursor: pointer; }
+    button:disabled { opacity: 0.55; cursor: not-allowed; }
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .ok { color: #0a6a2f; }
+    .warn { color: #8a5b00; }
+    .bad { color: #9b1c1c; }
+    pre { white-space: pre-wrap; font-size: 12px; margin: 0; background: #fcfcfe; padding: 10px; border-radius: 6px; border: 1px solid #eceef3; }
+    a { color: #1257bf; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { font-size: 13px; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Governed Run Launcher</h1>
+  <p class="sub">
+    Start a <strong>fixture</strong>, <strong>dry-run</strong>, or <strong>live smoke</strong> acquisition run (and pipeline when acquisition is ready).
+    This tool does <strong>not</strong> connect to brokers, send orders, or expose trade actions. Outputs are research and provenance artifacts only.
+    See <code>docs/FUTURE_TRADING_ARCHITECTURE.md</code> for how real-money execution would be gated in a hypothetical future phase.
+  </p>
+  <p class="panel muted" style="margin-top:-8px;">
+    <a href="/run-viewer">Open Run Viewer</a> (read-only) — after a run completes, use <code>?run_id=…</code> to jump to that run.
+    Serve with <code>python app/scripts/run_viewer_api.py</code> so <code>/api/*</code> works.
+  </p>
+
+  <div id="optsError" class="panel bad" style="display:none;"></div>
+
+  <form id="launchForm" class="panel">
+    <div class="row2">
+      <div>
+        <label for="mode">Mode</label>
+        <select id="mode" name="mode"></select>
+      </div>
+      <div>
+        <label for="provider">Provider</label>
+        <select id="provider" name="provider"></select>
+      </div>
+    </div>
+    <label for="symbols">Symbols (comma-separated; required for live smoke; optional for fixture)</label>
+    <input id="symbols" name="symbols" type="text" placeholder="e.g. TEST_A, TEST_B" autocomplete="off" />
+
+    <div class="row2">
+      <div>
+        <label for="start_date">Start date</label>
+        <input id="start_date" name="start_date" type="text" placeholder="YYYY-MM-DD" required />
+      </div>
+      <div>
+        <label for="end_date">End date</label>
+        <input id="end_date" name="end_date" type="text" placeholder="YYYY-MM-DD" required />
+      </div>
+    </div>
+    <div class="row2">
+      <div>
+        <label for="as_of_date">As-of (pipeline)</label>
+        <input id="as_of_date" name="as_of_date" type="text" placeholder="YYYY-MM-DD" required />
+      </div>
+      <div>
+        <label for="review_date">Review date</label>
+        <input id="review_date" name="review_date" type="text" placeholder="YYYY-MM-DD" required />
+      </div>
+    </div>
+
+    <label for="rule">Scan rule</label>
+    <select id="rule" name="rule"></select>
+
+    <div class="row2">
+      <div>
+        <label for="basket_name">Basket name</label>
+        <input id="basket_name" name="basket_name" type="text" required autocomplete="off" />
+      </div>
+      <div>
+        <label for="amount">Amount</label>
+        <input id="amount" name="amount" type="text" inputmode="decimal" required placeholder="positive number" />
+      </div>
+    </div>
+
+    <label for="run_purpose">Run purpose</label>
+    <select id="run_purpose" name="run_purpose"></select>
+
+    <label for="fixture_path">Fixture path (fixture mode; repo-relative)</label>
+    <input id="fixture_path" name="fixture_path" type="text" placeholder="default from server options if empty" autocomplete="off" />
+    <label for="market_cap_fixture">Market cap fixture (fixture mode)</label>
+    <input id="market_cap_fixture" name="market_cap_fixture" type="text" placeholder="default from server options if empty" autocomplete="off" />
+
+    <label for="run_id">Run id (optional; auto-generated if empty)</label>
+    <input id="run_id" name="run_id" type="text" autocomplete="off" />
+
+    <button type="submit" id="submitBtn">Launch run</button>
+    <p id="submitHint" class="muted" style="margin-bottom:0;">Launcher merges safe trading defaults into JSON artifacts (no execution).</p>
+  </form>
+
+  <div id="resultPanel" class="panel" style="display:none;">
+    <h2 style="margin-top:0;font-size:18px;">Result</h2>
+    <pre id="resultPre"></pre>
+    <p id="viewerLinkP" class="muted" style="display:none;"><a id="viewerLink" href="#">Open this run in Run Viewer</a></p>
+  </div>
+
+  <script src="run_launcher.js" defer></script>
+</body>
+</html>

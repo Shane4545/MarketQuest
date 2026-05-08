@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Resolve scripts/links from site root so /run-viewer and /run-viewer/ both work -->
+  <base href="/" />
+  <title>Run Viewer</title>
+  <style>
+    body { font-family: Segoe UI, Arial, sans-serif; margin: 24px; background: #f7f8fb; color: #111; }
+    h1 { margin-bottom: 8px; }
+    .sub { color: #444; margin-bottom: 16px; }
+    .row { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+    select, button { padding: 8px 10px; }
+    .panel { background: #fff; border: 1px solid #d9dbe2; border-radius: 8px; padding: 14px; margin-bottom: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 10px; }
+    .item { border: 1px solid #eceef3; border-radius: 6px; padding: 8px; background: #fcfcfe; }
+    .k { font-size: 12px; color: #666; }
+    .v { font-size: 14px; word-break: break-word; }
+    .ok { color: #0a6a2f; }
+    .warn { color: #8a5b00; font-weight: 600; }
+    .bad { color: #9b1c1c; font-weight: 600; }
+    pre { white-space: pre-wrap; font-size: 12px; margin: 0; }
+    ul { margin: 8px 0 0 18px; }
+    a { color: #1257bf; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Run Viewer (Read-Only)</h1>
+  <p class="sub">Inspect completed acquisition/pipeline runs from stored artifacts. This view reports status exactly as recorded.</p>
+  <p class="sub" style="margin-top:-8px;"><a href="/run-launcher">Run Launcher</a> — start governed fixture / dry-run / live smoke runs (no brokers or orders).</p>
+  <p class="sub" style="margin-top:-12px;font-size:13px;color:#666;">Requires the Run Viewer API server: <code>python app/scripts/run_viewer_api.py</code> — plain <code>python -m http.server</code> will load this page but cannot serve <code>/api/*</code>.</p>
+
+  <div class="row panel">
+    <label for="runSelect">Run ID</label>
+    <select id="runSelect"></select>
+    <button id="refreshRuns">Refresh Runs</button>
+    <button id="loadRun">Load Run</button>
+    <span id="status"></span>
+  </div>
+
+  <div id="noCandidatesBanner" class="panel warn" style="display:none;"></div>
+  <div id="errors" class="panel bad" style="display:none;"></div>
+
+  <div class="panel">
+    <h2>Summary</h2>
+    <div id="summaryGrid" class="grid"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Source And Provenance</h2>
+    <div id="sourceGrid" class="grid"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Artifact Paths</h2>
+    <div id="pathsGrid" class="grid"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Missing Artifacts</h2>
+    <pre id="missingArtifacts"></pre>
+  </div>
+
+  <div class="panel">
+    <h2>Governance linking (read-only)</h2>
+    <p class="sub" style="margin-top:0;color:#444;font-size:14px;">
+      linked = paths exist on disk; partial = some recorded paths missing; not_recorded = no mapping file or terminal fields.
+    </p>
+    <pre id="governanceDetail"></pre>
+  </div>
+
+  <script src="run_viewer.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "mode": "fixture",
+  "provider": "fixture",
+  "start_date": "2026-01-01",
+  "end_date": "2026-01-10",
+  "as_of_date": "2026-01-08",
+  "review_date": "2026-01-08",
+  "rule": "momentum_volume_pressure",
+  "basket_name": "acceptance_fixture_basket",
+  "amount": 10000,
+  "run_id": "launcher_fixture_acceptance",
+  "run_purpose": "paper_research",
+  "symbols": "TEST_A,TEST_B"
+}
