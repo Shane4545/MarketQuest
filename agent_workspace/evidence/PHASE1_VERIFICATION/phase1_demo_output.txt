@@ -1,0 +1,20 @@
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\ingest.py --input C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\raw\synthetic_prices.csv
+Ingested 300 rows -> C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\staged\prices.parquet
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\validate.py --input C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\staged\prices.parquet
+OK validated 300 rows in C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\staged\prices.parquet
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\compute_features.py --as-of 2026-01-08
+Wrote 10 feature rows -> C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\features\features_2026-01-08.parquet
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\scan_candidates.py --as-of 2026-01-08 --rule momentum_volume_pressure
+Selected 3 -> C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\curated\candidates_2026-01-08.parquet
+Rejected 7 -> C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\curated\rejected_candidates_2026-01-08.parquet
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\freeze_basket.py --as-of 2026-01-08 --basket-name demo_auto_selected --amount 100 --from-candidates C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\curated\candidates_2026-01-08.parquet
+Frozen basket -> C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\baskets\demo_auto_selected_2026-01-08.json
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\build_controls.py --basket-name demo_auto_selected
+Wrote control basket -> C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\baskets\demo_auto_selected_controls_2026-01-08.json
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\review_basket.py --basket-name demo_auto_selected --review-date 2026-01-13
+Wrote review -> C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\baskets\demo_auto_selected_review_2026-01-13.json
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\generate_evidence_manifest.py --run-id latest --as-of 2026-01-08
+Wrote C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\evidence\manifest_latest_2026-01-08.json
++ C:\Users\sgordon\AppData\Local\Programs\Python\Python311\python.exe C:\Cursor Projects\AI NATATION V1 -Stock Market\app\scripts\generate_coverage_report.py --run-id latest --as-of 2026-01-08
+Wrote C:\Cursor Projects\AI NATATION V1 -Stock Market\app\data\evidence\coverage_latest_2026-01-08.json
+Phase 1 demo pipeline completed OK.

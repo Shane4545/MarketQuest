@@ -17,7 +17,7 @@ from stock_reality_scanner.settings import (
 
 def test_daily_quote_model():
     quote = DailyQuote(
-        symbol="AAPL",
+        symbol="TEST_Q",
         day=date(2026, 1, 2),
         open=100.0,
         high=105.0,
@@ -28,13 +28,13 @@ def test_daily_quote_model():
         source="test",
     )
 
-    assert quote.symbol == "AAPL"
+    assert quote.symbol == "TEST_Q"
     assert quote.close == 104.0
 
 
 def test_hindsight_move_model():
     move = HindsightMove(
-        symbol="AAPL",
+        symbol="TEST_Q",
         entry_day=date(2026, 1, 2),
         exit_day=date(2026, 1, 3),
         entry_close=100.0,
@@ -74,12 +74,12 @@ def test_hindsight_optimizer_result_model():
 def test_strategy_signal_model():
     signal = StrategySignal(
         signal_day=date(2026, 1, 2),
-        symbol="AAPL",
+        symbol="TEST_Q",
         score=1.5,
         reason="test signal",
     )
 
-    assert signal.symbol == "AAPL"
+    assert signal.symbol == "TEST_Q"
 
 
 def test_paper_trade_model():
@@ -87,7 +87,7 @@ def test_paper_trade_model():
         signal_day=date(2026, 1, 1),
         entry_day=date(2026, 1, 2),
         exit_day=date(2026, 1, 3),
-        symbol="AAPL",
+        symbol="TEST_Q",
         entry_price=100.0,
         exit_price=110.0,
         shares=1.0,

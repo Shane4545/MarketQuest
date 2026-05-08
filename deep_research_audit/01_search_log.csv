@@ -1,0 +1,153 @@
+search_id,exact_search_query,search_target,top_result_url,reconstruction_status,notes
+S001,GitHub stock backtesting dashboard FastAPI React,web/GitHub,https://github.com/jakobildstad/quantdash,VERIFIED,Top result captured from tool output
+S002,GitHub quant dashboard FastAPI React,web/GitHub,https://github.com/jakobildstad/quantdash,VERIFIED,Top result captured from tool output
+S003,GitHub paper trading simulator FastAPI,web/GitHub,https://github.com/Open-Agent-Tools/open-paper-trading-mcp,VERIFIED,Top result captured from tool output
+S004,GitHub AI trading research agent,web/GitHub,https://github.com/OnePunchMonk/AgentQuant,VERIFIED,Top result captured from tool output
+S005,GitHub stock market analytics terminal DuckDB,web/GitHub,https://github.com/pdet/Scrooge-McDuck,VERIFIED,Top result captured from tool output
+S006,GitHub backtesting engine Python event driven,web/GitHub,https://github.com/davidstyers/vegas,VERIFIED,Top result captured from tool output
+S007,GitHub vectorbt dashboard,web/GitHub,https://github.com/polakowo/vectorbt/blob/master/apps/candlestick-patterns/app.py,VERIFIED,Top result captured from tool output
+S008,GitHub zipline alternatives,web/GitHub,https://github.com/jerryinyang/rustybt,VERIFIED,Top result captured from tool output
+S009,site:github.com finos Legend data modeling,web/GitHub,https://github.com/finos/legend-studio/,VERIFIED,Top result captured from tool output
+S010,site:github.com finos Morphir business logic,web/GitHub,https://github.com/finos/morphir/,VERIFIED,Top result captured from tool output
+S011,site:github.com finos Waltz enterprise architecture,web/GitHub,https://github.com/finos/waltz/,VERIFIED,Top result captured from tool output
+S012,site:github.com finos FDC3 financial desktop,web/GitHub,https://github.com/finos/FDC3/,VERIFIED,Top result captured from tool output
+S013,site:github.com finos Vuu financial UI,web/GitHub,https://github.com/finos/vuu,VERIFIED,Top result captured from tool output
+S014,site:github.com finos Common Domain Model,web/GitHub,https://github.com/finos-labs/cdm-playground,VERIFIED,Top result captured from tool output
+S015,site:github.com finos AI Governance Framework,web/GitHub,https://github.com/finos/ai-governance-framework,VERIFIED,Top result captured from tool output
+S016,site:github.com finos Perspective data visualization,web/GitHub,https://github.com/finos/perspective/,VERIFIED,Top result captured from tool output
+S017,site:github.com goldmansachs open source finance,web/GitHub,https://github.com/goldmansachs/gs-quant/,VERIFIED,Top result captured from tool output
+S018,site:github.com jpmorganchase open source finance,web/GitHub,https://github.com/jpmorganchase,VERIFIED,Top result captured from tool output
+S019,site:github.com Morgan Stanley FINOS GitHub,web/GitHub,https://www.github.com/finos,VERIFIED,Top result captured from tool output
+S020,site:github.com Bank of America FINOS GitHub,web/GitHub,https://www.github.com/finos,VERIFIED,Top result captured from tool output
+S021,site:github.com Citi open source GitHub,web/GitHub,https://github.com/Citi/citi-ospo,VERIFIED,Top result captured from tool output
+S022,site:github.com Wells Fargo open source GitHub,web/GitHub,https://github.com/vagabond-systems/wells-fargo-task-2,VERIFIED,Top result captured from tool output
+S023,site:github.com capitalone open source finance,web/GitHub,https://github.com/capitalone,VERIFIED,Top result captured from tool output
+S024,site:finos.org bank contributed project GitHub,web/FINOS,https://www.finos.org/press/citi-deutsche-bank-lead-latest-round-of-contributions-to-finos-as-financial-services-continues-rapid-adoption-of-open-source,VERIFIED,Top result captured from tool output
+S025,site:github.com rbc open source GitHub,web/GitHub,https://github.com/orgs/RBC/repositories,VERIFIED,Top result captured from tool output
+S026,site:github.com TD Bank open source GitHub,web/GitHub,https://github.com/budney/tdbank,VERIFIED,Top result captured from tool output
+S027,site:github.com BMO open source GitHub,web/GitHub,https://github.com/BYOBMO/BMOS,VERIFIED,Top result captured from tool output
+S028,site:github.com Scotiabank GitHub repositories,web/GitHub,https://github.com/javaidb/personal-finance-tracker,VERIFIED,Top result captured from tool output
+S029,site:github.com CIBC open source GitHub,web/GitHub,https://github.com/CIBC-Internal/boost,VERIFIED,Top result captured from tool output
+S030,site:github.com National Bank of Canada GitHub,web/GitHub,https://github.com/bankofcanada,VERIFIED,Top result captured from tool output
+S031,site:github.com TMX Group GitHub market data,web/GitHub,https://github.com/dray89/finance_python,VERIFIED,Top result captured from tool output
+S032,site:github.com deutschebank repositories,web/GitHub,https://github.com/deutschebank,VERIFIED,Top result captured from tool output
+S033,site:github.com UBS-AG open source,web/GitHub,https://github.com/UBS-IB,VERIFIED,Top result captured from tool output
+S034,site:github.com hsbc open source GitHub,web/GitHub,https://github.com/hsbc,VERIFIED,Top result captured from tool output
+S035,site:github.com natwest open source,web/GitHub,https://github.com/NatWest,VERIFIED,Top result captured from tool output
+S036,site:github.com barclays open source GitHub,web/GitHub,https://github.com/Barclays/research_data_science,VERIFIED,Top result captured from tool output
+S037,site:github.com BNP Paribas GitHub open source,web/GitHub,https://github.com/bnpparibas,VERIFIED,Top result captured from tool output
+S038,site:github.com ING open source GitHub,web/GitHub,https://github.com/ing-bank,VERIFIED,Top result captured from tool output
+S039,site:github.com BBVA open source GitHub,web/GitHub,https://github.com/bbva,VERIFIED,Top result captured from tool output
+S040,site:github.com Nomura GitHub open source,web/GitHub,https://github.com/norio-nomura,VERIFIED,Top result captured from tool output
+S041,site:github.com MUFG GitHub open source,web/GitHub,https://github.com/AlanFromJapan/FundManagerCompanion,VERIFIED,Top result captured from tool output
+S042,site:github.com "Cornell Quant Fund" backtesting,web/GitHub,https://github.com/CornellQuantFund/CQF_Backtesting,VERIFIED,Top result captured from tool output
+S043,site:github.com "MIT" "algorithmic trading" "GitHub",web/GitHub,https://github.com/Magica-Chen/GaussWorldTrader,VERIFIED,Top result captured from tool output
+S044,site:github.com "machine learning for trading" "university",web/GitHub,https://github.com/cwu392/Machine-Learning-for-Trading,VERIFIED,Top result captured from tool output
+S045,site:github.com "financial engineering" "backtesting" "course",web/GitHub,https://github.com/LechGrzelak/FinancialEngineering_IR_xVA,VERIFIED,Top result captured from tool output
+S046,site:github.com "University of Toronto" "finance" "GitHub",web/GitHub,https://github.com/Aman-Rana-02,VERIFIED,Top result captured from tool output
+S047,site:github.com "Waterloo" "quantitative finance",web/GitHub,https://github.com/UWQSC/algorithmic-trading,VERIFIED,Top result captured from tool output
+S048,site:github.com "UBC" "finance" "machine learning",web/GitHub,https://github.com/UBC-MDS/nasdaq_scorecards,VERIFIED,Top result captured from tool output
+S049,site:github.com NASA-PDS validate data product validation,web/GitHub,https://github.com/NASA-PDS/validate,VERIFIED,Top result captured from tool output
+S050,site:github.com NASA software verification validation runtime verification,web/GitHub,https://github.com/NASA-SW-VnV/mesa,VERIFIED,Top result captured from tool output
+S051,site:github.com LLNL workflow orchestration data analysis,web/GitHub,https://github.com/llnl/dfanalyzer,VERIFIED,Top result captured from tool output
+S052,site:github.com ORNL provenance scientific workflow,web/GitHub,https://github.com/ORNL/flowcept,VERIFIED,Top result captured from tool output
+S053,site:github.com Sandia verification validation test harness,web/GitHub,https://github.com/sandialabs/vvtest,VERIFIED,Top result captured from tool output
+S054,site:github.com NIST data validation reproducibility,web/GitHub,https://github.com/usnistgov/SDNist/,VERIFIED,Top result captured from tool output
+S055,site:github.com DVC data versioning pipeline,web/GitHub,https://github.com/iterative/dvc,VERIFIED,iterative/dvc README states DVC is Data Version Control for reproducible ML with versioned data and pipelines
+S056,site:github.com MLflow experiment tracking reproducible research,web/GitHub,https://github.com/mlflow/mlflow,VERIFIED,mlflow/mlflow README describes MLflow as an open source AI engineering platform with experiment tracking for ML models
+S057,site:github.com Great Expectations data quality validation,web/GitHub,https://github.com/great-expectations/great_expectations,VERIFIED,great-expectations README describes GX Core expectations as unit tests for data with validation documentation
+S058,site:github.com Evidently AI data drift model monitoring,web/GitHub,https://github.com/evidentlyai/evidently,VERIFIED,evidently README frames Evidently as evaluation testing and monitoring for ML and LLM systems with drift metrics
+S059,site:github.com Prefect data pipeline orchestration,web/GitHub,https://github.com/PrefectHQ/prefect,VERIFIED,Prefect README defines Prefect as Python workflow orchestration with scheduling retries and monitored execution
+S060,site:github.com Dagster data assets lineage,web/GitHub,https://github.com/dagster-io/dagster,VERIFIED,dagster package README describes Dagster as data pipeline orchestrator with lineage observability and asset graphs
+S061,site:github.com OpenLineage data provenance workflow,web/GitHub,https://github.com/OpenLineage/OpenLineage,VERIFIED,OpenLineage README defines an open standard for metadata and lineage collection for running jobs
+S062,site:github.com Marquez data lineage,web/GitHub,https://github.com/MarquezProject/marquez,VERIFIED,Marquez README describes metadata service for dataset job and run metadata using OpenLineage
+S063,site:github.com dbt data quality lineage,web/GitHub,https://github.com/dbt-labs/dbt-core,VERIFIED,dbt-core README states dbt transforms warehouse data using SQL models with ref relationships and testing
+S064,site:github.com DuckDB stock market analytics,web/GitHub,https://github.com/duckdb/duckdb,VERIFIED,DuckDB README describes DuckDB as high-performance analytical SQL engine with rich dialect and Parquet CSV access
+S065,site:github.com DataHub metadata lineage finance,web/GitHub,https://github.com/datahub-project/datahub,VERIFIED,datahub README positions DataHub as open source AI data catalog for discovery governance and observability
+S066,site:github.com Feast feature store financial data,web/GitHub,https://github.com/feast-dev/feast,VERIFIED,Feast README defines Feast as open source feature store with offline online stores and point-in-time correct training data
+S067,OSINT investigation platform GitHub evidence graph,web/GitHub,https://github.com/google/timesketch,VERIFIED,timesketch README describes collaborative forensic timeline analysis with sketches annotations and tags
+S068,site:github.com entity resolution graph analytics,web/GitHub,https://github.com/dedupeio/dedupe,VERIFIED,dedupe README states library uses ML for fuzzy matching deduplication and entity resolution on structured data
+S069,site:github.com fraud detection anomaly detection Python,web/GitHub,https://github.com/yzhao062/pyod,VERIFIED,PyOD README titles project Python Outlier Detection PyOD for scalable anomaly detection
+S070,site:github.com time series anomaly detection finance,web/GitHub,https://github.com/sintel-dev/Orion,VERIFIED,Orion README defines it as ML library for unsupervised time series anomaly detection with pipelines
+S071,site:github.com Sigma rules SIEM detection,web/GitHub,https://github.com/SigmaHQ/sigma,VERIFIED,Sigma README describes generic signature format for SIEM systems with thousands of peer-reviewed rules
+S072,site:github.com alert triage platform GitHub,web/GitHub,https://github.com/TheHive-Project/TheHive,VERIFIED,TheHive README defines scalable security incident response platform with cases observables and alert ingestion
+S073,site:github.com incident timeline analysis GitHub,web/GitHub,https://github.com/Velocidex/velociraptor,VERIFIED,Velociraptor README describes endpoint visibility tool collecting host state via VQL queries for investigations
+S074,site:github.com knowledge graph investigation dashboard,web/GitHub,https://github.com/neo4j-labs/neodash,VERIFIED,NeoDash README states dashboard builder for Neo4j graphs notes project no longer maintained upstream
+S075,site:github.com forecast verification skill score Python,web/GitHub,https://github.com/nci/scores,VERIFIED,nci/scores README describes Python verification metrics for forecasts with xarray multidimensional support
+S076,site:github.com statistical process control Python GitHub,web/GitHub,https://github.com/statsmodels/statsmodels,VERIFIED,statsmodels README lists statistical tests diagnostics time series models for estimation and inference workflows
+S077,site:github.com e-discovery evidence management GitHub,web/GitHub,https://github.com/apache/tika,VERIFIED,Tika README defines toolkit for detecting and extracting metadata and text from diverse documents
+S078,site:github.com clinical cohort analysis reproducibility GitHub,web/GitHub,https://github.com/OHDSI/WebAPI,VERIFIED,OHDSI WebAPI README lists cohort definition characterization and estimation REST services over OMOP CDM databases
+S079,site:github.com robotics simulation validation pipeline,web/GitHub,https://github.com/ros-industrial/industrial_ci,VERIFIED,industrial_ci README documents reusable CI scripts for ROS packages including build test and optional prerelease
+S080,site:github.com outbreak detection time series GitHub,web/GitHub,https://github.com/SABS-R3-Epidemiology/epiabm,VERIFIED,epiabm README describes agent-based SEIR spatial infection model with reproducible simulation workflows
+S081,site:github.com quality control dashboard statistical process control,web/GitHub,https://github.com/ydataai/pandas-profiling,VERIFIED,pandas-profiling README describes fg-data-profiling one-line EDA ProfileReport with HTML JSON outputs and data quality alerts
+S082,site:github.com noaa data pipeline validation,web/GitHub,https://github.com/ioos/erddapy,VERIFIED,erddapy README notes ERDDAP REST access including NOAA ERDDAP examples for scientific ocean weather datasets
+S083,site:github.com usgs data pipeline reproducible workflow,web/GitHub,https://github.com/USGS-python/dataretrieval,VERIFIED,dataretrieval README states package downloads USGS hydrologic and water-quality data via modern Water Data APIs
+S084,site:github.com cern workflow provenance,web/GitHub,https://github.com/reanahub/reana,VERIFIED,reana README describes reusable reproducible analysis platform born for particle physics with containerized workflows on clouds
+S085,GitHub qlib research platform,web/GitHub,https://github.com/microsoft/qlib,VERIFIED,Top result captured from tool output
+S086,GitHub nautilus trader architecture,web/GitHub,https://github.com/nautechsystems/nautilus_trader/blob/develop/docs/concepts/architecture.md,VERIFIED,Top result captured from tool output
+S087,GitHub stock screener FastAPI React DuckDB,web/GitHub,https://github.com/xang1234/stock-screener,VERIFIED,Top result captured from tool output
+S088,GitHub local first market analytics dashboard,web/GitHub,https://albertoroura.com/repo-dashboard-local-github-visibility-tool/,VERIFIED,Top result captured from tool output
+S089,GitHub OpenBB platform architecture,web/GitHub,https://openbb.co/blog/exploring-the-architecture-behind-the-openbb-platform,VERIFIED,Top result captured from tool output
+S090,GitHub QuantConnect LEAN engine,web/GitHub,https://github.com/QuantConnect,VERIFIED,Top result captured from tool output
+S091,GitHub FinRL framework,web/GitHub,https://github.com/AI4Finance-Foundation/FinRL,VERIFIED,Top result captured from tool output
+S092,site:finos.org Plexus Interop GitHub,web/FINOS,https://plexus.finos.org/,VERIFIED,Top result captured from tool output
+S093,site:finos.org Common Domain Model governance GitHub,web/FINOS,https://odp.finos.org/docs/governance,VERIFIED,Top result captured from tool output
+S094,site:github.com "Stanford" "machine learning trading" "GitHub",web/GitHub,https://github.com/picklenchips/MARKET-MAKING-RL,VERIFIED,Top result captured from tool output
+S095,site:github.com "Princeton" "financial engineering" "GitHub",web/GitHub,https://github.com/pu-orfe,VERIFIED,Top result captured from tool output
+S096,site:github.com "Columbia" "financial engineering" "backtesting",web/GitHub,https://github.com/DanOKeefe/FinancialEngineering,VERIFIED,Top result captured from tool output
+S097,site:github.com "NYU" "financial engineering" "algorithmic trading",web/GitHub,https://github.com/XhovaniM8/fpga-orderbook-analysis,VERIFIED,Top result captured from tool output
+S098,site:github.com "Carnegie Mellon" "computational finance",web/GitHub,https://github.com/cmu-sei/finsim,VERIFIED,Top result captured from tool output
+S099,site:github.com "University of Chicago" "algorithmic trading",web/GitHub,https://github.com/Ohimoiza1205/uchicago-quant-trading,VERIFIED,Top result captured from tool output
+S100,site:github.com "Berkeley" "machine learning for trading",web/GitHub,https://github.com/Traders-at-Berkeley,VERIFIED,Top result captured from tool output
+S101,site:github.com "McGill" "finance" "backtesting",web/GitHub,https://github.com/ThongLai/Investment-Allocation-Analysis_McGill-Hackathon,VERIFIED,Top result captured from tool output
+S102,site:github.com "Western University" "finance" "GitHub",web/GitHub,https://github.com/Banking-Analytics-Lab,VERIFIED,Top result captured from tool output
+S103,site:github.com NASA cFS core flight system,web/GitHub,https://github.com/nasa/cFS/blob/main/README.md,VERIFIED,Top result captured from tool output
+S104,site:github.com nasa trick simulation environment,web/GitHub,https://github.com/nasa/trick/,VERIFIED,Top result captured from tool output
+S105,site:github.com NASA JPL ION-DTN,web/GitHub,https://github.com/nasa-jpl/ION-DTN/blob/integration/README.md,VERIFIED,Top result captured from tool output
+S106,site:github.com LLNL merlin workflow,web/GitHub,https://github.com/LLNL/merlin/blob/develop/README.md,VERIFIED,Top result captured from tool output
+S107,site:github.com llnl conduit,web/GitHub,https://github.com/LLNL/conduit/releases,VERIFIED,Top result captured from tool output
+S108,site:github.com pnnl trend analysis data science,web/GitHub,https://github.com/pnnl/texplore,VERIFIED,Top result captured from tool output
+S109,site:github.com source confidence scoring OSINT GitHub,web/GitHub,https://github.com/smixs/osint-skill,VERIFIED,Top result captured from tool output
+S110,site:github.com graph fraud detection Python,web/GitHub,https://github.com/safe-graph/DGFraud,VERIFIED,Top result captured from tool output
+S111,site:github.com anomaly detection dashboard time series,web/GitHub,https://github.com/julian-rakuschek/AnoScout,VERIFIED,Top result captured from tool output
+S112,site:github.com pump dump detection GitHub,web/GitHub,https://github.com/Bayi-Hu/Pump-and-Dump-Detection-on-Cryptocurrency,VERIFIED,Top result captured from tool output
+S113,site:github.com red team blue team analysis framework,web/GitHub,https://github.com/msaleme/red-team-blue-team-agent-fabric/blob/bf2159fc2889b4f29489d04c64fe069e97e752d2/EVALUATION_PROTOCOL.md,VERIFIED,Top result captured from tool output
+S114,site:github.com adversarial evaluation LLM agents,web/GitHub,https://github.com/microsoft/ai-agent-eval-scenario-library/blob/main/capability-scenarios/red-teaming-and-adversarial-evaluation.md,VERIFIED,Top result captured from tool output
+S115,site:github.com Maltego open source transforms graph investigation,web/GitHub,https://github.com/INTERPOL-Innovation-Centre/GraphSense-Maltego-transform,VERIFIED,Top result captured from tool output
+S116,site:github.com digital forensics timeline analysis tool,web/GitHub,https://github.com/google/timesketch/,VERIFIED,Top result captured from tool output
+S117,site:github.com threat intelligence entity resolution,web/GitHub,https://github.com/OpenCTI-Platform/docs/blob/main/docs/usage/exploring-entities.md,VERIFIED,Top result captured from tool output
+S118,site:github.com fraud triage case management investigation,web/GitHub,https://github.com/js731981/insurance-ai-decision-platform,VERIFIED,Top result captured from tool output
+S119,site:github.com root cause analysis toolkit incident,web/GitHub,https://github.com/salesforce/PyRCA,VERIFIED,Top result captured from tool output
+S120,site:github.com postmortem template blameless incident,web/GitHub,https://github.com/PagerDuty/postmortem-docs/blob/master/docs/resources/post_mortem_template.md,VERIFIED,Top result captured from tool output
+S121,site:github.com actuarial tail risk modeling,web/GitHub,https://github.com/burning-cost/insurance-evt,VERIFIED,Top result captured from tool output
+S122,site:github.com climate forecast verification skill score,web/GitHub,https://github.com/nci/scores/,VERIFIED,Top result captured from tool output
+S123,GitHub ABIDES market simulator repository,web/GitHub,https://github.com/abides-sim/abides,VERIFIED,Fresh reconciliation search
+S124,GitHub BackDash FastAPI React repository,web/GitHub,https://github.com/sajalkmr/backdash,VERIFIED,Fresh reconciliation search
+S125,GitHub QuantDash FastAPI React repository,web/GitHub,https://github.com/jakobildstad/quantdash,VERIFIED,Fresh reconciliation search
+S126,GitHub BatesStocks repository stock indicators dashboard,web/GitHub,https://github.com/wtbates99/stock-indicators,VERIFIED,Fresh reconciliation search
+S127,GitHub Open Paper Trading MCP repository,web/GitHub,https://github.com/Open-Agent-Tools/open-paper-trading-mcp,VERIFIED,Fresh reconciliation search
+S128,GitHub Vibe-Trading repository,web/GitHub,https://github.com/bxrbcn/Vibe-Trading,VERIFIED,Fresh reconciliation search
+S129,GitHub HuntKit OSINT repository,web/GitHub,https://github.com/mcnamee/huntkit,VERIFIED,Fresh reconciliation search
+S130,GitHub Helm-Path OSINT repository,web/GitHub,https://github.com/Nhoya/gOSINT,VERIFIED,No direct Helm-Path match found
+S131,GitHub OSINT case management tool repository,web/GitHub,https://github.com/be0vlk/owlculus,VERIFIED,Fresh reconciliation search
+S132,GitHub DerwenAI Strwythura repository,web/GitHub,https://github.com/DerwenAI/strwythura,VERIFIED,Fresh reconciliation search
+S133,GitHub ERKG Neo4j entity resolution example,web/GitHub,https://github.com/cj2001/erkg_demo,VERIFIED,Fresh reconciliation search
+S134,GitHub KBpedia repository,web/GitHub,https://github.com/Cognonto/kbpedia,VERIFIED,Fresh reconciliation search
+S135,GitHub RahulNYK knowledge_graph repository,web/GitHub,https://github.com/rahulnyk/knowledge_graph,VERIFIED,Fresh reconciliation search
+S136,GitHub Senzing Neo4j entity resolution example repository,web/GitHub,https://github.com/DerwenAI/ERKG,VERIFIED,Fresh reconciliation search
+S137,Siemens supply chain knowledge graph thesis github,web/GitHub,https://github.com/Humboldt-WI-Dissertations/Knowledge-Graphs-Integration-in-the-Context-of-Supply-Chain-Risk-Management/blob/main/README.md,VERIFIED,Fresh reconciliation search
+S138,GitHub nci scores forecast verification repository,web/GitHub,https://github.com/nci/scores,VERIFIED,Fresh reconciliation search
+S139,GitHub FSSprob repository forecast skill score,web/GitHub,https://github.com/wolfgruber/FSSprob,VERIFIED,Fresh reconciliation search
+S140,GitHub properscoring repository,web/GitHub,https://github.com/properscoring/properscoring,VERIFIED,Fresh reconciliation search
+S141,GitHub xskillscore repository,web/GitHub,https://github.com/xarray-contrib/xskillscore,VERIFIED,Fresh reconciliation search
+S142,GitHub statistical process control python package repository,web/GitHub,https://github.com/suanto/pycontrolcharts,VERIFIED,Fresh reconciliation search
+S143,evidentlyai/evidently github repository README,web/GitHub,https://github.com/evidentlyai/evidently,VERIFIED,Fresh reconciliation search
+S144,dagster-io/dagster github repository lineage assets,web/GitHub,https://github.com/dagster-io/dagster/blob/master/docs/docs/guides/build/assets/asset-selection-syntax/index.md,VERIFIED,Fresh reconciliation search
+S145,great-expectations/great_expectations github repository,web/GitHub,https://github.com/great-expectations/great_expectations,VERIFIED,Fresh reconciliation search
+S146,iterative/dvc github repository pipelines,web/GitHub,https://github.com/iterative/dvc,VERIFIED,Fresh reconciliation search
+S147,mlflow/mlflow github tracking repository,web/GitHub,https://github.com/MLflow/MLflow,VERIFIED,Fresh reconciliation search
+S148,OpenLineage/OpenLineage github specification repository,web/GitHub,https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.md,VERIFIED,Fresh reconciliation search
+S149,MarquezProject/marquez github lineage metadata service,web/GitHub,https://github.com/MarquezProject/marquez,VERIFIED,Fresh reconciliation search
+S150,GitHub ABIDES-Gym repository,web/GitHub,https://github.com/jpmorganchase/abides-jpmc-public,VERIFIED,Fresh reconciliation search
+S151,GitHub hunters-org/hunter-kit repository,web/GitHub,https://github.com/hunters-org/hunter-kit,VERIFIED,Fresh reconciliation search
+S152,GitHub Siemens-OKE llm-query-pipeline repository,web/GitHub,https://github.com/Siemens-OKE/llm-query-pipeline,VERIFIED,Fresh reconciliation search

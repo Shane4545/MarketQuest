@@ -1,0 +1,38 @@
+ M tests/test_baseline.py
+ M web/app.js
+ M web/index.html
+ M web/styles.css
+?? agent_workspace/evidence/DASHBOARD_001/
+?? agent_workspace/evidence/DATA_IMPORT_001/
+?? agent_workspace/evidence/EVIDENCE_001/
+?? agent_workspace/evidence/RESULTS_001/
+?? agent_workspace/evidence/SERVER_001/
+?? agent_workspace/evidence/TIME_TRAVEL_001/
+?? agent_workspace/evidence/WALK_FORWARD_001/
+?? agent_workspace/judge/DASHBOARD_001.json
+?? agent_workspace/judge/DATA_IMPORT_001.json
+?? agent_workspace/judge/EVIDENCE_001.json
+?? agent_workspace/judge/RESULTS_001.json
+?? agent_workspace/judge/SERVER_001.json
+?? agent_workspace/judge/TIME_TRAVEL_001.json
+?? agent_workspace/judge/WALK_FORWARD_001.json
+?? agent_workspace/logs/DASHBOARD_001_collect_summary.json
+?? agent_workspace/logs/DATA_IMPORT_001_collect_summary.json
+?? agent_workspace/logs/EVIDENCE_001_collect_summary.json
+?? agent_workspace/logs/RESULTS_001_collect_summary.json
+?? agent_workspace/logs/SERVER_001_collect_summary.json
+?? agent_workspace/logs/TIME_TRAVEL_001_collect_summary.json
+?? agent_workspace/logs/WALK_FORWARD_001_collect_summary.json
+?? agent_workspace/receipts/DATA_IMPORT_001.json
+?? agent_workspace/receipts/EVIDENCE_001.json
+?? agent_workspace/receipts/RESULTS_001.json
+?? agent_workspace/receipts/SERVER_001.json
+?? agent_workspace/receipts/TIME_TRAVEL_001.json
+?? agent_workspace/receipts/WALK_FORWARD_001.json
+?? app/
+?? deep_research_audit/
+?? reports/live_market_snapshot.json
+?? requirements.txt
+?? scripts/two_day_best_long_only.py
+?? tests/conftest.py
+?? tests/test_phase1_scan.py

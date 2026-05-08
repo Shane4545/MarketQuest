@@ -1,0 +1,37 @@
+{
+  "basket_name": "demo_auto_selected",
+  "as_of": "2026-01-08",
+  "review_date": "2026-01-13",
+  "rows": [
+    {
+      "symbol": "TEST_H",
+      "entry_close_as_of": 19.264,
+      "review_date": "2026-01-13",
+      "close_on_review_date": 18.584,
+      "return_pct_asof_to_review": -3.5299003322259104,
+      "forward_return_1d_pct": -4.983388704318936,
+      "forward_return_3d_pct": -3.5299003322259104,
+      "forward_return_5d_pct": 3.6544850498339
+    },
+    {
+      "symbol": "TEST_A",
+      "entry_close_as_of": 96.835,
+      "review_date": "2026-01-13",
+      "close_on_review_date": 98.22249999999998,
+      "return_pct_asof_to_review": 1.43284969277635,
+      "forward_return_1d_pct": -2.7817937729126774,
+      "forward_return_3d_pct": 1.43284969277635,
+      "forward_return_5d_pct": 6.651778798987973
+    },
+    {
+      "symbol": "TEST_I",
+      "entry_close_as_of": 4.836,
+      "review_date": "2026-01-13",
+      "close_on_review_date": 4.1715,
+      "return_pct_asof_to_review": -13.740694789081886,
+      "forward_return_1d_pct": -11.786600496277899,
+      "forward_return_3d_pct": -13.740694789081886,
+      "forward_return_5d_pct": -7.320099255583113
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Thresholds for deterministic candidate rules (Phase 1).
+# Adjust here — scanner reads this file; do not hard-code thresholds in Python.
+
+momentum_volume_pressure:
+  min_prior_5d_return_pct: 20
+  min_volume_surge: 2.0
+  min_close_location_value: 0.60
+  require_market_cap: true
+  max_candidates: 5
+  # Feature-derived flags (computed in compute_features / scan)
+  weak_close_clv_max: 0.35
+  blowoff_min_volume_surge: 4.5
+  blowoff_min_prior_5d_return_pct: 45

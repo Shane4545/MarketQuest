@@ -1,0 +1,28 @@
+UNIVERSE_COLUMNS = [
+    "symbol",
+    "date",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "market_cap",
+    "exchange",
+    "currency",
+    "source_url",
+]
+
+OPTIONAL_CATALYST_COLUMNS = [
+    "symbol",
+    "event_date",
+    "catalyst_type",
+    "headline",
+    "summary",
+    "source_url",
+    "financing_amount",
+    "financing_price",
+    "reverse_split_ratio",
+    "merger_ownership_note",
+    "dilution_flag",
+    "confidence",
+]

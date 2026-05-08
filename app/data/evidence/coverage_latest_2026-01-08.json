@@ -1,0 +1,17 @@
+{
+  "run_id": "latest",
+  "as_of": "2026-01-08",
+  "generated_at_utc": "2026-05-08T13:17:07.881868+00:00",
+  "symbols_selected_count": 3,
+  "symbols_rejected_count": 7,
+  "notes": "Synthetic fixture only \u2014 verifies routing thresholds and artifact wiring.",
+  "rejection_reason_histogram": {
+    "blowoff_flag true": 1,
+    "prior_5d_return_pct 2.9742 below threshold 20.0": 1,
+    "market_cap_missing_flag true and market cap required": 1,
+    "prior_5d_return_pct 0.1423 below threshold 20.0": 1,
+    "prior_5d_return_pct 0.6995 below threshold 20.0": 1,
+    "prior_5d_return_pct 0.2926 below threshold 20.0": 1,
+    "close_weak_flag true": 1
+  }
+}

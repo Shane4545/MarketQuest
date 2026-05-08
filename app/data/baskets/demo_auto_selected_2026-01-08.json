@@ -1,0 +1,26 @@
+{
+  "basket_name": "demo_auto_selected",
+  "as_of": "2026-01-08",
+  "notional_total": 100.0,
+  "frozen_at": "2026-05-08T13:16:56.044321+00:00",
+  "rule": "momentum_volume_pressure",
+  "positions": [
+    {
+      "symbol": "TEST_H",
+      "notional_allocation": 33.333333333333336,
+      "scan_reason": "passed momentum_volume_pressure thresholds"
+    },
+    {
+      "symbol": "TEST_A",
+      "notional_allocation": 33.333333333333336,
+      "scan_reason": "passed momentum_volume_pressure thresholds"
+    },
+    {
+      "symbol": "TEST_I",
+      "notional_allocation": 33.333333333333336,
+      "scan_reason": "passed momentum_volume_pressure thresholds"
+    }
+  ],
+  "source_candidates_path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\curated\\candidates_2026-01-08.parquet",
+  "basket_hash": "923149f13f36c56f"
+}

@@ -1,0 +1,27 @@
+{
+  "basket_name": "demo_auto_selected",
+  "as_of": "2026-01-08",
+  "method": "random_matched",
+  "seed": 42,
+  "pairs": [
+    {
+      "treatment_symbol": "TEST_A",
+      "control_symbol": "TEST_B",
+      "stratum": "small",
+      "method": "random_matched"
+    },
+    {
+      "treatment_symbol": "TEST_H",
+      "control_symbol": "TEST_F",
+      "stratum": "micro",
+      "method": "random_matched"
+    },
+    {
+      "treatment_symbol": "TEST_I",
+      "control_symbol": "TEST_F",
+      "stratum": "micro",
+      "method": "random_matched"
+    }
+  ],
+  "built_at": "2026-05-08T13:16:59.307892+00:00"
+}

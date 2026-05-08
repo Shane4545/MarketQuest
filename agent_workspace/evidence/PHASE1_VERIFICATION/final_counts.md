@@ -1,0 +1,13 @@
+- Research audit verified: YES
+- Research ready for app build: YES
+- Valid receipt count: 144
+- Invalid receipt count: 11
+- Deep-analysis valid row count: 76
+- Architecture recommendations missing two valid receipt IDs: 0
+- pytest result: 9 passed
+- Phase 1 demo rerun: PASS
+- Real ticker leakage found: NO
+- Selected candidate count: 3
+- Rejected candidate count: 7
+- Evidence manifest path: app/data/evidence/manifest_latest_2026-01-08.json
+- Coverage report path: app/data/evidence/coverage_latest_2026-01-08.json

@@ -1,0 +1,38 @@
+{
+  "run_id": "latest",
+  "generated_at_utc": "2026-05-08T13:17:05.247100+00:00",
+  "as_of": "2026-01-08",
+  "artifacts": {
+    "staged_prices": {
+      "path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\staged\\prices.parquet",
+      "sha256": "4345a3459a635cdddd31185631c5b2a61c0774549f8d2bf61c86d867848f461c"
+    },
+    "features": {
+      "path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\features\\features_2026-01-08.parquet",
+      "sha256": "250134a85cb66e327bba6d75ecf83c70bf4f505f481ec34a25278cd435747331"
+    },
+    "candidates_selected": {
+      "path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\curated\\candidates_2026-01-08.parquet",
+      "sha256": "4b27c0229c379b9bf733120412bed2bfd27f0e6011f46e141ef6043baf766019"
+    },
+    "candidates_rejected": {
+      "path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\curated\\rejected_candidates_2026-01-08.parquet",
+      "sha256": "779360a41124b36dcd7e5148aaaed03dbe788d3a67541cd130e705e494ad8345"
+    },
+    "basket_files": [
+      {
+        "path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\baskets\\demo_auto_selected_2026-01-08.json",
+        "sha256": "27e18db5fa82863d389fb2702cd989f993f47f7df2011f1cf11cbbf5a4b43c70"
+      },
+      {
+        "path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\baskets\\demo_auto_selected_controls_2026-01-08.json",
+        "sha256": "420839c66ad9a59a6b28b9669e3468d829775d501efd9d2bd7f8b33135915fad"
+      },
+      {
+        "path": "C:\\Cursor Projects\\AI NATATION V1 -Stock Market\\app\\data\\baskets\\demo_auto_selected_review_2026-01-13.json",
+        "sha256": "29cdd0cf5f980d398bdf5a9b75dff88396682dcc1c6fed45309bd39c896d58cc"
+      }
+    ]
+  },
+  "purpose": "Synthetic Phase 1 fixture validation \u2014 schema formulas gates \u2014 not market proof."
+}
