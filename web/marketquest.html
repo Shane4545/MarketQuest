@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/" />
   <title>MarketQuest — Wall Street Intelligence Game</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="marketquest.css" />
@@ -13,11 +12,11 @@
     <h1>MarketQuest</h1>
     <p class="subtitle" id="tagline">Wall Street intelligence game — real data, paper scoring, honest learning.</p>
     <nav>
-      <a href="/marketquest">MarketQuest</a>
-      <a href="/pencil-test">Pencil Test</a>
-      <a href="/run-viewer">Run Viewer</a>
+      <a href="marketquest.html">MarketQuest</a>
+      <a href="pencil_test.html">Pencil Test</a>
+      <a href="run_viewer.html">Run Viewer</a>
     </nav>
-    <p class="server-hint">Requires <code>python app/scripts/run_viewer_api.py</code> on port <strong>8010</strong></p>
+    <p class="server-hint" id="server-hint">Requires <code>python app/scripts/run_viewer_api.py</code> on port <strong>8010</strong> for live data.</p>
     <div id="status-banner" class="mq-banner">Loading…</div>
     <div id="provenance-status" class="mq-provenance"></div>
     <div class="mq-toolbar">

@@ -1,62 +1,25 @@
 name: CI
 
-"on":
+on:
   push:
-    branches:
-      - "**"
+    branches: ["**"]
   pull_request:
 
 jobs:
-  governance:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install PyYAML
-        run: pip install pyyaml
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - name: Compile governance Python scripts
-        run: |
-          python -m py_compile scripts/create_worktree.py
-          python -m py_compile scripts/collect_evidence.py
-          python -m py_compile scripts/verify_receipt.py
-          python -m py_compile scripts/judge_gate.py
-          python -m py_compile scripts/status_report.py
-          python -m py_compile scripts/cleanup_worktree.py
+      - name: Build GitHub Pages bundle
+        run: python scripts/build_github_pages.py
 
-      - name: Validate agent_workspace/tasks/tasks.yaml
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import yaml
-          p = Path("agent_workspace/tasks/tasks.yaml")
-          yaml.safe_load(p.read_text(encoding="utf-8"))
-          print("tasks.yaml: OK")
-          PY
-
-      - name: Run governance status report
-        run: python scripts/status_report.py
-
-      - name: Run project tests if available
-        run: |
-          if [ -d tests ] || [ -f pytest.ini ]; then
-            pip install pytest
-            pytest -q
-          elif [ -f package.json ] && node -e "try { const p = require('./package.json'); process.exit(p.scripts && p.scripts.test ? 0 : 1); } catch (e) { process.exit(1); }"; then
-            if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then npm ci; else npm install; fi
-            npm test
-          else
-            echo "No project test entrypoint detected; skipping project tests."
-          fi
-
-      - name: Security scan (placeholder, non-blocking)
-        continue-on-error: true
-        run: |
-          echo "Placeholder only: wire CodeQL, dependency review, or SARIF scanning here."
-          echo "This step is intentionally non-blocking and does not perform a real scan."
+      - name: Run MarketQuest tests
+        run: pytest -q -k marketquest

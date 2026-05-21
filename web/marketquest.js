@@ -33,7 +33,121 @@ function querySuffix() {
   return parts.length ? "?" + parts.join("&") : "";
 }
 
+function isStaticPages() {
+  return (
+    window.location.hostname.endsWith("github.io") ||
+    window.location.search.includes("static=1")
+  );
+}
+
+function pagesBase() {
+  if (!window.location.hostname.endsWith("github.io")) return "";
+  const seg = window.location.pathname.split("/").filter(Boolean)[0];
+  return seg ? "/" + seg : "";
+}
+
+function staticDataUrl(name) {
+  return pagesBase() + "/data/" + name;
+}
+
+function loadStoredPortfolio(fallback) {
+  try {
+    const raw = sessionStorage.getItem("mq_portfolio");
+    if (raw) return JSON.parse(raw);
+  } catch (_) {
+    /* ignore */
+  }
+  return fallback;
+}
+
+function saveStoredPortfolio(portfolio) {
+  try {
+    sessionStorage.setItem("mq_portfolio", JSON.stringify(portfolio));
+  } catch (_) {
+    /* ignore */
+  }
+}
+
+function watchlistPriceMap(dashboard) {
+  const map = {};
+  const rows = dashboard?.watchlist?.rows || dashboard?.watchlist || [];
+  for (const row of rows) {
+    if (row?.symbol) map[row.symbol] = Number(row.last ?? row.price ?? 0) || 0;
+  }
+  return map;
+}
+
+function staticPaperOrder(body) {
+  const base = lastDashboard?.portfolio || {};
+  const portfolio = JSON.parse(JSON.stringify(loadStoredPortfolio(base)));
+  const prices = watchlistPriceMap(lastDashboard);
+  const symbol = String(body.symbol || "").toUpperCase();
+  const side = body.side === "sell" ? "sell" : "buy";
+  let qty = Number(body.qty) || 0;
+  const notional = Number(body.notional) || 0;
+  const px = prices[symbol] || 100;
+  if (notional > 0) qty = Math.max(1, Math.floor(notional / px));
+  if (!symbol || qty <= 0) return { error: "Enter symbol and qty or notional." };
+
+  portfolio.positions = portfolio.positions || [];
+  portfolio.cash_usd = Number(portfolio.cash_usd ?? 8500);
+
+  const idx = portfolio.positions.findIndex((p) => p.symbol === symbol);
+  if (side === "buy") {
+    const cost = qty * px;
+    if (cost > portfolio.cash_usd) return { error: "Insufficient paper cash." };
+    portfolio.cash_usd -= cost;
+    if (idx >= 0) {
+      const p = portfolio.positions[idx];
+      const totalQty = Number(p.qty) + qty;
+      p.entry_price =
+        (Number(p.entry_price) * Number(p.qty) + px * qty) / Math.max(totalQty, 1);
+      p.qty = totalQty;
+      p.last = px;
+    } else {
+      portfolio.positions.push({ symbol, qty, entry_price: px, last: px, unrealized_usd: 0 });
+    }
+  } else {
+    if (idx < 0) return { error: "No position to sell." };
+    const p = portfolio.positions[idx];
+    const held = Number(p.qty) || 0;
+    if (qty > held) qty = held;
+    portfolio.cash_usd += qty * px;
+    p.qty = held - qty;
+    if (p.qty <= 0) portfolio.positions.splice(idx, 1);
+  }
+
+  saveStoredPortfolio(portfolio);
+  if (lastDashboard) lastDashboard.portfolio = portfolio;
+  return { ok: true, portfolio, message: "Paper order recorded — not investment advice." };
+}
+
 async function fetchJson(url, options) {
+  if (isStaticPages()) {
+    if (url.includes("/api/marketquest/dashboard")) {
+      const res = await fetch(staticDataUrl("dashboard.json"), { cache: "no-store" });
+      const payload = await res.json();
+      if (!res.ok) throw new Error(payload.error || res.statusText);
+      payload.portfolio = loadStoredPortfolio(payload.portfolio);
+      return payload;
+    }
+    if (url.includes("/api/marketquest/learning-report")) {
+      const res = await fetch(staticDataUrl("learning-report.json"), { cache: "no-store" });
+      if (!res.ok) return {};
+      return res.json();
+    }
+    if (url.includes("/api/marketquest/refresh") && options?.method === "POST") {
+      return { ok: true, mode: "static_pages" };
+    }
+    if (url.includes("/api/marketquest/paper-order") && options?.method === "POST") {
+      const body = JSON.parse(options.body || "{}");
+      return staticPaperOrder(body);
+    }
+    if (url.includes("/api/marketquest/challenges/submit")) {
+      return { ok: true, message: "Answer saved (static demo)." };
+    }
+    throw new Error("Static demo — feature not available on GitHub Pages.");
+  }
   const res = await fetch(url, { cache: "no-store", ...options });
   const payload = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(payload.error || res.statusText || "HTTP " + res.status);
@@ -662,13 +776,24 @@ async function refreshNow() {
 }
 
 async function init() {
+  if (isStaticPages()) {
+    const hint = byId("server-hint");
+    if (hint) {
+      hint.textContent =
+        "GitHub Pages demo — offline fixture data. Paper trades saved in this browser only.";
+    }
+  }
   try {
     const data = await fetchJson("/api/marketquest/dashboard" + querySuffix());
     paintDashboard(data);
     await loadLearningLab();
   } catch (e) {
     byId("status-banner").textContent =
-      "Error: " + e.message + " — Start run_viewer_api.py on 8010. Offline: /marketquest?training=1";
+      "Error: " +
+      e.message +
+      (isStaticPages()
+        ? ""
+        : " — Start run_viewer_api.py on 8010. Offline: /marketquest?training=1");
     byId("status-banner").className = "mq-banner mock";
   }
 }
