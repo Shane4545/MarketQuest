@@ -2,9 +2,10 @@
 
 ## GitHub Pages (phone + browser)
 
-1. Push to `main` on https://github.com/Shane4545/MarketQuest
-2. **Settings → Pages → Build and deployment → Source:** GitHub Actions
-3. Wait for **Deploy GitHub Pages** workflow
+1. Push to `main` — workflow builds and updates the `gh-pages` branch.
+2. **Settings → Pages → Build and deployment**
+3. **Source:** Deploy from a branch → **gh-pages** / **/ (root)**
+4. Save, wait ~1 minute
 
 **URL:** https://shane4545.github.io/MarketQuest/marketquest.html
 
