@@ -1,0 +1,35 @@
+{
+  "week": "2026-W21",
+  "as_of": "2026-05-20",
+  "data_mode": "mock",
+  "entries": [
+    {
+      "id": "momentum",
+      "display_name": "Momentum Agent",
+      "type": "agent",
+      "score_pct": 7.2,
+      "rank": 1
+    },
+    {
+      "id": "news_sentiment",
+      "display_name": "News/Sentiment Agent",
+      "type": "agent",
+      "score_pct": 6.5,
+      "rank": 2
+    },
+    {
+      "id": "macro_event",
+      "display_name": "Macro/Event Agent",
+      "type": "agent",
+      "score_pct": 5.8,
+      "rank": 3
+    },
+    {
+      "id": "default",
+      "display_name": "You (default)",
+      "type": "human",
+      "score_pct": 3.25,
+      "rank": 4
+    }
+  ]
+}

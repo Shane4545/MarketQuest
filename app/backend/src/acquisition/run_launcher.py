@@ -146,6 +146,7 @@ def validate_launch_request(repo_root: Path, body: dict[str, Any]) -> dict[str, 
     expected_artifacts = [
         f"app/data/acquisition_runs/{planned_run_id}/launcher_request.json",
         f"app/data/acquisition_runs/{planned_run_id}/launcher_status.json",
+        f"app/data/acquisition_runs/{planned_run_id}/governance_links.json",
         f"app/data/acquisition_runs/{planned_run_id}/acquisition_plan.json",
         f"app/data/acquisition_runs/{planned_run_id}/acquisition_result.json",
     ]
@@ -174,6 +175,27 @@ def _amount_str(amount: float) -> str:
     if amount == int(amount):
         return str(int(amount))
     return str(amount)
+
+
+def ensure_run_governance_artifacts(repo_root: Path, run_id: str) -> None:
+    """Create agent_workspace/evidence/<run_id>/ and write governance_links.json for Run Viewer.
+
+    run_openbb_acquired_pipeline merges this file into pipeline_terminal_status.json when present.
+    Receipt paths are omitted until a receipt exists (viewer falls back to legacy receipts/<run_id>.*).
+    """
+    evidence_dir = repo_root / "agent_workspace" / "evidence" / run_id
+    evidence_dir.mkdir(parents=True, exist_ok=True)
+    marker = evidence_dir / ".run_evidence_dir"
+    if not marker.is_file():
+        marker.write_text(
+            "Evidence outputs for this run_id (screenshots, collect_evidence.py captures).\n",
+            encoding="utf-8",
+        )
+    gl_path = repo_root / "app" / "data" / "acquisition_runs" / run_id / "governance_links.json"
+    payload = {
+        "evidence_folders": [f"agent_workspace/evidence/{run_id}"],
+    }
+    _write_json(gl_path, payload)
 
 
 def execute_launch(
@@ -292,6 +314,7 @@ def execute_launch(
         subprocess.check_call(argv, cwd=str(repo_root))
 
     try:
+        ensure_run_governance_artifacts(repo_root, run_id)
         if mode == "fixture":
             acq = [
                 py,

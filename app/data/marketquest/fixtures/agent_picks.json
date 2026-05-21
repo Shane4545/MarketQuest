@@ -1,0 +1,55 @@
+{
+  "as_of": "2026-05-20",
+  "data_mode": "mock",
+  "picks": [
+    {
+      "symbol": "NVDA",
+      "agent_id": "momentum",
+      "as_of": "2026-05-20",
+      "score": 0.72,
+      "predicted_bias": "bullish",
+      "explanation": {
+        "headline": "Strong gap and relative volume (mock)",
+        "bullets": ["gap_pct elevated", "rvol above average", "composite score leads watchlist"]
+      },
+      "news": [],
+      "features": {"gap_pct": 4.2, "rvol": 2.1, "ml_predicted_return_1d_pct": 3.5},
+      "data_mode": "mock",
+      "runners_up": ["AMD", "TSLA"]
+    },
+    {
+      "symbol": "TSLA",
+      "agent_id": "news_sentiment",
+      "as_of": "2026-05-20",
+      "score": 0.65,
+      "predicted_bias": "bullish",
+      "explanation": {
+        "headline": "Positive news sentiment cluster (mock)",
+        "bullets": ["sentiment_mean elevated", "multiple articles in 48h"]
+      },
+      "news": [
+        {"title": "Mock: delivery numbers beat estimates", "sentiment": 0.45, "source": "fixture"}
+      ],
+      "features": {"sentiment_mean": 0.42, "news_count_48h": 5},
+      "data_mode": "mock",
+      "runners_up": ["NVDA", "AAPL"]
+    },
+    {
+      "symbol": "AMD",
+      "agent_id": "macro_event",
+      "as_of": "2026-05-20",
+      "score": 0.58,
+      "predicted_bias": "neutral",
+      "explanation": {
+        "headline": "Earnings/macro event signal (mock)",
+        "bullets": ["earnings keyword detected", "event-driven catalyst"]
+      },
+      "news": [
+        {"title": "Mock: earnings preview scheduled", "sentiment": 0.1, "source": "fixture"}
+      ],
+      "features": {"has_earnings_keyword": true, "news_count_48h": 3},
+      "data_mode": "mock",
+      "runners_up": ["NVDA", "MSFT"]
+    }
+  ]
+}

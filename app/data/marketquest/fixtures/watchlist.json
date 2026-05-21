@@ -1,0 +1,19 @@
+{
+  "as_of": "2026-05-20",
+  "data_mode": "offline_training",
+  "symbol_count": 12,
+  "quotes": [
+    {"symbol": "SPY", "last": 520.1, "change_pct": 0.4, "volume": 65000000, "currency": "USD"},
+    {"symbol": "QQQ", "last": 445.2, "change_pct": 0.6, "volume": 42000000, "currency": "USD"},
+    {"symbol": "IWM", "last": 210.5, "change_pct": -0.2, "volume": 28000000, "currency": "USD"},
+    {"symbol": "NVDA", "last": 132.5, "change_pct": 2.4, "volume": 45000000, "currency": "USD"},
+    {"symbol": "AMD", "last": 118.3, "change_pct": 3.1, "volume": 38000000, "currency": "USD"},
+    {"symbol": "MSFT", "last": 425.0, "change_pct": 0.8, "volume": 21000000, "currency": "USD"},
+    {"symbol": "AAPL", "last": 198.2, "change_pct": 0.5, "volume": 52000000, "currency": "USD"},
+    {"symbol": "XLE", "last": 88.4, "change_pct": 1.1, "volume": 15000000, "currency": "USD"},
+    {"symbol": "XLK", "last": 210.0, "change_pct": 0.9, "volume": 12000000, "currency": "USD"},
+    {"symbol": "BAM", "last": 52.3, "change_pct": -0.3, "volume": 900000, "currency": "USD"},
+    {"symbol": "XOM", "last": 112.0, "change_pct": 0.7, "volume": 18000000, "currency": "USD"},
+    {"symbol": "GOOGL", "last": 175.5, "change_pct": 1.2, "volume": 22000000, "currency": "USD"}
+  ]
+}

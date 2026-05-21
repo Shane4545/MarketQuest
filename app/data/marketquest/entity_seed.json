@@ -1,0 +1,106 @@
+{
+  "people": [
+    "Donald Trump",
+    "Mark Carney",
+    "Jerome Powell",
+    "Elon Musk",
+    "Tim Cook",
+    "Jensen Huang"
+  ],
+  "organizations": [
+    "Brookfield",
+    "Federal Reserve",
+    "Bank of Canada",
+    "OPEC",
+    "SEC"
+  ],
+  "themes": [
+    "tariffs",
+    "oil",
+    "AI",
+    "data centers",
+    "infrastructure",
+    "renewables",
+    "defense",
+    "housing",
+    "interest rates",
+    "inflation",
+    "mergers",
+    "regulation"
+  ],
+  "relationships": [
+    {
+      "from": "Mark Carney",
+      "to": "Brookfield",
+      "type": "past_employment",
+      "note": "Vice Chair ESG and Impact Fund Investing, appointed 2020"
+    },
+    {
+      "from": "Mark Carney",
+      "to": "Bank of Canada",
+      "type": "policy",
+      "note": "Former Governor; current Canadian PM policy context"
+    },
+    {
+      "from": "Mark Carney",
+      "to": "infrastructure",
+      "type": "theme",
+      "note": "Canadian infrastructure and energy policy"
+    },
+    {
+      "from": "Brookfield",
+      "to": "infrastructure",
+      "type": "theme"
+    },
+    {
+      "from": "Brookfield",
+      "to": "renewables",
+      "type": "theme"
+    },
+    {
+      "from": "Brookfield",
+      "to": ["BAM", "BN"],
+      "type": "org_tickers"
+    },
+    {
+      "from": "tariffs",
+      "to": ["XLE", "XLI", "XLY", "XLB"],
+      "type": "theme_tickers"
+    },
+    {
+      "from": "oil",
+      "to": ["XLE", "XOM", "CVX", "COP"],
+      "type": "theme_tickers"
+    },
+    {
+      "from": "AI",
+      "to": ["NVDA", "AMD", "MSFT", "GOOGL", "META"],
+      "type": "theme_tickers"
+    },
+    {
+      "from": "infrastructure",
+      "to": ["BAM", "BN", "ENB", "TRP", "XLI"],
+      "type": "theme_tickers"
+    },
+    {
+      "from": "interest rates",
+      "to": ["XLF", "XLU", "SPY"],
+      "type": "theme_tickers"
+    },
+    {
+      "from": "Donald Trump",
+      "to": "tariffs",
+      "type": "policy_theme"
+    },
+    {
+      "from": "Jerome Powell",
+      "to": "Federal Reserve",
+      "type": "employment"
+    },
+    {
+      "from": "Federal Reserve",
+      "to": "interest rates",
+      "type": "policy_theme"
+    }
+  ]
+}

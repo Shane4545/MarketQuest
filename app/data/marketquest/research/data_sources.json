@@ -1,0 +1,77 @@
+{
+  "sources": [
+    {
+      "name": "Finnhub",
+      "category": "market_data_apis",
+      "url": "https://finnhub.io",
+      "description": "Free tier: stock quotes, forex, crypto, news, fundamentals.",
+      "free": true,
+      "needs_api_key": true,
+      "student_safe": true,
+      "ideas_to_borrow": ["Real-time quotes", "Forex rates", "Company news"],
+      "integration_status": "integrated",
+      "notes": "FINNHUB_API_KEY required for live data."
+    },
+    {
+      "name": "FRED",
+      "category": "macro_data_tools",
+      "url": "https://fred.stlouisfed.org",
+      "description": "Official U.S. economic data — rates, inflation, oil, USD/CAD.",
+      "free": true,
+      "needs_api_key": true,
+      "student_safe": true,
+      "ideas_to_borrow": ["Macro Agent inputs", "Cross-asset strip"],
+      "integration_status": "integrated",
+      "notes": "FRED_API_KEY optional; some series need key."
+    },
+    {
+      "name": "SEC EDGAR",
+      "category": "sec_filing_tools",
+      "url": "https://www.sec.gov/edgar/sec-api-documentation",
+      "description": "Official SEC APIs for company filings and XBRL data.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Filing events as game events", "8-K detection"],
+      "integration_status": "integrated",
+      "notes": "Public API — no key required."
+    },
+    {
+      "name": "Alpha Vantage",
+      "category": "market_data_apis",
+      "url": "https://www.alphavantage.co",
+      "description": "Stock, forex, crypto APIs with free tier.",
+      "free": true,
+      "needs_api_key": true,
+      "student_safe": true,
+      "tier": "future_optional",
+      "ideas_to_borrow": ["Backup quote provider", "Technical indicators"],
+      "integration_status": "not_started",
+      "notes": "Rate limits on free tier."
+    },
+    {
+      "name": "OpenBB",
+      "category": "market_data_apis",
+      "url": "https://openbb.co",
+      "description": "Open financial data platform — used in Pencil/acquisition track.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Unified data access", "Provenance patterns"],
+      "integration_status": "evaluated",
+      "notes": "Separate from MarketQuest providers; potential future unify."
+    },
+    {
+      "name": "yfinance",
+      "category": "market_data_apis",
+      "url": "https://github.com/ranaroussi/yfinance",
+      "description": "Unofficial Yahoo Finance data — fallback quotes (DELAYED).",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Fallback when primary providers offline"],
+      "integration_status": "integrated",
+      "notes": "Used as DELAYED fallback in MarketQuest."
+    }
+  ]
+}

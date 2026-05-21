@@ -1,0 +1,19 @@
+{
+  "user_id": "default",
+  "cash_usd": 8500.0,
+  "starting_value_usd": 10000.0,
+  "positions": [
+    {
+      "symbol": "NVDA",
+      "qty": 5,
+      "entry_price": 128.0
+    },
+    {
+      "symbol": "AAPL",
+      "qty": 10,
+      "entry_price": 195.0
+    }
+  ],
+  "day_pnl_usd": 125.5,
+  "as_of": "2026-05-20"
+}

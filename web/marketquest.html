@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+  <title>MarketQuest — Wall Street Intelligence Game</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="marketquest.css" />
+</head>
+<body class="marketquest-page">
+  <header class="mq-header">
+    <h1>MarketQuest</h1>
+    <p class="subtitle" id="tagline">Wall Street intelligence game — real data, paper scoring, honest learning.</p>
+    <nav>
+      <a href="/marketquest">MarketQuest</a>
+      <a href="/pencil-test">Pencil Test</a>
+      <a href="/run-viewer">Run Viewer</a>
+    </nav>
+    <p class="server-hint">Requires <code>python app/scripts/run_viewer_api.py</code> on port <strong>8010</strong></p>
+    <div id="status-banner" class="mq-banner">Loading…</div>
+    <div id="provenance-status" class="mq-provenance"></div>
+    <div class="mq-toolbar">
+      <button type="button" id="btn-refresh">Refresh Now</button>
+      <span id="refresh-countdown" class="mq-msg"></span>
+      <span id="refresh-status" class="mq-msg"></span>
+    </div>
+  </header>
+
+  <main class="mq-main">
+    <section class="mq-panel" id="panel-regime">
+      <h2>Market Regime</h2>
+      <p class="mq-hint">Educational regime label from indexes, FX, and sectors — not investment advice.</p>
+      <div id="regime-card" class="mq-regime"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-currency">
+      <h2>Currency Radar</h2>
+      <p class="mq-hint">Major FX pairs with freshness labels.</p>
+      <div id="currency-radar" class="mq-currency-grid"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-cross-asset">
+      <h2>World Connects</h2>
+      <p class="mq-hint">Currencies, oil, and rates connect to markets — educational context only.</p>
+      <div id="cross-asset-strip" class="mq-cross-asset"></div>
+      <div id="cross-asset-matrix" class="mq-matrix"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-radar">
+      <h2>Event Radar</h2>
+      <p class="mq-hint">Educational signals from live public sources — not investment advice.</p>
+      <div id="event-radar" class="mq-event-grid"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-watchlist">
+      <h2>Live Watchlist</h2>
+      <div id="provenance-watchlist" class="mq-provenance"></div>
+      <div id="watchlist-content"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-picks">
+      <h2>AI Picks Today — Paper Hypotheses</h2>
+      <div id="picks-table-wrap"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-benchmarks">
+      <h2>Benchmark Scoreboard</h2>
+      <p class="mq-hint">AI vs baselines — honest paper scoring comparisons only.</p>
+      <div id="benchmark-scoreboard"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-debate">
+      <h2>Agent Debate</h2>
+      <label>Ticker
+        <select id="debate-symbol"></select>
+      </label>
+      <div id="agent-debate"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-entity-graph">
+      <h2>Entity Graph</h2>
+      <div id="entity-graph-content"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-explain">
+      <h2>Reality Scores</h2>
+      <div id="reality-scores"></div>
+    </section>
+
+    <section class="mq-panel mq-split">
+      <div>
+        <h2>Paper Portfolio</h2>
+        <div id="portfolio-content"></div>
+        <form id="trade-form" class="mq-trade-form">
+          <label>Symbol <input type="text" id="trade-symbol" placeholder="NVDA" /></label>
+          <label>Side
+            <select id="trade-side">
+              <option value="buy">Paper Buy</option>
+              <option value="sell">Paper Sell</option>
+            </select>
+          </label>
+          <label>Qty <input type="number" id="trade-qty" min="1" value="1" /></label>
+          <label>Or Notional $ <input type="number" id="trade-notional" min="0" step="100" placeholder="1000" /></label>
+          <button type="submit">Paper Order</button>
+        </form>
+        <p id="trade-msg" class="mq-msg"></p>
+      </div>
+      <div>
+        <h2>Leaderboard</h2>
+        <div id="leaderboard-content"></div>
+      </div>
+    </section>
+
+    <section class="mq-panel" id="panel-learning">
+      <h2>Learning Lab</h2>
+      <div id="learning-lab"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-education">
+      <h2>Education &amp; Challenges</h2>
+      <div id="education-content"></div>
+      <div id="challenge-content" class="mq-challenge"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-career">
+      <h2>Future Builder</h2>
+      <p class="mq-hint">Careers this game teaches — no real money required.</p>
+      <div id="career-content"></div>
+    </section>
+
+    <section class="mq-panel" id="panel-scout">
+      <h2>AI Tool Scout</h2>
+      <p class="mq-hint">Tools and projects we research to build better apps.</p>
+      <div id="scout-content"></div>
+    </section>
+  </main>
+
+  <footer class="mq-footer">
+    <p id="disclaimer">Paper trading simulation only. Not investment advice. No real-money order placement. Past paper scores do not predict future results.</p>
+  </footer>
+
+  <script src="marketquest.js" defer></script>
+</body>
+</html>

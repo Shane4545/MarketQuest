@@ -13,7 +13,7 @@ from __future__ import annotations
 
 from typing import Any
 
-ALLOWED_RUN_PURPOSES = frozenset({"research", "paper_research"})
+ALLOWED_RUN_PURPOSES = frozenset({"research", "paper_research", "aggressive_pencil"})
 
 
 def default_trading_flags_for_request() -> dict[str, Any]:

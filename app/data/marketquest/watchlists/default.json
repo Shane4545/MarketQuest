@@ -1,0 +1,20 @@
+{
+  "name": "default",
+  "description": "Broad market, AI/tech, energy, infrastructure — paper hypotheses only, not buy recommendations",
+  "groups": {
+    "broad_market_etfs": ["SPY", "QQQ", "IWM", "XLE", "XLF", "XLK", "XLI", "XLV", "XLU"],
+    "ai_tech": ["NVDA", "AMD", "MSFT", "GOOGL", "META", "AAPL", "AMZN"],
+    "energy": ["XOM", "CVX", "COP"],
+    "infrastructure_brookfield": ["BAM", "BN", "ENB", "TRP"]
+  },
+  "symbols": [
+    "SPY", "QQQ", "IWM", "XLE", "XLF", "XLK", "XLI", "XLV", "XLU",
+    "NVDA", "AMD", "MSFT", "GOOGL", "META", "AAPL", "AMZN",
+    "XOM", "CVX", "COP",
+    "BAM", "BN", "ENB", "TRP"
+  ],
+  "press_rss": [
+    {"symbol": "BAM", "url": "https://bam.brookfield.com/press-releases/rss", "label": "Brookfield IR"},
+    {"symbol": "NVDA", "url": "https://nvidianews.nvidia.com/releases.xml", "label": "NVIDIA IR"}
+  ]
+}

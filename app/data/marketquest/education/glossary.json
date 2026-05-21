@@ -1,0 +1,24 @@
+{
+  "terms": [
+    {"term": "Stock", "definition": "A share of ownership in a company. When you own a stock, you own a small piece of that business and may benefit if the company grows."},
+    {"term": "Ticker", "definition": "A short symbol (like AAPL or NVDA) used to identify a stock on exchanges. Tickers make it easy to look up prices and news."},
+    {"term": "Market Cap", "definition": "Market capitalization = share price × total shares. It measures how big a company is in dollar terms."},
+    {"term": "Volume", "definition": "How many shares traded in a period. High volume means many buyers and sellers were active."},
+    {"term": "Relative Volume (RVOL)", "definition": "Today's volume compared to recent average. Unusual activity (RVOL > 1) can signal attention or news."},
+    {"term": "Sector", "definition": "A group of companies in the same industry (e.g. Technology, Energy, Financials). Events often affect whole sectors."},
+    {"term": "Catalyst", "definition": "An event that could move a stock — earnings, FDA approval, merger, rate decision, or major news."},
+    {"term": "SEC Filing", "definition": "Official documents companies submit to the U.S. Securities and Exchange Commission. Public and free via EDGAR."},
+    {"term": "8-K", "definition": "A current report filed when something important happens between quarterly reports — acquisitions, CEO changes, material events."},
+    {"term": "Gap %", "definition": "Percent change from prior close to current price. Large gaps often follow overnight news."},
+    {"term": "USD/CAD", "definition": "How many Canadian dollars one U.S. dollar buys. Matters for trade, oil, and Canadian companies."},
+    {"term": "Oil and Markets", "definition": "Oil prices affect energy stocks, airlines, inflation, and currencies like CAD. Energy shocks ripple across sectors."},
+    {"term": "Interest Rates", "definition": "Higher rates tend to hurt growth/tech and real estate; help banks; affect bond prices and borrowing costs."},
+    {"term": "Correlation vs Causation", "definition": "Two things moving together does not prove one caused the other. Always ask for the mechanism."},
+    {"term": "Strong Story, Bad Trade", "definition": "A compelling narrative can still be a poor trade if the news is priced in or the risk/reward is poor."},
+    {"term": "AI Overfitting", "definition": "When a model memorizes past data instead of learning patterns that generalize. It can look great in backtests and fail live."},
+    {"term": "Random Baseline", "definition": "Picking stocks at random. If AI cannot beat random over time, the system must show that honestly."},
+    {"term": "One Week Wins", "definition": "Winning one week does not prove a strategy works. Sample size and regime matter."},
+    {"term": "Paper P&L", "definition": "Simulated profit/loss using real delayed quotes — no real orders or money at risk."},
+    {"term": "Sentiment (VADER)", "definition": "NLP compound score on news headlines. Positive/negative tone — not a guarantee of price direction."}
+  ]
+}

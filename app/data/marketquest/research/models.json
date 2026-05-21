@@ -1,0 +1,40 @@
+{
+  "models": [
+    {
+      "name": "VADER Sentiment",
+      "category": "sentiment_models",
+      "url": "https://github.com/cjhutto/vaderSentiment",
+      "description": "Rule-based sentiment analysis for social/text — used in News Agent.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Headline sentiment scoring"],
+      "integration_status": "integrated",
+      "notes": "Already used via news/sentiment_scorer in repo."
+    },
+    {
+      "name": "FinBERT",
+      "category": "sentiment_models",
+      "url": "https://huggingface.co/ProsusAI/finbert",
+      "description": "BERT fine-tuned on financial text for sentiment.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Finance-specific headline sentiment"],
+      "integration_status": "not_started",
+      "notes": "Upgrade path from VADER for News-Only Agent."
+    },
+    {
+      "name": "Llama 3 (local)",
+      "category": "financial_llms",
+      "url": "https://ollama.com/library/llama3",
+      "description": "General-purpose local LLM for explanation and reasoning tasks.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Challenge grading", "Agent debate summaries"],
+      "integration_status": "not_started",
+      "notes": "Run via Ollama for student-safe local inference."
+    }
+  ]
+}

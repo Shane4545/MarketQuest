@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "name": "FinRL",
+      "category": "reinforcement_learning",
+      "url": "https://github.com/AI4Finance-Foundation/FinRL",
+      "description": "Open-source framework for financial reinforcement learning — educational, not financial advice.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["RL agent environments", "Paper trading gym", "Multi-agent competition"],
+      "integration_status": "evaluated",
+      "notes": "Explicitly not a recommendation to trade real money."
+    },
+    {
+      "name": "Qlib",
+      "category": "reinforcement_learning",
+      "url": "https://github.com/microsoft/qlib",
+      "description": "Microsoft AI-oriented quantitative investment platform.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Feature store patterns", "Model training pipelines"],
+      "integration_status": "not_started",
+      "notes": "Research-oriented; good for advanced students."
+    },
+    {
+      "name": "FinGPT",
+      "category": "financial_llms",
+      "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+      "description": "Open-source financial large language models.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Finance-tuned sentiment", "News summarization"],
+      "integration_status": "not_started",
+      "notes": "Requires GPU for full models; smaller variants for demos."
+    },
+    {
+      "name": "backtesting.py",
+      "category": "backtesting_engines",
+      "url": "https://kernc.github.io/backtesting.py/",
+      "description": "Lightweight Python backtesting library.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Simple strategy backtests", "Transparent rule evaluation"],
+      "integration_status": "not_started",
+      "notes": "Good for momentum baseline validation."
+    },
+    {
+      "name": "Backtrader",
+      "category": "backtesting_engines",
+      "url": "https://www.backtrader.com/",
+      "description": "Feature-rich Python backtesting framework.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Event-driven backtesting", "Multi-data feeds"],
+      "integration_status": "not_started",
+      "notes": "Heavier than backtesting.py."
+    }
+  ]
+}

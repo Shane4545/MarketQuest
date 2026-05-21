@@ -1,0 +1,4268 @@
+{
+  "timestamp_utc": "2026-05-21T03:31:45+00:00",
+  "market_status": "closed",
+  "market_session": "closed",
+  "provider_status": {
+    "finnhub": {
+      "status": "OFFLINE",
+      "fetched_at": "2026-05-21T03:31:45+00:00",
+      "fallback": false,
+      "error": "FINNHUB_API_KEY not set",
+      "ok": false
+    },
+    "alpaca": {
+      "status": "OFFLINE",
+      "fetched_at": "2026-05-21T03:31:45+00:00",
+      "fallback": false,
+      "error": "ALPACA_API_KEY/ALPACA_SECRET_KEY not set",
+      "ok": false
+    },
+    "yfinance": {
+      "status": "DELAYED",
+      "fetched_at": "2026-05-21T03:31:45+00:00",
+      "fallback": true,
+      "error": null,
+      "ok": true
+    },
+    "sec_edgar": {
+      "status": "DELAYED",
+      "fetched_at": "2026-05-21T03:32:00+00:00",
+      "fallback": false,
+      "error": null,
+      "ok": true
+    },
+    "fred": {
+      "status": "OFFLINE",
+      "fetched_at": "2026-05-21T03:32:03+00:00",
+      "fallback": false,
+      "error": null,
+      "ok": false
+    },
+    "forex": {
+      "status": "LIVE",
+      "ok": true,
+      "count": 10,
+      "live_count": 10,
+      "offline_count": 0
+    },
+    "rss": {
+      "status": "OFFLINE",
+      "fetched_at": "2026-05-21T03:32:04+00:00",
+      "fallback": false,
+      "error": "feedparser not installed",
+      "ok": false
+    },
+    "government": {
+      "status": "OFFLINE",
+      "fetched_at": "2026-05-21T03:32:04+00:00",
+      "fallback": false,
+      "error": "feedparser not installed",
+      "ok": false
+    },
+    "company_press": {
+      "status": "OFFLINE",
+      "fetched_at": "2026-05-21T03:32:04+00:00",
+      "fallback": false,
+      "error": "feedparser not installed",
+      "ok": false
+    },
+    "x_api": {
+      "status": "OFFLINE",
+      "fetched_at": "2026-05-21T03:32:04+00:00",
+      "fallback": false,
+      "error": "X_BEARER_TOKEN not configured \u2014 official API required",
+      "ok": false
+    }
+  },
+  "symbols_checked": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "XLE",
+    "XLF",
+    "XLK",
+    "XLI",
+    "XLV",
+    "XLU",
+    "NVDA",
+    "AMD",
+    "MSFT",
+    "GOOGL",
+    "META",
+    "AAPL",
+    "AMZN",
+    "XOM",
+    "CVX",
+    "COP",
+    "BAM",
+    "BN",
+    "ENB",
+    "TRP"
+  ],
+  "prices": [
+    {
+      "symbol": "SPY",
+      "last": 741.25,
+      "change_pct": 0.9534,
+      "volume": 45085124,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "QQQ",
+      "last": 713.15,
+      "change_pct": 1.5507,
+      "volume": 35933262,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "IWM",
+      "last": 279.87,
+      "change_pct": 2.4414,
+      "volume": 31045643,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "XLE",
+      "last": 59.8,
+      "change_pct": -2.2077,
+      "volume": 58965584,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "XLF",
+      "last": 51.66,
+      "change_pct": 1.0366,
+      "volume": 42136935,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "XLK",
+      "last": 177.14,
+      "change_pct": 2.062,
+      "volume": 12594706,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "XLI",
+      "last": 170.73,
+      "change_pct": 1.0237,
+      "volume": 10492145,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "XLV",
+      "last": 147.13,
+      "change_pct": -0.129,
+      "volume": 10503628,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "XLU",
+      "last": 44.51,
+      "change_pct": 0.3381,
+      "volume": 17568456,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "last": 223.47,
+      "change_pct": 0.8712,
+      "volume": 171145403,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "AMD",
+      "last": 447.58,
+      "change_pct": 7.2613,
+      "volume": 35425772,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "last": 421.06,
+      "change_pct": 1.0269,
+      "volume": 27738933,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "last": 388.91,
+      "change_pct": 0.1881,
+      "volume": 30405838,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "META",
+      "last": 605.06,
+      "change_pct": 0.3957,
+      "volume": 11270062,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "AAPL",
+      "last": 302.25,
+      "change_pct": 1.0986,
+      "volume": 37276629,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "last": 265.01,
+      "change_pct": 2.2731,
+      "volume": 34425988,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "XOM",
+      "last": 156.28,
+      "change_pct": -3.7507,
+      "volume": 14463312,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "CVX",
+      "last": 191.33,
+      "change_pct": -2.9583,
+      "volume": 14531892,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "COP",
+      "last": 122.36,
+      "change_pct": -1.9237,
+      "volume": 4666983,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "BAM",
+      "last": 48.06,
+      "change_pct": 1.4995,
+      "volume": 1663905,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "BN",
+      "last": 45.34,
+      "change_pct": 1.8876,
+      "volume": 3438233,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "ENB",
+      "last": 57.08,
+      "change_pct": 1.3854,
+      "volume": 6591317,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "TRP",
+      "last": 70.09,
+      "change_pct": 0.5595,
+      "volume": 2610025,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    }
+  ],
+  "movers": [
+    {
+      "symbol": "AMD",
+      "last": 447.58,
+      "change_pct": 7.2613,
+      "volume": 35425772,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "XOM",
+      "last": 156.28,
+      "change_pct": -3.7507,
+      "volume": 14463312,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "CVX",
+      "last": 191.33,
+      "change_pct": -2.9583,
+      "volume": 14531892,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "IWM",
+      "last": 279.87,
+      "change_pct": 2.4414,
+      "volume": 31045643,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "last": 265.01,
+      "change_pct": 2.2731,
+      "volume": 34425988,
+      "currency": "USD",
+      "gap_pct": null,
+      "rvol": null,
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:31:45+00:00",
+        "market_timestamp": "2026-05-21T03:31:45+00:00",
+        "age_minutes": 0.26,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null,
+        "scoring_eligible": true
+      }
+    }
+  ],
+  "news_events": [
+    {
+      "event_id": "4917fef52457ec64",
+      "title": "SPY filed N-CEN",
+      "summary": "SEC filing N-CEN for SPY",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000141036826023904",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-03-13",
+      "symbols": [
+        "SPY"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 99572.07880661666,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000141036826023904"
+      ],
+      "event_type": "sec_filing",
+      "candidate_tickers": [
+        "SPY"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: sec_filing involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    },
+    {
+      "event_id": "12d9a3b2a9d0bf89",
+      "title": "SPY filed NPORT-P",
+      "summary": "SEC filing NPORT-P for SPY",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000141036826020131",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-02-26",
+      "symbols": [
+        "SPY"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 121172.07880661666,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000141036826020131"
+      ],
+      "event_type": "sec_filing",
+      "candidate_tickers": [
+        "SPY"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: sec_filing involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    },
+    {
+      "event_id": "f9663ec176d2d591",
+      "title": "SPY filed 497",
+      "summary": "SEC filing 497 for SPY",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000119312526023648",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-01-27",
+      "symbols": [
+        "SPY"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 164372.0788066167,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312526023648"
+      ],
+      "event_type": "insider_transaction",
+      "candidate_tickers": [
+        "SPY"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: insider_transaction involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    },
+    {
+      "event_id": "c3e2ed208c55656f",
+      "title": "SPY filed 485BPOS",
+      "summary": "SEC filing 485BPOS for SPY",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/884394/000119312526022316",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-01-26",
+      "symbols": [
+        "SPY"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 165812.0788066167,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312526022316"
+      ],
+      "event_type": "insider_transaction",
+      "candidate_tickers": [
+        "SPY"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: insider_transaction involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    },
+    {
+      "event_id": "a3938353abf0f3ee",
+      "title": "QQQ filed 497K",
+      "summary": "SEC filing 497K for QQQ",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465926052973",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-04-30",
+      "symbols": [
+        "QQQ"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 30452.078806616668,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465926052973"
+      ],
+      "event_type": "insider_transaction",
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: insider_transaction involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    },
+    {
+      "event_id": "21e1d6e979f64f07",
+      "title": "QQQ filed 497",
+      "summary": "SEC filing 497 for QQQ",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465926052905",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-04-30",
+      "symbols": [
+        "QQQ"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 30452.078806616668,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465926052905"
+      ],
+      "event_type": "insider_transaction",
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: insider_transaction involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    },
+    {
+      "event_id": "37f819429a0bdd55",
+      "title": "QQQ filed N-CEN",
+      "summary": "SEC filing N-CEN for QQQ",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000106783926000018",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-03-03",
+      "symbols": [
+        "QQQ"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 113972.07882331667,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000106783926000018"
+      ],
+      "event_type": "sec_filing",
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: sec_filing involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    },
+    {
+      "event_id": "2e35f25537ad43b7",
+      "title": "QQQ filed NPORT-P",
+      "summary": "SEC filing NPORT-P for QQQ",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000106783926000016",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-02-27",
+      "symbols": [
+        "QQQ"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 119732.07882331667,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000106783926000016"
+      ],
+      "event_type": "sec_filing",
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: sec_filing involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    },
+    {
+      "event_id": "4401498c05d4ab05",
+      "title": "QQQ filed 40-17G",
+      "summary": "SEC filing 40-17G for QQQ",
+      "source": "sec_edgar",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1067839/000119312526030715",
+      "fetched_at_utc": "2026-05-21T03:31:45+00:00",
+      "published_at_utc": "2026-01-30",
+      "symbols": [
+        "QQQ"
+      ],
+      "entities": [
+        "SEC"
+      ],
+      "confidence": 0.9,
+      "freshness_minutes": 160052.07882331667,
+      "license_note": "SEC public filing metadata only",
+      "source_links": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312526030715"
+      ],
+      "event_type": "insider_transaction",
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "possible_positive_impacts": [],
+      "possible_negative_impacts": [],
+      "uncertainties": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "affected_sectors": [],
+      "why_this_may_matter": "Educational signal: insider_transaction involving SEC. Not investment advice \u2014 paper hypothesis only.",
+      "importance_score": 46.0
+    }
+  ],
+  "public_figure_events": [],
+  "entity_graph_updates": [
+    {
+      "event_id": "4917fef52457ec64",
+      "title": "SPY filed N-CEN",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "SPY"
+      ],
+      "event_type": "sec_filing"
+    },
+    {
+      "event_id": "12d9a3b2a9d0bf89",
+      "title": "SPY filed NPORT-P",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "SPY"
+      ],
+      "event_type": "sec_filing"
+    },
+    {
+      "event_id": "f9663ec176d2d591",
+      "title": "SPY filed 497",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "SPY"
+      ],
+      "event_type": "insider_transaction"
+    },
+    {
+      "event_id": "c3e2ed208c55656f",
+      "title": "SPY filed 485BPOS",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "SPY"
+      ],
+      "event_type": "insider_transaction"
+    },
+    {
+      "event_id": "a3938353abf0f3ee",
+      "title": "QQQ filed 497K",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "event_type": "insider_transaction"
+    },
+    {
+      "event_id": "21e1d6e979f64f07",
+      "title": "QQQ filed 497",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "event_type": "insider_transaction"
+    },
+    {
+      "event_id": "37f819429a0bdd55",
+      "title": "QQQ filed N-CEN",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "event_type": "sec_filing"
+    },
+    {
+      "event_id": "2e35f25537ad43b7",
+      "title": "QQQ filed NPORT-P",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "event_type": "sec_filing"
+    },
+    {
+      "event_id": "4401498c05d4ab05",
+      "title": "QQQ filed 40-17G",
+      "entities": [
+        "SEC"
+      ],
+      "candidate_tickers": [
+        "QQQ"
+      ],
+      "event_type": "insider_transaction"
+    }
+  ],
+  "sec_filings": [
+    {
+      "symbol": "SPY",
+      "form_type": "N-CEN",
+      "filed_at": "2026-03-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000141036826023904",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "SPY",
+      "form_type": "NPORT-P",
+      "filed_at": "2026-02-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000141036826020131",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "SPY",
+      "form_type": "497",
+      "filed_at": "2026-01-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000119312526023648",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "SPY",
+      "form_type": "497",
+      "filed_at": "2026-01-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000119312526022775",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "SPY",
+      "form_type": "485BPOS",
+      "filed_at": "2026-01-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/884394/000119312526022316",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "QQQ",
+      "form_type": "497K",
+      "filed_at": "2026-04-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465926052973",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "QQQ",
+      "form_type": "497",
+      "filed_at": "2026-04-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067839/000110465926052905",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "QQQ",
+      "form_type": "N-CEN",
+      "filed_at": "2026-03-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067839/000106783926000018",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "QQQ",
+      "form_type": "NPORT-P",
+      "filed_at": "2026-02-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067839/000106783926000016",
+      "category": "sec_filing"
+    },
+    {
+      "symbol": "QQQ",
+      "form_type": "40-17G",
+      "filed_at": "2026-01-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067839/000119312526030715",
+      "category": "sec_filing"
+    }
+  ],
+  "macro_indicators": [],
+  "currencies": [
+    {
+      "pair": "EUR/USD",
+      "bid": null,
+      "ask": null,
+      "mid": 1.162385,
+      "last": 1.162385,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": 0.1441,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "Euro strength reflects EU growth and ECB policy \u2014 affects multinational earnings.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "GBP/USD",
+      "bid": null,
+      "ask": null,
+      "mid": 1.342877,
+      "last": 1.342877,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": 0.2444,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "Sterling reflects UK growth and BoE policy \u2014 affects global banks and multinationals.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "USD/JPY",
+      "bid": null,
+      "ask": null,
+      "mid": 158.942001,
+      "last": 158.942001,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": -0.0585,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "JPY crosses often signal risk-on/risk-off and yield differentials.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "USD/CAD",
+      "bid": null,
+      "ask": null,
+      "mid": 1.37634,
+      "last": 1.37634,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": 0.1186,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "CAD moves with oil and Bank of Canada policy \u2014 affects Canadian exporters and energy names.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "AUD/USD",
+      "bid": null,
+      "ask": null,
+      "mid": 0.711845,
+      "last": 0.711845,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": 0.1668,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "AUD is commodity-sensitive \u2014 links to China demand and metals.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "NZD/USD",
+      "bid": null,
+      "ask": null,
+      "mid": 0.585995,
+      "last": 0.585995,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": 0.4553,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "NZD tracks dairy/commodity cycles and risk appetite.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "USD/CHF",
+      "bid": null,
+      "ask": null,
+      "mid": 0.78708,
+      "last": 0.78708,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": -0.2181,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "CHF often strengthens in risk-off \u2014 safe-haven signal.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "USD/CNH",
+      "bid": null,
+      "ask": null,
+      "mid": 6.80249,
+      "last": 6.80249,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": 0.0,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "Offshore yuan reflects China trade and tariff sensitivity.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "USD/MXN",
+      "bid": null,
+      "ask": null,
+      "mid": 17.320999,
+      "last": 17.320999,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": -0.47,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "Peso reflects EM and US-Mexico trade dynamics.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    },
+    {
+      "pair": "USD/NOK",
+      "bid": null,
+      "ask": null,
+      "mid": 9.27505,
+      "last": 9.27505,
+      "change_pct_15m": null,
+      "change_pct_1h": null,
+      "change_pct_1d": 0.0928,
+      "provider": "yfinance",
+      "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+      "market_timestamp_utc": null,
+      "freshness_minutes": 0,
+      "status": "DELAYED",
+      "why_it_matters": "NOK links to oil and European energy markets.",
+      "provenance": {
+        "provider": "yfinance",
+        "fetched_at": "2026-05-21T03:32:04+00:00",
+        "market_timestamp": null,
+        "age_minutes": 0.0,
+        "freshness": "DELAYED",
+        "fallback": true,
+        "error": null
+      },
+      "errors": []
+    }
+  ],
+  "scoring_data_eligible": true,
+  "offline_training_mode": false,
+  "tagline": "Real markets, real events, real scoring, simulated portfolios.",
+  "freshness": {
+    "label": "delayed",
+    "scoring_data_eligible": true,
+    "stale_providers": [
+      "finnhub",
+      "alpaca",
+      "fred",
+      "rss",
+      "government",
+      "company_press",
+      "x_api"
+    ],
+    "quote_count": 23
+  },
+  "cross_asset": {
+    "forex": [
+      {
+        "pair": "EUR/USD",
+        "bid": null,
+        "ask": null,
+        "mid": 1.162385,
+        "last": 1.162385,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": 0.1441,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "Euro strength reflects EU growth and ECB policy \u2014 affects multinational earnings.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "GBP/USD",
+        "bid": null,
+        "ask": null,
+        "mid": 1.342877,
+        "last": 1.342877,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": 0.2444,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "Sterling reflects UK growth and BoE policy \u2014 affects global banks and multinationals.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "USD/JPY",
+        "bid": null,
+        "ask": null,
+        "mid": 158.942001,
+        "last": 158.942001,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": -0.0585,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "JPY crosses often signal risk-on/risk-off and yield differentials.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "USD/CAD",
+        "bid": null,
+        "ask": null,
+        "mid": 1.37634,
+        "last": 1.37634,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": 0.1186,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "CAD moves with oil and Bank of Canada policy \u2014 affects Canadian exporters and energy names.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "AUD/USD",
+        "bid": null,
+        "ask": null,
+        "mid": 0.711845,
+        "last": 0.711845,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": 0.1668,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "AUD is commodity-sensitive \u2014 links to China demand and metals.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "NZD/USD",
+        "bid": null,
+        "ask": null,
+        "mid": 0.585995,
+        "last": 0.585995,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": 0.4553,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "NZD tracks dairy/commodity cycles and risk appetite.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "USD/CHF",
+        "bid": null,
+        "ask": null,
+        "mid": 0.78708,
+        "last": 0.78708,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": -0.2181,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "CHF often strengthens in risk-off \u2014 safe-haven signal.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "USD/CNH",
+        "bid": null,
+        "ask": null,
+        "mid": 6.80249,
+        "last": 6.80249,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": 0.0,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "Offshore yuan reflects China trade and tariff sensitivity.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "USD/MXN",
+        "bid": null,
+        "ask": null,
+        "mid": 17.320999,
+        "last": 17.320999,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": -0.47,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "Peso reflects EM and US-Mexico trade dynamics.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      },
+      {
+        "pair": "USD/NOK",
+        "bid": null,
+        "ask": null,
+        "mid": 9.27505,
+        "last": 9.27505,
+        "change_pct_15m": null,
+        "change_pct_1h": null,
+        "change_pct_1d": 0.0928,
+        "provider": "yfinance",
+        "fetched_at_utc": "2026-05-21T03:32:04+00:00",
+        "market_timestamp_utc": null,
+        "freshness_minutes": 0,
+        "status": "DELAYED",
+        "why_it_matters": "NOK links to oil and European energy markets.",
+        "provenance": {
+          "provider": "yfinance",
+          "fetched_at": "2026-05-21T03:32:04+00:00",
+          "market_timestamp": null,
+          "age_minutes": 0.0,
+          "freshness": "DELAYED",
+          "fallback": true,
+          "error": null
+        },
+        "errors": []
+      }
+    ],
+    "macro": [],
+    "oil": null,
+    "commodities": [],
+    "indexes": [
+      {
+        "symbol": "SPY",
+        "last": 741.25,
+        "change_pct_1d": 0.9534,
+        "status": "DELAYED"
+      },
+      {
+        "symbol": "QQQ",
+        "last": 713.15,
+        "change_pct_1d": 1.5507,
+        "status": "DELAYED"
+      },
+      {
+        "symbol": "IWM",
+        "last": 279.87,
+        "change_pct_1d": 2.4414,
+        "status": "DELAYED"
+      }
+    ],
+    "sectors": [
+      {
+        "symbol": "XLE",
+        "sector": "energy",
+        "last": 59.8,
+        "change_pct_1d": -2.2077,
+        "status": "DELAYED"
+      },
+      {
+        "symbol": "XLK",
+        "sector": "technology",
+        "last": 177.14,
+        "change_pct_1d": 2.062,
+        "status": "DELAYED"
+      },
+      {
+        "symbol": "XLF",
+        "sector": "financials",
+        "last": 51.66,
+        "change_pct_1d": 1.0366,
+        "status": "DELAYED"
+      },
+      {
+        "symbol": "XLI",
+        "sector": "industrials",
+        "last": 170.73,
+        "change_pct_1d": 1.0237,
+        "status": "DELAYED"
+      },
+      {
+        "symbol": "XLU",
+        "sector": "utilities",
+        "last": 44.51,
+        "change_pct_1d": 0.3381,
+        "status": "DELAYED"
+      },
+      {
+        "symbol": "XLV",
+        "sector": "healthcare",
+        "last": 147.13,
+        "change_pct_1d": -0.129,
+        "status": "DELAYED"
+      }
+    ],
+    "correlations": [
+      {
+        "symbol": "XLE",
+        "related_asset": "EUR/USD",
+        "window": "1d",
+        "correlation": -0.065,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLE shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLF",
+        "related_asset": "EUR/USD",
+        "window": "1d",
+        "correlation": 0.139,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLF shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLK",
+        "related_asset": "EUR/USD",
+        "window": "1d",
+        "correlation": 0.07,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLK shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLI",
+        "related_asset": "EUR/USD",
+        "window": "1d",
+        "correlation": 0.141,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLI shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLV",
+        "related_asset": "EUR/USD",
+        "window": "1d",
+        "correlation": -0.895,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLV shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLU",
+        "related_asset": "EUR/USD",
+        "window": "1d",
+        "correlation": 0.426,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLU shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLE",
+        "related_asset": "GBP/USD",
+        "window": "1d",
+        "correlation": -0.111,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLE shows weak unstable same-day alignment with GBP/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLF",
+        "related_asset": "GBP/USD",
+        "window": "1d",
+        "correlation": 0.236,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLF shows weak unstable same-day alignment with GBP/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLK",
+        "related_asset": "GBP/USD",
+        "window": "1d",
+        "correlation": 0.119,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLK shows weak unstable same-day alignment with GBP/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLI",
+        "related_asset": "GBP/USD",
+        "window": "1d",
+        "correlation": 0.239,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLI shows weak unstable same-day alignment with GBP/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLV",
+        "related_asset": "GBP/USD",
+        "window": "1d",
+        "correlation": -0.528,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLV shows weak unstable same-day alignment with GBP/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLU",
+        "related_asset": "GBP/USD",
+        "window": "1d",
+        "correlation": 0.723,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLU shows weak unstable same-day alignment with GBP/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLE",
+        "related_asset": "USD/JPY",
+        "window": "1d",
+        "correlation": 0.026,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLE shows weak unstable same-day alignment with USD/JPY in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLF",
+        "related_asset": "USD/JPY",
+        "window": "1d",
+        "correlation": -0.056,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLF shows weak unstable same-day alignment with USD/JPY in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLK",
+        "related_asset": "USD/JPY",
+        "window": "1d",
+        "correlation": -0.028,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLK shows weak unstable same-day alignment with USD/JPY in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLI",
+        "related_asset": "USD/JPY",
+        "window": "1d",
+        "correlation": -0.057,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLI shows weak unstable same-day alignment with USD/JPY in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLV",
+        "related_asset": "USD/JPY",
+        "window": "1d",
+        "correlation": 0.453,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLV shows weak unstable same-day alignment with USD/JPY in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLU",
+        "related_asset": "USD/JPY",
+        "window": "1d",
+        "correlation": -0.173,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLU shows weak unstable same-day alignment with USD/JPY in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLE",
+        "related_asset": "USD/CAD",
+        "window": "1d",
+        "correlation": -0.054,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLE shows weak unstable same-day alignment with USD/CAD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      },
+      {
+        "symbol": "XLF",
+        "related_asset": "USD/CAD",
+        "window": "1d",
+        "correlation": 0.114,
+        "sample_count": 1,
+        "relationship_strength": "weak",
+        "direction": "unstable",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00",
+        "explanation": "XLF shows weak unstable same-day alignment with USD/CAD in current snapshot (V0 proxy \u2014 not full rolling history)."
+      }
+    ],
+    "lead_lag": [
+      {
+        "leader": "QQQ",
+        "follower": "NVDA",
+        "lag_minutes": 15,
+        "relationship_score": 0.403,
+        "historical_hit_rate": 0.54,
+        "sample_count": 1,
+        "status": "weak",
+        "explanation": "QQQ moved 1.55% while NVDA moved 0.87% \u2014 possible 15m lag candidate (moderate confidence, V0 heuristic).",
+        "last_updated_utc": "2026-05-21T03:31:45+00:00"
+      }
+    ],
+    "divergences": [],
+    "regime": {
+      "regime": "tech_momentum",
+      "confidence": 0.7,
+      "evidence": [
+        "QQQ outperforming SPY",
+        "IWM outperforming SPY"
+      ],
+      "likely_sensitive_groups": [
+        "AI/semis",
+        "software",
+        "high beta growth"
+      ],
+      "scores": {
+        "tech_momentum": 0.35,
+        "small_cap_momentum": 0.3
+      }
+    },
+    "matrix": [
+      {
+        "symbol": "IWM",
+        "change_pct_1d": 2.4414,
+        "strongest_currency_correlation": null,
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Insufficient cross-asset data"
+      },
+      {
+        "symbol": "XLE",
+        "change_pct_1d": -2.2077,
+        "strongest_currency_correlation": {
+          "symbol": "XLE",
+          "related_asset": "EUR/USD",
+          "window": "1d",
+          "correlation": -0.065,
+          "sample_count": 1,
+          "relationship_strength": "weak",
+          "direction": "unstable",
+          "last_updated_utc": "2026-05-21T03:31:45+00:00",
+          "explanation": "XLE shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+        },
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Low sample \u2014 correlation is not causation"
+      },
+      {
+        "symbol": "XLF",
+        "change_pct_1d": 1.0366,
+        "strongest_currency_correlation": {
+          "symbol": "XLF",
+          "related_asset": "EUR/USD",
+          "window": "1d",
+          "correlation": 0.139,
+          "sample_count": 1,
+          "relationship_strength": "weak",
+          "direction": "unstable",
+          "last_updated_utc": "2026-05-21T03:31:45+00:00",
+          "explanation": "XLF shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+        },
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Low sample \u2014 correlation is not causation"
+      },
+      {
+        "symbol": "XLK",
+        "change_pct_1d": 2.062,
+        "strongest_currency_correlation": {
+          "symbol": "XLK",
+          "related_asset": "EUR/USD",
+          "window": "1d",
+          "correlation": 0.07,
+          "sample_count": 1,
+          "relationship_strength": "weak",
+          "direction": "unstable",
+          "last_updated_utc": "2026-05-21T03:31:45+00:00",
+          "explanation": "XLK shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+        },
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Low sample \u2014 correlation is not causation"
+      },
+      {
+        "symbol": "XLI",
+        "change_pct_1d": 1.0237,
+        "strongest_currency_correlation": {
+          "symbol": "XLI",
+          "related_asset": "EUR/USD",
+          "window": "1d",
+          "correlation": 0.141,
+          "sample_count": 1,
+          "relationship_strength": "weak",
+          "direction": "unstable",
+          "last_updated_utc": "2026-05-21T03:31:45+00:00",
+          "explanation": "XLI shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+        },
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Low sample \u2014 correlation is not causation"
+      },
+      {
+        "symbol": "XLV",
+        "change_pct_1d": -0.129,
+        "strongest_currency_correlation": {
+          "symbol": "XLV",
+          "related_asset": "EUR/USD",
+          "window": "1d",
+          "correlation": -0.895,
+          "sample_count": 1,
+          "relationship_strength": "weak",
+          "direction": "unstable",
+          "last_updated_utc": "2026-05-21T03:31:45+00:00",
+          "explanation": "XLV shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+        },
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Low sample \u2014 correlation is not causation"
+      },
+      {
+        "symbol": "XLU",
+        "change_pct_1d": 0.3381,
+        "strongest_currency_correlation": {
+          "symbol": "XLU",
+          "related_asset": "EUR/USD",
+          "window": "1d",
+          "correlation": 0.426,
+          "sample_count": 1,
+          "relationship_strength": "weak",
+          "direction": "unstable",
+          "last_updated_utc": "2026-05-21T03:31:45+00:00",
+          "explanation": "XLU shows weak unstable same-day alignment with EUR/USD in current snapshot (V0 proxy \u2014 not full rolling history)."
+        },
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Low sample \u2014 correlation is not causation"
+      },
+      {
+        "symbol": "NVDA",
+        "change_pct_1d": 0.8712,
+        "strongest_currency_correlation": null,
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Insufficient cross-asset data"
+      },
+      {
+        "symbol": "AMD",
+        "change_pct_1d": 7.2613,
+        "strongest_currency_correlation": null,
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Insufficient cross-asset data"
+      },
+      {
+        "symbol": "MSFT",
+        "change_pct_1d": 1.0269,
+        "strongest_currency_correlation": null,
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Insufficient cross-asset data"
+      },
+      {
+        "symbol": "GOOGL",
+        "change_pct_1d": 0.1881,
+        "strongest_currency_correlation": null,
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Insufficient cross-asset data"
+      },
+      {
+        "symbol": "META",
+        "change_pct_1d": 0.3957,
+        "strongest_currency_correlation": null,
+        "strongest_commodity_correlation": null,
+        "strongest_sector_correlation": null,
+        "regime_alignment": "tech_momentum",
+        "regime_confidence": 0.7,
+        "skeptic_warning": "Insufficient cross-asset data"
+      }
+    ],
+    "currency_count": 10,
+    "currency_errors": []
+  },
+  "regime": {
+    "regime": "tech_momentum",
+    "confidence": 0.7,
+    "evidence": [
+      "QQQ outperforming SPY",
+      "IWM outperforming SPY"
+    ],
+    "likely_sensitive_groups": [
+      "AI/semis",
+      "software",
+      "high beta growth"
+    ],
+    "scores": {
+      "tech_momentum": 0.35,
+      "small_cap_momentum": 0.3
+    }
+  },
+  "ai_agent_picks": [
+    {
+      "symbol": "AMD",
+      "agent_id": "momentum",
+      "as_of": "2026-05-21",
+      "score": 0.7261,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "15m",
+      "confidence": 0.4841,
+      "expected_direction": "up",
+      "reasons": [
+        "Intraday momentum 7.26%"
+      ],
+      "risks": [
+        "Momentum can reverse quickly"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Momentum: AMD move 7.2613%",
+        "bullets": [
+          "Change: 7.2613%",
+          "Reality-ranked from live snapshot"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 7.2613,
+        "gap_pct": null
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 71.0,
+      "reality_reasons": [
+        {
+          "delta": 14,
+          "label": "gap/move 7.3%"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (4 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "news_only",
+      "as_of": "2026-05-21",
+      "score": 0.46,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.46,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Fresh headline: SPY filed N-CEN"
+      ],
+      "risks": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "source_event_ids": [
+        "4917fef52457ec64"
+      ],
+      "explanation": {
+        "headline": "SPY filed N-CEN",
+        "bullets": [
+          "Source: sec_edgar",
+          "Event type: sec_filing"
+        ]
+      },
+      "news": [
+        {
+          "title": "SPY filed N-CEN",
+          "sentiment": null,
+          "source": "sec_edgar"
+        }
+      ],
+      "features": {
+        "sentiment": null,
+        "importance": 46.0
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "filing_event",
+      "as_of": "2026-05-21",
+      "score": 0.6,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.6,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Filed 2026-04-30",
+        "Category: insider_transaction"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Filing pick: QQQ (497K)",
+        "bullets": [
+          "Filed 2026-04-30",
+          "Category: insider_transaction"
+        ]
+      },
+      "news": [],
+      "features": {
+        "form_type": "497K"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (3 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "macro",
+      "as_of": "2026-05-21",
+      "score": 0.5,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.5,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No macro series in snapshot \u2014 check FRED_API_KEY"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Macro context pick: SPY",
+        "bullets": [
+          "No macro series in snapshot \u2014 check FRED_API_KEY"
+        ]
+      },
+      "news": [],
+      "features": {
+        "macro_count": 0
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "public_figure",
+      "as_of": "2026-05-21",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No fresh public figure events"
+      ],
+      "risks": [
+        "Policy statements can move markets quickly when they appear"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "No public figure statements in current snapshot",
+        "bullets": [
+          "Monitor government and executive communications"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "entity_graph",
+      "as_of": "2026-05-21",
+      "score": 0.45,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.5,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Entity graph linked SEC to watchlist tickers",
+        "Educational second-order hypothesis \u2014 not investment advice"
+      ],
+      "risks": [
+        "Correlation \u2260 causation",
+        "Market may have priced narrative already"
+      ],
+      "source_event_ids": [
+        "4917fef52457ec64"
+      ],
+      "explanation": {
+        "headline": "Graph chain: SEC \u2192 SPY",
+        "bullets": [
+          "Event: SPY filed N-CEN",
+          "Candidate tickers: SPY"
+        ]
+      },
+      "news": [],
+      "features": {
+        "entities": [
+          "SEC"
+        ],
+        "chain_tickers": [
+          "SPY"
+        ]
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "fx_agent",
+      "as_of": "2026-05-21",
+      "score": 0.094,
+      "predicted_bias": "bearish",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.2588,
+      "expected_direction": "unclear",
+      "reasons": [
+        "USD/MXN moved -0.47%",
+        "USD/MXN move may affect cross-border revenue and commodity pricing."
+      ],
+      "risks": [
+        "Correlation is not causation \u2014 confirm with sector and macro context."
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "FX watch: USD/MXN -0.47% \u2014 educational hypothesis",
+        "bullets": [
+          "USD/MXN move may affect cross-border revenue and commodity pricing.",
+          "USD/MXN move may create offsetting sector effects.",
+          "Status: DELAYED"
+        ]
+      },
+      "news": [],
+      "features": {
+        "pair": "USD/MXN",
+        "change_pct": -0.47,
+        "provider": "yfinance"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "IWM",
+      "agent_id": "cross_asset_agent",
+      "as_of": "2026-05-21",
+      "score": 0.45,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.7,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Cross-asset matrix alignment check"
+      ],
+      "risks": [
+        "Insufficient cross-asset data"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Cross-asset context for IWM",
+        "bullets": [
+          "Regime: tech_momentum",
+          "FX link: None (n/a)"
+        ]
+      },
+      "news": [],
+      "features": {
+        "matrix_row": {
+          "symbol": "IWM",
+          "change_pct_1d": 2.4414,
+          "strongest_currency_correlation": null,
+          "strongest_commodity_correlation": null,
+          "strongest_sector_correlation": null,
+          "regime_alignment": "tech_momentum",
+          "regime_confidence": 0.7,
+          "skeptic_warning": "Insufficient cross-asset data"
+        }
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 47.0,
+      "reality_reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "agent_id": "regime_agent",
+      "as_of": "2026-05-21",
+      "score": 0.7,
+      "predicted_bias": "bullish",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.7,
+      "expected_direction": "up",
+      "reasons": [
+        "Current regime classified as tech_momentum",
+        "QQQ outperforming SPY",
+        "IWM outperforming SPY"
+      ],
+      "risks": [
+        "Regime labels can flip intraday \u2014 not investment advice"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Regime: tech momentum \u2014 paper watch on NVDA",
+        "bullets": [
+          "QQQ outperforming SPY",
+          "IWM outperforming SPY"
+        ]
+      },
+      "news": [],
+      "features": {
+        "regime": "tech_momentum",
+        "regime_scores": {
+          "tech_momentum": 0.35,
+          "small_cap_momentum": 0.3
+        }
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 57.0,
+      "reality_reasons": [
+        {
+          "delta": 10,
+          "label": "model agreement (2 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "divergence_agent",
+      "as_of": "2026-05-21",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.15,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Drivers and stocks moving in expected directions"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "No significant divergences detected",
+        "bullets": [
+          "Drivers and stocks moving in expected directions"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "ensemble",
+      "as_of": "2026-05-21",
+      "score": 0.284,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.284,
+      "expected_direction": "up",
+      "reasons": [
+        "6 agents selected SPY",
+        "Ensemble weighted consensus"
+      ],
+      "risks": [
+        "No direct news/filing link to ticker in current snapshot",
+        "Large move already (7.3%) \u2014 timing risk"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Ensemble paper hypothesis: SPY (6 agents agree)",
+        "bullets": [
+          "Votes: 6",
+          "Blended score: 0.284",
+          "Not investment advice \u2014 paper prediction only"
+        ]
+      },
+      "news": [],
+      "features": {
+        "votes": 6,
+        "agents": 10
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "random_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Uniform random symbol from watchlist",
+        "If AI cannot beat this over time, the UI must show that honestly"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Random baseline pick: QQQ",
+        "bullets": [
+          "Uniform random symbol from watchlist",
+          "If AI cannot beat this over time, the UI must show that honestly"
+        ]
+      },
+      "news": [],
+      "features": {
+        "random": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (3 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "spy_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0953,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.5,
+      "expected_direction": "up",
+      "reasons": [
+        "Index benchmark \u2014 no stock selection skill"
+      ],
+      "risks": [
+        "Broad market exposure"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "SPY Baseline \u2014 S&P 500 proxy",
+        "bullets": [
+          "Passive benchmark: tracks SPY return",
+          "Measures whether players beat the broad market"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 0.9534,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "qqq_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.1551,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.5,
+      "expected_direction": "up",
+      "reasons": [
+        "Tech index benchmark"
+      ],
+      "risks": [
+        "Concentrated in mega-cap tech"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "QQQ Baseline \u2014 Nasdaq-100 proxy",
+        "bullets": [
+          "Passive benchmark: tracks QQQ return",
+          "Measures whether players beat large-cap tech"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 1.5507,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (3 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "agent_id": "equal_weight_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0734,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.4,
+      "expected_direction": "up",
+      "reasons": [
+        "Diversified equal-weight basket"
+      ],
+      "risks": [
+        "No stock-picking edge \u2014 diversification baseline"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Equal-weight watchlist (23 names, avg 0.73%)",
+        "bullets": [
+          "Equal weight across 23 watchlist symbols",
+          "Average change: 0.73%",
+          "Representative pick shown for display"
+        ]
+      },
+      "news": [],
+      "features": {
+        "avg_change_pct": 0.7341,
+        "symbol_count": 23,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 71.0,
+      "reality_reasons": [
+        {
+          "delta": 14,
+          "label": "gap/move 7.3%"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (4 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "agent_id": "momentum_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.7261,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.3631,
+      "expected_direction": "up",
+      "reasons": [
+        "Top momentum: AMD at 7.26%"
+      ],
+      "risks": [
+        "Momentum reversals are common"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Momentum baseline: top mover AMD (7.26%)",
+        "bullets": [
+          "Transparent rule: rank by change_pct, pick #1",
+          "Runners-up: IWM, AMZN",
+          "Rebalance weekly in paper scoring"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 7.2613,
+        "rule": "top_momentum",
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [
+        "IWM",
+        "AMZN"
+      ],
+      "player_type": "benchmark",
+      "reality_score": 71.0,
+      "reality_reasons": [
+        {
+          "delta": 14,
+          "label": "gap/move 7.3%"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (4 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "agent_id": "human_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Educational comparator for human players",
+        "Not optimized \u2014 reflects your book"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Human baseline tracks portfolio or SPY: NVDA",
+        "bullets": [
+          "Educational comparator for human players",
+          "Not optimized \u2014 reflects your book"
+        ]
+      },
+      "news": [],
+      "features": {
+        "baseline": "human"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 57.0,
+      "reality_reasons": [
+        {
+          "delta": 10,
+          "label": "model agreement (2 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "agent_id": "skeptic",
+      "as_of": "2026-05-21",
+      "score": 0.4,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.4,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No direct news/filing link to ticker in current snapshot",
+        "Large move already (7.3%) \u2014 timing risk"
+      ],
+      "risks": [
+        "No direct news/filing link to ticker in current snapshot",
+        "Large move already (7.3%) \u2014 timing risk"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Skeptic review of AMD (momentum thesis)",
+        "bullets": [
+          "No direct news/filing link to ticker in current snapshot",
+          "Large move already (7.3%) \u2014 timing risk"
+        ]
+      },
+      "news": [],
+      "features": {
+        "risk_count": 2,
+        "target_agent": "momentum"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 71.0,
+      "reality_reasons": [
+        {
+          "delta": 14,
+          "label": "gap/move 7.3%"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (4 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "correlation_skeptic",
+      "as_of": "2026-05-21",
+      "score": 0.15,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.15,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Cross-asset links look plausible but still paper-only \u2014 correlation \u2260 causation"
+      ],
+      "risks": [
+        "Cross-asset links look plausible but still paper-only \u2014 correlation \u2260 causation"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Correlation skeptic review of SPY",
+        "bullets": [
+          "Cross-asset links look plausible but still paper-only \u2014 correlation \u2260 causation"
+        ]
+      },
+      "news": [],
+      "features": {
+        "risk_count": 1,
+        "correlation_count": 20
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    }
+  ],
+  "agent_predictions": [
+    {
+      "symbol": "AMD",
+      "agent_id": "momentum",
+      "as_of": "2026-05-21",
+      "score": 0.7261,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "15m",
+      "confidence": 0.4841,
+      "expected_direction": "up",
+      "reasons": [
+        "Intraday momentum 7.26%"
+      ],
+      "risks": [
+        "Momentum can reverse quickly"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Momentum: AMD move 7.2613%",
+        "bullets": [
+          "Change: 7.2613%",
+          "Reality-ranked from live snapshot"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 7.2613,
+        "gap_pct": null
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 71.0,
+      "reality_reasons": [
+        {
+          "delta": 14,
+          "label": "gap/move 7.3%"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (4 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "news_only",
+      "as_of": "2026-05-21",
+      "score": 0.46,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.46,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Fresh headline: SPY filed N-CEN"
+      ],
+      "risks": [
+        "Event type not in rule table \u2014 treat as low-confidence hypothesis"
+      ],
+      "source_event_ids": [
+        "4917fef52457ec64"
+      ],
+      "explanation": {
+        "headline": "SPY filed N-CEN",
+        "bullets": [
+          "Source: sec_edgar",
+          "Event type: sec_filing"
+        ]
+      },
+      "news": [
+        {
+          "title": "SPY filed N-CEN",
+          "sentiment": null,
+          "source": "sec_edgar"
+        }
+      ],
+      "features": {
+        "sentiment": null,
+        "importance": 46.0
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "filing_event",
+      "as_of": "2026-05-21",
+      "score": 0.6,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.6,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Filed 2026-04-30",
+        "Category: insider_transaction"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Filing pick: QQQ (497K)",
+        "bullets": [
+          "Filed 2026-04-30",
+          "Category: insider_transaction"
+        ]
+      },
+      "news": [],
+      "features": {
+        "form_type": "497K"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (3 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "macro",
+      "as_of": "2026-05-21",
+      "score": 0.5,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.5,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No macro series in snapshot \u2014 check FRED_API_KEY"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Macro context pick: SPY",
+        "bullets": [
+          "No macro series in snapshot \u2014 check FRED_API_KEY"
+        ]
+      },
+      "news": [],
+      "features": {
+        "macro_count": 0
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "public_figure",
+      "as_of": "2026-05-21",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No fresh public figure events"
+      ],
+      "risks": [
+        "Policy statements can move markets quickly when they appear"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "No public figure statements in current snapshot",
+        "bullets": [
+          "Monitor government and executive communications"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "entity_graph",
+      "as_of": "2026-05-21",
+      "score": 0.45,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.5,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Entity graph linked SEC to watchlist tickers",
+        "Educational second-order hypothesis \u2014 not investment advice"
+      ],
+      "risks": [
+        "Correlation \u2260 causation",
+        "Market may have priced narrative already"
+      ],
+      "source_event_ids": [
+        "4917fef52457ec64"
+      ],
+      "explanation": {
+        "headline": "Graph chain: SEC \u2192 SPY",
+        "bullets": [
+          "Event: SPY filed N-CEN",
+          "Candidate tickers: SPY"
+        ]
+      },
+      "news": [],
+      "features": {
+        "entities": [
+          "SEC"
+        ],
+        "chain_tickers": [
+          "SPY"
+        ]
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "fx_agent",
+      "as_of": "2026-05-21",
+      "score": 0.094,
+      "predicted_bias": "bearish",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.2588,
+      "expected_direction": "unclear",
+      "reasons": [
+        "USD/MXN moved -0.47%",
+        "USD/MXN move may affect cross-border revenue and commodity pricing."
+      ],
+      "risks": [
+        "Correlation is not causation \u2014 confirm with sector and macro context."
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "FX watch: USD/MXN -0.47% \u2014 educational hypothesis",
+        "bullets": [
+          "USD/MXN move may affect cross-border revenue and commodity pricing.",
+          "USD/MXN move may create offsetting sector effects.",
+          "Status: DELAYED"
+        ]
+      },
+      "news": [],
+      "features": {
+        "pair": "USD/MXN",
+        "change_pct": -0.47,
+        "provider": "yfinance"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "IWM",
+      "agent_id": "cross_asset_agent",
+      "as_of": "2026-05-21",
+      "score": 0.45,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.7,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Cross-asset matrix alignment check"
+      ],
+      "risks": [
+        "Insufficient cross-asset data"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Cross-asset context for IWM",
+        "bullets": [
+          "Regime: tech_momentum",
+          "FX link: None (n/a)"
+        ]
+      },
+      "news": [],
+      "features": {
+        "matrix_row": {
+          "symbol": "IWM",
+          "change_pct_1d": 2.4414,
+          "strongest_currency_correlation": null,
+          "strongest_commodity_correlation": null,
+          "strongest_sector_correlation": null,
+          "regime_alignment": "tech_momentum",
+          "regime_confidence": 0.7,
+          "skeptic_warning": "Insufficient cross-asset data"
+        }
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 47.0,
+      "reality_reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "agent_id": "regime_agent",
+      "as_of": "2026-05-21",
+      "score": 0.7,
+      "predicted_bias": "bullish",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.7,
+      "expected_direction": "up",
+      "reasons": [
+        "Current regime classified as tech_momentum",
+        "QQQ outperforming SPY",
+        "IWM outperforming SPY"
+      ],
+      "risks": [
+        "Regime labels can flip intraday \u2014 not investment advice"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Regime: tech momentum \u2014 paper watch on NVDA",
+        "bullets": [
+          "QQQ outperforming SPY",
+          "IWM outperforming SPY"
+        ]
+      },
+      "news": [],
+      "features": {
+        "regime": "tech_momentum",
+        "regime_scores": {
+          "tech_momentum": 0.35,
+          "small_cap_momentum": 0.3
+        }
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 57.0,
+      "reality_reasons": [
+        {
+          "delta": 10,
+          "label": "model agreement (2 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "divergence_agent",
+      "as_of": "2026-05-21",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.15,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Drivers and stocks moving in expected directions"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "No significant divergences detected",
+        "bullets": [
+          "Drivers and stocks moving in expected directions"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "ensemble",
+      "as_of": "2026-05-21",
+      "score": 0.284,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.284,
+      "expected_direction": "up",
+      "reasons": [
+        "6 agents selected SPY",
+        "Ensemble weighted consensus"
+      ],
+      "risks": [
+        "No direct news/filing link to ticker in current snapshot",
+        "Large move already (7.3%) \u2014 timing risk"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Ensemble paper hypothesis: SPY (6 agents agree)",
+        "bullets": [
+          "Votes: 6",
+          "Blended score: 0.284",
+          "Not investment advice \u2014 paper prediction only"
+        ]
+      },
+      "news": [],
+      "features": {
+        "votes": 6,
+        "agents": 10
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "random_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Uniform random symbol from watchlist",
+        "If AI cannot beat this over time, the UI must show that honestly"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Random baseline pick: QQQ",
+        "bullets": [
+          "Uniform random symbol from watchlist",
+          "If AI cannot beat this over time, the UI must show that honestly"
+        ]
+      },
+      "news": [],
+      "features": {
+        "random": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (3 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "spy_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0953,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.5,
+      "expected_direction": "up",
+      "reasons": [
+        "Index benchmark \u2014 no stock selection skill"
+      ],
+      "risks": [
+        "Broad market exposure"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "SPY Baseline \u2014 S&P 500 proxy",
+        "bullets": [
+          "Passive benchmark: tracks SPY return",
+          "Measures whether players beat the broad market"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 0.9534,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "qqq_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.1551,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.5,
+      "expected_direction": "up",
+      "reasons": [
+        "Tech index benchmark"
+      ],
+      "risks": [
+        "Concentrated in mega-cap tech"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "QQQ Baseline \u2014 Nasdaq-100 proxy",
+        "bullets": [
+          "Passive benchmark: tracks QQQ return",
+          "Measures whether players beat large-cap tech"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 1.5507,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (3 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "agent_id": "equal_weight_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0734,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.4,
+      "expected_direction": "up",
+      "reasons": [
+        "Diversified equal-weight basket"
+      ],
+      "risks": [
+        "No stock-picking edge \u2014 diversification baseline"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Equal-weight watchlist (23 names, avg 0.73%)",
+        "bullets": [
+          "Equal weight across 23 watchlist symbols",
+          "Average change: 0.73%",
+          "Representative pick shown for display"
+        ]
+      },
+      "news": [],
+      "features": {
+        "avg_change_pct": 0.7341,
+        "symbol_count": 23,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 71.0,
+      "reality_reasons": [
+        {
+          "delta": 14,
+          "label": "gap/move 7.3%"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (4 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "agent_id": "momentum_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.7261,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.3631,
+      "expected_direction": "up",
+      "reasons": [
+        "Top momentum: AMD at 7.26%"
+      ],
+      "risks": [
+        "Momentum reversals are common"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Momentum baseline: top mover AMD (7.26%)",
+        "bullets": [
+          "Transparent rule: rank by change_pct, pick #1",
+          "Runners-up: IWM, AMZN",
+          "Rebalance weekly in paper scoring"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 7.2613,
+        "rule": "top_momentum",
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [
+        "IWM",
+        "AMZN"
+      ],
+      "player_type": "benchmark",
+      "reality_score": 71.0,
+      "reality_reasons": [
+        {
+          "delta": 14,
+          "label": "gap/move 7.3%"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (4 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "agent_id": "human_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Educational comparator for human players",
+        "Not optimized \u2014 reflects your book"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Human baseline tracks portfolio or SPY: NVDA",
+        "bullets": [
+          "Educational comparator for human players",
+          "Not optimized \u2014 reflects your book"
+        ]
+      },
+      "news": [],
+      "features": {
+        "baseline": "human"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark",
+      "reality_score": 57.0,
+      "reality_reasons": [
+        {
+          "delta": 10,
+          "label": "model agreement (2 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "agent_id": "skeptic",
+      "as_of": "2026-05-21",
+      "score": 0.4,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.4,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No direct news/filing link to ticker in current snapshot",
+        "Large move already (7.3%) \u2014 timing risk"
+      ],
+      "risks": [
+        "No direct news/filing link to ticker in current snapshot",
+        "Large move already (7.3%) \u2014 timing risk"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Skeptic review of AMD (momentum thesis)",
+        "bullets": [
+          "No direct news/filing link to ticker in current snapshot",
+          "Large move already (7.3%) \u2014 timing risk"
+        ]
+      },
+      "news": [],
+      "features": {
+        "risk_count": 2,
+        "target_agent": "momentum"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 71.0,
+      "reality_reasons": [
+        {
+          "delta": 14,
+          "label": "gap/move 7.3%"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (4 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "correlation_skeptic",
+      "as_of": "2026-05-21",
+      "score": 0.15,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.15,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Cross-asset links look plausible but still paper-only \u2014 correlation \u2260 causation"
+      ],
+      "risks": [
+        "Cross-asset links look plausible but still paper-only \u2014 correlation \u2260 causation"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Correlation skeptic review of SPY",
+        "bullets": [
+          "Cross-asset links look plausible but still paper-only \u2014 correlation \u2260 causation"
+        ]
+      },
+      "news": [],
+      "features": {
+        "risk_count": 1,
+        "correlation_count": 20
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent",
+      "reality_score": 69.0,
+      "reality_reasons": [
+        {
+          "delta": 12,
+          "label": "SEC filing activity"
+        },
+        {
+          "delta": 10,
+          "label": "model agreement (9 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    }
+  ],
+  "leaderboard_marks": [
+    {
+      "id": "momentum",
+      "symbol": "AMD",
+      "score": 71.0
+    },
+    {
+      "id": "news_only",
+      "symbol": "SPY",
+      "score": 69.0
+    },
+    {
+      "id": "filing_event",
+      "symbol": "QQQ",
+      "score": 69.0
+    },
+    {
+      "id": "macro",
+      "symbol": "SPY",
+      "score": 69.0
+    },
+    {
+      "id": "public_figure",
+      "symbol": "SPY",
+      "score": 69.0
+    },
+    {
+      "id": "entity_graph",
+      "symbol": "SPY",
+      "score": 69.0
+    },
+    {
+      "id": "fx_agent",
+      "symbol": "SPY",
+      "score": 69.0
+    },
+    {
+      "id": "cross_asset_agent",
+      "symbol": "IWM",
+      "score": 47.0
+    },
+    {
+      "id": "regime_agent",
+      "symbol": "NVDA",
+      "score": 57.0
+    },
+    {
+      "id": "divergence_agent",
+      "symbol": "SPY",
+      "score": 69.0
+    },
+    {
+      "id": "ensemble",
+      "symbol": "SPY",
+      "score": 69.0
+    },
+    {
+      "id": "random_baseline",
+      "symbol": "QQQ",
+      "score": 69.0
+    },
+    {
+      "id": "spy_baseline",
+      "symbol": "SPY",
+      "score": 69.0
+    },
+    {
+      "id": "qqq_baseline",
+      "symbol": "QQQ",
+      "score": 69.0
+    },
+    {
+      "id": "equal_weight_baseline",
+      "symbol": "AMD",
+      "score": 71.0
+    },
+    {
+      "id": "momentum_baseline",
+      "symbol": "AMD",
+      "score": 71.0
+    },
+    {
+      "id": "human_baseline",
+      "symbol": "NVDA",
+      "score": 57.0
+    },
+    {
+      "id": "skeptic",
+      "symbol": "AMD",
+      "score": 71.0
+    },
+    {
+      "id": "correlation_skeptic",
+      "symbol": "SPY",
+      "score": 69.0
+    }
+  ],
+  "snapshot_id": "2026-05-21T03-31-45+00-00"
+}

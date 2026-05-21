@@ -1,0 +1,35 @@
+{
+  "user_id": "local_player",
+  "cash_usd": 80989.77,
+  "starting_value_usd": 100000.0,
+  "positions": [
+    {
+      "symbol": "NVDA",
+      "qty": 23.0,
+      "entry_price": 147.3426086956522,
+      "last_price": 223.47,
+      "market_value_usd": 5139.81,
+      "unrealized_pnl_usd": 1750.93
+    },
+    {
+      "symbol": "AAPL",
+      "qty": 10,
+      "entry_price": 195.0,
+      "last_price": 302.25,
+      "market_value_usd": 3022.5,
+      "unrealized_pnl_usd": 1072.5
+    },
+    {
+      "symbol": "SPY",
+      "qty": 2.0,
+      "entry_price": 630.675,
+      "last_price": 741.25,
+      "market_value_usd": 1482.5,
+      "unrealized_pnl_usd": 221.15
+    }
+  ],
+  "day_pnl_usd": -9365.42,
+  "as_of": "2026-05-20",
+  "total_value_usd": 90634.58,
+  "positions_market_value_usd": 9644.81
+}

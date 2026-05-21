@@ -1,0 +1,52 @@
+{
+  "cards": [
+    {
+      "id": "filing_8k",
+      "context": "filing",
+      "title": "SEC 8-K — Material Events",
+      "what_happened": "A company filed an 8-K current report with the SEC.",
+      "why_it_matters": "8-Ks disclose events that shareholders should know about between quarterly reports.",
+      "what_to_watch": "Read the form type, check if it mentions earnings, leadership, acquisitions, or financing."
+    },
+    {
+      "id": "macro_rates",
+      "context": "macro",
+      "title": "Interest Rates and Markets",
+      "what_happened": "Macro data shows Fed Funds rate, yields, or inflation readings.",
+      "why_it_matters": "Rates affect borrowing costs, stock valuations, and sector rotation.",
+      "what_to_watch": "Tech vs banks vs utilities — different sectors react differently to rate changes."
+    },
+    {
+      "id": "energy_oil",
+      "context": "energy",
+      "title": "Oil Price Connections",
+      "what_happened": "Oil prices moved or energy-related news appeared.",
+      "why_it_matters": "Oil affects energy producers, airlines, inflation, and currencies like CAD.",
+      "what_to_watch": "XLE, airlines, Canadian exporters, and inflation-sensitive sectors."
+    },
+    {
+      "id": "currency_usdcad",
+      "context": "currency",
+      "title": "USD/CAD and Global Trade",
+      "what_happened": "The U.S. dollar moved against the Canadian dollar.",
+      "why_it_matters": "Canada is a major commodity exporter — CAD often tracks oil and trade flows.",
+      "what_to_watch": "Canadian banks, energy names, and multinationals with cross-border revenue."
+    },
+    {
+      "id": "news_headline",
+      "context": "news",
+      "title": "Reading a Headline",
+      "what_happened": "A fresh headline hit the news radar.",
+      "why_it_matters": "News can move prices — but markets may have already priced it in.",
+      "what_to_watch": "Which tickers and sectors are tagged? Is the source credible? How fresh is it?"
+    },
+    {
+      "id": "ai_prediction",
+      "context": "ai",
+      "title": "AI Paper Predictions",
+      "what_happened": "An AI agent made a paper hypothesis — not investment advice.",
+      "why_it_matters": "Agents compete on the same data. Compare them to random and SPY baselines.",
+      "what_to_watch": "Confidence, reasons, risks, and whether the Skeptic flagged stale data."
+    }
+  ]
+}

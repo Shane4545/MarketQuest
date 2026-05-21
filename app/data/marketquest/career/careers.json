@@ -1,0 +1,112 @@
+{
+  "careers": [
+    {
+      "id": "ai_engineer",
+      "title": "AI Engineer",
+      "description": "Builds AI systems that process data, make predictions, and power intelligent applications.",
+      "skills": ["Python", "machine learning", "APIs", "prompt engineering"],
+      "marketquest_teaches": "Agent Debate, Ensemble Agent, AI Tool Scout, Reality Engine",
+      "beginner_project": "Build a simple news sentiment scorer for one ticker",
+      "school_subjects": ["Computer Science", "Mathematics", "Statistics"]
+    },
+    {
+      "id": "data_scientist",
+      "title": "Data Scientist",
+      "description": "Analyzes data to find patterns, build models, and communicate insights.",
+      "skills": ["Statistics", "Python/R", "visualization", "experiment design"],
+      "marketquest_teaches": "Reality Scores, Learning Lab, benchmark comparisons, event radar",
+      "beginner_project": "Compare agent hit rates vs random baseline over 2 weeks of snapshots",
+      "school_subjects": ["Statistics", "Mathematics", "Computer Science"]
+    },
+    {
+      "id": "quant_researcher",
+      "title": "Quant Researcher",
+      "description": "Develops systematic trading strategies using math, data, and backtesting.",
+      "skills": ["Statistics", "programming", "market microstructure", "backtesting"],
+      "marketquest_teaches": "Benchmark players, momentum baseline, multi-horizon outcomes",
+      "beginner_project": "Implement a transparent momentum rule and compare to SPY",
+      "school_subjects": ["Mathematics", "Physics", "Computer Science", "Economics"]
+    },
+    {
+      "id": "business_analyst",
+      "title": "Business Analyst",
+      "description": "Connects business problems to data and helps teams make better decisions.",
+      "skills": ["Excel/SQL", "communication", "domain knowledge", "requirements gathering"],
+      "marketquest_teaches": "Event Radar, entity graph, lesson cards, filing events",
+      "beginner_project": "Write a one-page brief on how an 8-K filing affects a sector",
+      "school_subjects": ["Business", "Economics", "Communications"]
+    },
+    {
+      "id": "portfolio_analyst",
+      "title": "Portfolio Analyst",
+      "description": "Tracks holdings, performance, and risk for investment portfolios.",
+      "skills": ["Finance", "Excel", "risk metrics", "reporting"],
+      "marketquest_teaches": "Paper Portfolio, leaderboard, SPY/QQQ baselines",
+      "beginner_project": "Track a paper portfolio vs SPY for one month",
+      "school_subjects": ["Finance", "Economics", "Mathematics"]
+    },
+    {
+      "id": "economist",
+      "title": "Economist",
+      "description": "Studies how economies work — growth, inflation, employment, and policy.",
+      "skills": ["Economic theory", "data analysis", "writing", "forecasting"],
+      "marketquest_teaches": "Macro Agent, FRED data, cross-asset strip, currency connections",
+      "beginner_project": "Explain how a Fed rate change might affect three different sectors",
+      "school_subjects": ["Economics", "Mathematics", "History", "Political Science"]
+    },
+    {
+      "id": "risk_manager",
+      "title": "Risk Manager",
+      "description": "Identifies and measures risks in portfolios and trading operations.",
+      "skills": ["Statistics", "regulation", "stress testing", "communication"],
+      "marketquest_teaches": "Skeptic Agent, stale-data flags, drawdown scoring, honesty disclosures",
+      "beginner_project": "List 5 reasons a hyped headline trade could fail",
+      "school_subjects": ["Finance", "Mathematics", "Economics"]
+    },
+    {
+      "id": "financial_software_dev",
+      "title": "Financial Software Developer",
+      "description": "Builds trading platforms, data pipelines, and financial applications.",
+      "skills": ["Programming", "APIs", "databases", "system design"],
+      "marketquest_teaches": "Reality Engine, data providers, API routes, freshness layer",
+      "beginner_project": "Build a watchlist dashboard that shows data freshness badges",
+      "school_subjects": ["Computer Science", "Finance", "Mathematics"]
+    },
+    {
+      "id": "product_manager",
+      "title": "Product Manager",
+      "description": "Defines what to build, prioritizes features, and connects users to value.",
+      "skills": ["Communication", "user research", "prioritization", "technical literacy"],
+      "marketquest_teaches": "Full game loop — events to picks to scoring to learning",
+      "beginner_project": "Design a new mini-challenge and write acceptance criteria",
+      "school_subjects": ["Business", "Computer Science", "Design", "Economics"]
+    },
+    {
+      "id": "entrepreneur",
+      "title": "Entrepreneur",
+      "description": "Starts businesses by identifying problems and building solutions people need.",
+      "skills": ["Creativity", "sales", "finance basics", "resilience"],
+      "marketquest_teaches": "AI Tool Scout, research registries, building with free tools",
+      "beginner_project": "Research 3 free market data APIs and pitch a student-friendly app idea",
+      "school_subjects": ["Business", "Economics", "Computer Science", "Communications"]
+    },
+    {
+      "id": "public_policy_analyst",
+      "title": "Public Policy Analyst",
+      "description": "Studies how government decisions affect economies, industries, and people.",
+      "skills": ["Research", "writing", "economics", "political awareness"],
+      "marketquest_teaches": "Government feeds, macro events, public figure agent, entity graph",
+      "beginner_project": "Trace how a policy headline connects to sector tickers via entity graph",
+      "school_subjects": ["Political Science", "Economics", "History", "Law"]
+    },
+    {
+      "id": "market_research_analyst",
+      "title": "Market Research Analyst",
+      "description": "Studies markets, competitors, and consumer trends to guide business strategy.",
+      "skills": ["Research", "surveys", "data analysis", "presentation"],
+      "marketquest_teaches": "News radar, sentiment, sector mapping, lesson cards",
+      "beginner_project": "Map 5 headlines to affected sectors with reasoning",
+      "school_subjects": ["Business", "Marketing", "Economics", "Statistics"]
+    }
+  ]
+}

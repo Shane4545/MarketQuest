@@ -1,0 +1,41 @@
+{
+  "tools": [
+    {
+      "name": "Cursor",
+      "category": "ai_coding_tools",
+      "url": "https://cursor.com",
+      "description": "AI-powered IDE for building apps with agent assistance.",
+      "free": false,
+      "needs_api_key": false,
+      "student_safe": true,
+      "tier": "future_optional",
+      "ideas_to_borrow": ["Agent workflows", "MCP integrations", "inline code generation"],
+      "integration_status": "evaluated",
+      "notes": "Primary development environment for MarketQuest."
+    },
+    {
+      "name": "Local LLM (Ollama)",
+      "category": "ai_coding_tools",
+      "url": "https://ollama.com",
+      "description": "Run open models locally for privacy and experimentation.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Offline sentiment scoring", "Local agent experiments"],
+      "integration_status": "not_started",
+      "notes": "Good for student labs without cloud API costs."
+    },
+    {
+      "name": "MCP Servers",
+      "category": "ai_coding_tools",
+      "url": "https://modelcontextprotocol.io",
+      "description": "Standard for connecting AI agents to data sources and tools.",
+      "free": true,
+      "needs_api_key": false,
+      "student_safe": true,
+      "ideas_to_borrow": ["Browser automation", "File system access", "Custom data connectors"],
+      "integration_status": "evaluated",
+      "notes": "Used in Cursor for browser and backend control."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "agents": {
+    "random_baseline": {
+      "wins": 0,
+      "total": 0,
+      "hit_rate": 0.0
+    },
+    "ensemble": {
+      "wins": 0,
+      "total": 0,
+      "hit_rate": 0.0
+    }
+  },
+  "event_types": {},
+  "updated_at": "2026-05-21T02:07:31+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "indexes": ["SPY", "QQQ", "IWM", "DIA"],
+  "sectors": {
+    "XLK": "technology",
+    "XLE": "energy",
+    "XLF": "financials",
+    "XLI": "industrials",
+    "XLU": "utilities",
+    "XLV": "healthcare",
+    "XLY": "consumer_discretionary",
+    "XLP": "consumer_staples",
+    "XLB": "materials",
+    "XLRE": "real_estate",
+    "XLC": "communications"
+  },
+  "commodities": {
+    "USO": "oil_wti",
+    "BNO": "oil_brent",
+    "GLD": "gold",
+    "SLV": "silver",
+    "UNG": "natural_gas",
+    "CPER": "copper",
+    "DBA": "agriculture"
+  },
+  "rates_bonds": {
+    "TLT": "long_bonds",
+    "IEF": "intermediate_bonds",
+    "SHY": "short_bonds",
+    "HYG": "high_yield",
+    "LQD": "investment_grade"
+  },
+  "fred_yields": ["DGS10", "DGS2", "FEDFUNDS"],
+  "canada_infrastructure": ["BAM", "BN", "BEP", "BIP"]
+}

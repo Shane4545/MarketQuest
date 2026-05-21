@@ -1,0 +1,30 @@
+{
+  "major_pairs": [
+    "EUR/USD",
+    "GBP/USD",
+    "USD/JPY",
+    "USD/CAD",
+    "AUD/USD",
+    "NZD/USD",
+    "USD/CHF"
+  ],
+  "trade_policy_pairs": [
+    "USD/CNH",
+    "USD/MXN",
+    "USD/CAD",
+    "EUR/USD"
+  ],
+  "commodity_sensitive_pairs": [
+    "USD/CAD",
+    "AUD/USD",
+    "NZD/USD",
+    "USD/NOK"
+  ],
+  "risk_pairs": [
+    "USD/JPY",
+    "USD/CHF",
+    "AUD/JPY",
+    "CAD/JPY"
+  ],
+  "custom_pairs": []
+}

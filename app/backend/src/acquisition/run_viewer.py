@@ -3,10 +3,46 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
+
+_SELECTED_COLUMN_ORDER = [
+    "symbol",
+    "score",
+    "_score",
+    "prior_5d_return_pct",
+    "volume_surge",
+    "close_location_value",
+    "close_weak_flag",
+    "blowoff_flag",
+    "market_cap_missing_flag",
+    "scan_reason",
+    "rule",
+    "as_of",
+    "status",
+    "insufficient_evidence",
+    "missing_required_ohlcv",
+    "market_cap_value",
+]
+
+_REJECTED_COLUMN_ORDER = [
+    "symbol",
+    "rejection_reason",
+    "failed_rule",
+    "scan_reason",
+    "rule",
+    "prior_5d_return_pct",
+    "volume_surge",
+    "close_location_value",
+    "close_weak_flag",
+    "blowoff_flag",
+    "market_cap_missing_flag",
+    "as_of",
+    "status",
+]
 
 MSG_EVIDENCE_NOT_LINKED = "not linked to run_id"
 MSG_RECEIPT_NOT_LINKED = "not linked to run_id"
@@ -29,6 +65,285 @@ def _csv_count(path: Path) -> int | None:
     if not path.is_file():
         return None
     return int(pd.read_csv(path).shape[0])
+
+
+def _json_safe_value(val: Any) -> Any:
+    if val is None:
+        return None
+    if isinstance(val, bool):
+        return val
+    if isinstance(val, str):
+        return val
+    if isinstance(val, (int,)):
+        return int(val)
+    if isinstance(val, float):
+        if math.isnan(val):
+            return None
+        return float(val)
+    try:
+        if pd.isna(val):
+            return None
+    except (ValueError, TypeError):
+        pass
+    if hasattr(val, "item"):
+        try:
+            return _json_safe_value(val.item())
+        except Exception:
+            return str(val)
+    return str(val)
+
+
+def _order_columns(columns: list[str], preferred: list[str]) -> list[str]:
+    seen: set[str] = set()
+    out: list[str] = []
+    for key in preferred:
+        if key in columns and key not in seen:
+            out.append(key)
+            seen.add(key)
+    for key in columns:
+        if key not in seen:
+            out.append(key)
+            seen.add(key)
+    return out
+
+
+def _dataframe_to_records(df: pd.DataFrame) -> tuple[list[str], list[dict[str, Any]]]:
+    columns = list(df.columns)
+    rows: list[dict[str, Any]] = []
+    for _, row in df.iterrows():
+        rec: dict[str, Any] = {}
+        for col in columns:
+            rec[col] = _json_safe_value(row[col])
+        rows.append(rec)
+    return columns, rows
+
+
+def _resolve_parquet_path(
+    repo_root: Path,
+    terminal: dict[str, Any],
+    path_key: str,
+    fallback_relative: str,
+) -> tuple[Path | None, list[str]]:
+    """Pick first existing path from terminal absolute path or curated fallback using terminal as_of."""
+    tried: list[str] = []
+    raw = terminal.get(path_key)
+    if raw:
+        p = Path(str(raw))
+        if not p.is_absolute():
+            p = (repo_root / raw).resolve()
+        tried.append(str(p))
+        if p.is_file():
+            return p, tried
+
+    as_of = terminal.get("as_of")
+    if as_of:
+        fb = repo_root / "app" / "data" / "curated" / fallback_relative.format(as_of=as_of)
+        tried.append(str(fb))
+        if fb.is_file():
+            return fb, tried
+
+    return None, tried
+
+
+def load_parquet_candidate_artifact(
+    repo_root: Path,
+    terminal: dict[str, Any] | None,
+    *,
+    kind: str,
+) -> dict[str, Any]:
+    """Load selected or rejected candidates from parquet; paths come from terminal or curated fallback."""
+    terminal = terminal or {}
+    if kind == "selected":
+        path_key = "candidates_path"
+        fallback = "candidates_{as_of}.parquet"
+        preferred = _SELECTED_COLUMN_ORDER
+    elif kind == "rejected":
+        path_key = "rejected_candidates_path"
+        fallback = "rejected_candidates_{as_of}.parquet"
+        preferred = _REJECTED_COLUMN_ORDER
+    else:
+        raise ValueError(f"unknown kind: {kind}")
+
+    resolved, tried = _resolve_parquet_path(repo_root, terminal, path_key, fallback)
+    if resolved is None:
+        return {
+            "artifact_path": str(terminal.get(path_key) or ""),
+            "resolved_path": "",
+            "columns": [],
+            "rows": [],
+            "error": (
+                "Candidate parquet not found. Checked pipeline_terminal_status paths and "
+                f"app/data/curated fallback for as_of. Attempted: {tried}"
+            ),
+        }
+
+    try:
+        df = pd.read_parquet(resolved)
+    except Exception as exc:
+        return {
+            "artifact_path": str(resolved),
+            "resolved_path": str(resolved),
+            "columns": [],
+            "rows": [],
+            "error": f"Failed to read parquet: {exc}",
+        }
+
+    cols, rows = _dataframe_to_records(df)
+    if kind == "selected":
+        for r in rows:
+            if r.get("_score") is not None and r.get("score") is None:
+                r["score"] = r["_score"]
+        cols = list(rows[0].keys()) if rows else cols
+        cols = _order_columns(cols, _SELECTED_COLUMN_ORDER)
+    else:
+        for r in rows:
+            if r.get("scan_reason") is not None and r.get("rejection_reason") is None:
+                r["rejection_reason"] = r["scan_reason"]
+            if r.get("rule") is not None and r.get("failed_rule") is None:
+                r["failed_rule"] = r["rule"]
+        cols = list(rows[0].keys()) if rows else cols
+        cols = _order_columns(cols, _REJECTED_COLUMN_ORDER)
+
+    ordered_rows: list[dict[str, Any]] = []
+    for r in rows:
+        ordered_rows.append({c: r.get(c) for c in cols})
+
+    return {
+        "artifact_path": str(terminal.get(path_key) or ""),
+        "resolved_path": str(resolved),
+        "columns": cols,
+        "rows": ordered_rows,
+        "error": None,
+    }
+
+
+def load_frozen_basket_detail(
+    repo_root: Path,
+    *,
+    terminal: dict[str, Any] | None,
+    launcher_request: dict[str, Any] | None,
+    overall_pipeline_status: str | None,
+    no_candidates_message: str | None,
+) -> dict[str, Any]:
+    terminal = terminal or {}
+    lr = launcher_request or {}
+
+    if overall_pipeline_status == "COMPLETE_NO_CANDIDATES":
+        return {
+            "status": "no_basket",
+            "message": no_candidates_message
+            or "No basket was generated because no candidates passed the configured scan rule.",
+        }
+
+    if not terminal.get("basket_frozen"):
+        bs = str(terminal.get("basket_status") or "")
+        if bs.startswith("NOT_RUN") or "NO_CANDIDATES" in bs:
+            return {
+                "status": "not_run",
+                "message": terminal.get("reason") or "Basket freeze did not run for this pipeline state.",
+            }
+        return {
+            "status": "no_basket",
+            "message": terminal.get("reason") or "Basket was not marked frozen in terminal status.",
+        }
+
+    basket_name = lr.get("basket_name")
+    as_of = terminal.get("as_of")
+    if not basket_name or not as_of:
+        return {
+            "status": "missing_metadata",
+            "message": "Cannot locate basket JSON: launcher_request.json missing basket_name or terminal missing as_of.",
+        }
+
+    basket_path = repo_root / "app" / "data" / "baskets" / f"{basket_name}_{as_of}.json"
+    if not basket_path.is_file():
+        return {
+            "status": "artifact_missing",
+            "expected_path": str(basket_path),
+            "message": f"Frozen basket JSON not found at expected path: {basket_path}",
+        }
+
+    payload = _read_json(basket_path)
+    return {"status": "ok", "artifact_path": str(basket_path), "basket": payload}
+
+
+def load_review_result_detail(
+    repo_root: Path,
+    *,
+    terminal: dict[str, Any] | None,
+    launcher_request: dict[str, Any] | None,
+    overall_pipeline_status: str | None,
+    no_candidates_message: str | None,
+) -> dict[str, Any]:
+    terminal = terminal or {}
+    lr = launcher_request or {}
+
+    if overall_pipeline_status == "COMPLETE_NO_CANDIDATES":
+        return {
+            "status": "not_run",
+            "message": no_candidates_message
+            or "Review was not generated because no candidates passed the configured scan rule.",
+        }
+
+    if not terminal.get("review_generated"):
+        return {
+            "status": "not_run",
+            "message": terminal.get("reason") or "Review output was not generated for this run.",
+        }
+
+    basket_name = lr.get("basket_name")
+    review_date = lr.get("review_date")
+    if not basket_name or not review_date:
+        return {
+            "status": "missing_metadata",
+            "message": "Cannot locate review JSON: launcher_request.json missing basket_name or review_date.",
+        }
+
+    review_path = repo_root / "app" / "data" / "baskets" / f"{basket_name}_review_{review_date}.json"
+    if not review_path.is_file():
+        return {
+            "status": "artifact_missing",
+            "expected_path": str(review_path),
+            "message": f"Review JSON not found at expected path: {review_path}",
+        }
+
+    payload = _read_json(review_path)
+    return {"status": "ok", "artifact_path": str(review_path), "review": payload}
+
+
+def build_terminal_status_detail(terminal: dict[str, Any] | None) -> dict[str, Any]:
+    if not terminal:
+        return {
+            "missing": True,
+            "message": "pipeline_terminal_status.json is missing or unreadable.",
+            "pipeline_fields": {},
+            "errors_list": [],
+            "warnings_list": [],
+            "full_terminal": {},
+        }
+
+    pipeline_fields = {
+        "acquisition_status": terminal.get("acquisition_status"),
+        "validation_status": terminal.get("validation_status"),
+        "scan_status": terminal.get("scan_status"),
+        "basket_status": terminal.get("basket_status"),
+        "review_status": terminal.get("review_status"),
+        "overall_pipeline_status": terminal.get("overall_pipeline_status"),
+    }
+
+    err_raw = terminal.get("errors")
+    warn_raw = terminal.get("warnings")
+    errors_list = err_raw if isinstance(err_raw, list) else ([err_raw] if err_raw not in (None, "") else [])
+    warnings_list = warn_raw if isinstance(warn_raw, list) else ([warn_raw] if warn_raw not in (None, "") else [])
+
+    return {
+        "missing": False,
+        "message": "",
+        "pipeline_fields": pipeline_fields,
+        "errors_list": errors_list,
+        "warnings_list": warnings_list,
+        "full_terminal": terminal,
+    }
 
 
 def _collect_str_list(payload: dict[str, Any] | None, *keys: str) -> list[str]:
@@ -246,6 +561,7 @@ def load_run_summary(repo_root: Path, run_id: str) -> dict[str, Any]:
         raise FileNotFoundError(f"Run not found: {run_id}")
 
     plan = _read_json(run_dir / "acquisition_plan.json")
+    launcher_request = _read_json(run_dir / "launcher_request.json")
     result = _read_json(run_dir / "acquisition_result.json")
     manifest = _read_json(run_dir / "openbb_acquisition_manifest.json")
     source_log = _read_json(run_dir / "openbb_source_log.json")
@@ -289,6 +605,24 @@ def load_run_summary(repo_root: Path, run_id: str) -> dict[str, Any]:
 
     limitations.extend(governance.get("limitations") or [])
 
+    selected_candidates = load_parquet_candidate_artifact(repo_root, terminal, kind="selected")
+    rejected_candidates = load_parquet_candidate_artifact(repo_root, terminal, kind="rejected")
+    frozen_basket = load_frozen_basket_detail(
+        repo_root,
+        terminal=terminal,
+        launcher_request=launcher_request,
+        overall_pipeline_status=overall_pipeline_status,
+        no_candidates_message=no_candidates_message,
+    )
+    review_result = load_review_result_detail(
+        repo_root,
+        terminal=terminal,
+        launcher_request=launcher_request,
+        overall_pipeline_status=overall_pipeline_status,
+        no_candidates_message=no_candidates_message,
+    )
+    terminal_status_detail = build_terminal_status_detail(terminal)
+
     return {
         "run_id": run_id,
         "provider": provider,
@@ -316,4 +650,9 @@ def load_run_summary(repo_root: Path, run_id: str) -> dict[str, Any]:
         "paths": paths,
         "governance": governance,
         "missing_artifacts": missing_artifacts,
+        "selected_candidates": selected_candidates,
+        "rejected_candidates": rejected_candidates,
+        "frozen_basket": frozen_basket,
+        "review_result": review_result,
+        "terminal_status_detail": terminal_status_detail,
     }

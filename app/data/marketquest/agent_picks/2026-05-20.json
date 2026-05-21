@@ -1,0 +1,654 @@
+{
+  "as_of": "2026-05-20",
+  "data_mode": "offline_training",
+  "picks": [
+    {
+      "symbol": "NVDA",
+      "agent_id": "momentum",
+      "as_of": "2026-05-20",
+      "score": 0.72,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.72,
+      "expected_direction": "up",
+      "reasons": [
+        "gap_pct elevated",
+        "rvol above average",
+        "composite score leads watchlist"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Strong gap and relative volume (mock)",
+        "bullets": [
+          "gap_pct elevated",
+          "rvol above average",
+          "composite score leads watchlist"
+        ]
+      },
+      "news": [],
+      "features": {
+        "gap_pct": 4.2,
+        "rvol": 2.1,
+        "ml_predicted_return_1d_pct": 3.5
+      },
+      "data_mode": "mock",
+      "runners_up": [
+        "AMD",
+        "TSLA"
+      ],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "TSLA",
+      "agent_id": "news",
+      "as_of": "2026-05-20",
+      "score": 0.65,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.65,
+      "expected_direction": "up",
+      "reasons": [
+        "sentiment_mean elevated",
+        "multiple articles in 48h"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Positive news sentiment cluster (mock)",
+        "bullets": [
+          "sentiment_mean elevated",
+          "multiple articles in 48h"
+        ]
+      },
+      "news": [
+        {
+          "title": "Mock: delivery numbers beat estimates",
+          "sentiment": 0.45,
+          "source": "fixture"
+        }
+      ],
+      "features": {
+        "sentiment_mean": 0.42,
+        "news_count_48h": 5
+      },
+      "data_mode": "mock",
+      "runners_up": [
+        "NVDA",
+        "AAPL"
+      ],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "AMD",
+      "agent_id": "macro_event",
+      "as_of": "2026-05-20",
+      "score": 0.58,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.58,
+      "expected_direction": "unclear",
+      "reasons": [
+        "earnings keyword detected",
+        "event-driven catalyst"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Earnings/macro event signal (mock)",
+        "bullets": [
+          "earnings keyword detected",
+          "event-driven catalyst"
+        ]
+      },
+      "news": [
+        {
+          "title": "Mock: earnings preview scheduled",
+          "sentiment": 0.1,
+          "source": "fixture"
+        }
+      ],
+      "features": {
+        "has_earnings_keyword": true,
+        "news_count_48h": 3
+      },
+      "data_mode": "mock",
+      "runners_up": [
+        "NVDA",
+        "MSFT"
+      ],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "filing_event",
+      "as_of": "2026-05-20",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "EDGAR fetch may be rate-limited"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "No recent SEC filings in snapshot",
+        "bullets": [
+          "EDGAR fetch may be rate-limited"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "macro",
+      "as_of": "2026-05-20",
+      "score": 0.5,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.5,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No macro series in snapshot \u2014 check FRED_API_KEY"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Macro context pick: SPY",
+        "bullets": [
+          "No macro series in snapshot \u2014 check FRED_API_KEY"
+        ]
+      },
+      "news": [],
+      "features": {
+        "macro_count": 0
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "public_figure",
+      "as_of": "2026-05-20",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No fresh public figure events"
+      ],
+      "risks": [
+        "Policy statements can move markets quickly when they appear"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "No public figure statements in current snapshot",
+        "bullets": [
+          "Monitor government and executive communications"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "BAM",
+      "agent_id": "entity_graph",
+      "as_of": "2026-05-20",
+      "score": 0.45,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.5,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Entity graph linked Mark Carney \u2192 Canada to watchlist tickers",
+        "Educational second-order hypothesis \u2014 not investment advice"
+      ],
+      "risks": [
+        "Correlation \u2260 causation",
+        "Market may have priced narrative already"
+      ],
+      "source_event_ids": [
+        "test1"
+      ],
+      "explanation": {
+        "headline": "Graph chain: Mark Carney \u2192 Canada \u2192 BAM",
+        "bullets": [
+          "Event: Carney infrastructure plan",
+          "Candidate tickers: BAM, ENB"
+        ]
+      },
+      "news": [],
+      "features": {
+        "entities": [
+          "Mark Carney",
+          "Canada"
+        ],
+        "chain_tickers": [
+          "BAM",
+          "ENB"
+        ]
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "fx_agent",
+      "as_of": "2026-05-20",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No FX quotes in snapshot"
+      ],
+      "risks": [
+        "Currency shocks can move multinationals quickly"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "FX data offline \u2014 watch only",
+        "bullets": [
+          "Configure FINNHUB_API_KEY or use yfinance fallback"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "cross_asset_agent",
+      "as_of": "2026-05-20",
+      "score": 0.15,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.15,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Need index/sector/commodity proxies in watchlist"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Cross-asset data sparse \u2014 watch only",
+        "bullets": [
+          "Need index/sector/commodity proxies in watchlist"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "regime_agent",
+      "as_of": "2026-05-20",
+      "score": 0.3,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1d",
+      "confidence": 0.3,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Current regime classified as event_uncertain"
+      ],
+      "risks": [
+        "Regime labels can flip intraday \u2014 not investment advice"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Regime: event uncertain \u2014 paper watch on SPY",
+        "bullets": [
+          "Mixed signals across indexes and FX"
+        ]
+      },
+      "news": [],
+      "features": {
+        "regime": "event_uncertain",
+        "regime_scores": null
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "divergence_agent",
+      "as_of": "2026-05-20",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.15,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Drivers and stocks moving in expected directions"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "No significant divergences detected",
+        "bullets": [
+          "Drivers and stocks moving in expected directions"
+        ]
+      },
+      "news": [],
+      "features": {},
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "ensemble",
+      "as_of": "2026-05-20",
+      "score": 0.1786,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1786,
+      "expected_direction": "up",
+      "reasons": [
+        "7 agents selected SPY",
+        "Ensemble weighted consensus"
+      ],
+      "risks": [
+        "No direct news/filing link to ticker in current snapshot"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Ensemble paper hypothesis: SPY (7 agents agree)",
+        "bullets": [
+          "Votes: 7",
+          "Blended score: 0.179",
+          "Not investment advice \u2014 paper prediction only"
+        ]
+      },
+      "news": [],
+      "features": {
+        "votes": 7,
+        "agents": 11
+      },
+      "data_mode": "mock",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "NVDA",
+      "agent_id": "skeptic",
+      "as_of": "2026-05-20",
+      "score": 0.2,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.2,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No direct news/filing link to ticker in current snapshot"
+      ],
+      "risks": [
+        "No direct news/filing link to ticker in current snapshot"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Skeptic review of NVDA (momentum thesis)",
+        "bullets": [
+          "No direct news/filing link to ticker in current snapshot"
+        ]
+      },
+      "news": [],
+      "features": {
+        "risk_count": 1,
+        "target_agent": "momentum"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "correlation_skeptic",
+      "as_of": "2026-05-20",
+      "score": 0.2,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1h",
+      "confidence": 0.2,
+      "expected_direction": "unclear",
+      "reasons": [
+        "No correlation data \u2014 cross-asset thesis unverified"
+      ],
+      "risks": [
+        "No correlation data \u2014 cross-asset thesis unverified"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Correlation skeptic review of SPY",
+        "bullets": [
+          "No correlation data \u2014 cross-asset thesis unverified"
+        ]
+      },
+      "news": [],
+      "features": {
+        "risk_count": 1,
+        "correlation_count": 0
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "agent"
+    },
+    {
+      "symbol": "NVDA",
+      "agent_id": "human_baseline",
+      "as_of": "2026-05-20",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Educational comparator for human players",
+        "Not optimized \u2014 reflects your book"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Human baseline tracks portfolio or SPY: NVDA",
+        "bullets": [
+          "Educational comparator for human players",
+          "Not optimized \u2014 reflects your book"
+        ]
+      },
+      "news": [],
+      "features": {
+        "baseline": "human"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "NVDA",
+      "agent_id": "random_baseline",
+      "as_of": "2026-05-20",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Uniform random symbol from watchlist",
+        "If AI cannot beat this over time, the UI must show that honestly"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Random baseline pick: NVDA",
+        "bullets": [
+          "Uniform random symbol from watchlist",
+          "If AI cannot beat this over time, the UI must show that honestly"
+        ]
+      },
+      "news": [],
+      "features": {
+        "random": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "spy_baseline",
+      "as_of": "2026-05-20",
+      "score": 0.0,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.5,
+      "expected_direction": "up",
+      "reasons": [
+        "Index benchmark \u2014 no stock selection skill"
+      ],
+      "risks": [
+        "Broad market exposure"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "SPY Baseline \u2014 S&P 500 proxy",
+        "bullets": [
+          "Passive benchmark: tracks SPY return",
+          "Measures whether players beat the broad market"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 0.0,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "qqq_baseline",
+      "as_of": "2026-05-20",
+      "score": 0.0,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.5,
+      "expected_direction": "up",
+      "reasons": [
+        "Tech index benchmark"
+      ],
+      "risks": [
+        "Concentrated in mega-cap tech"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "QQQ Baseline \u2014 Nasdaq-100 proxy",
+        "bullets": [
+          "Passive benchmark: tracks QQQ return",
+          "Measures whether players beat large-cap tech"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 0.0,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "equal_weight_baseline",
+      "as_of": "2026-05-20",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1w",
+      "confidence": 0.3,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Equal weight all eligible names"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Equal-weight watchlist (no prices)",
+        "bullets": [
+          "Equal weight all eligible names"
+        ]
+      },
+      "news": [],
+      "features": {
+        "equal_weight": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "momentum_baseline",
+      "as_of": "2026-05-20",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1w",
+      "confidence": 0.3,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Rule: buy top 3 by recent change_pct"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Momentum baseline (no prices)",
+        "bullets": [
+          "Rule: buy top 3 by recent change_pct"
+        ]
+      },
+      "news": [],
+      "features": {
+        "rule": "top_momentum"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    }
+  ]
+}

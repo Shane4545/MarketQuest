@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: marketquest
+    runtime: docker
+    plan: free
+    healthCheckPath: /marketquest
+    envVars:
+      - key: PORT
+        value: "8010"
+      - key: HOST
+        value: "0.0.0.0"
+      - key: MARKETQUEST_OFFLINE_TRAINING
+        value: "0"
+      - key: FINNHUB_API_KEY
+        sync: false
+      - key: ALPACA_API_KEY
+        sync: false
+      - key: ALPACA_SECRET_KEY
+        sync: false
+      - key: FRED_API_KEY
+        sync: false

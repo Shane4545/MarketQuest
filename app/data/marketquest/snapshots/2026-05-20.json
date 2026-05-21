@@ -1,0 +1,168 @@
+{
+  "as_of": "2026-05-20",
+  "data_mode": "live",
+  "quotes": [
+    {
+      "symbol": "SPY",
+      "last": 741.25,
+      "change_pct": 0.9534,
+      "volume": 45085124,
+      "currency": "USD"
+    },
+    {
+      "symbol": "QQQ",
+      "last": 713.15,
+      "change_pct": 1.5507,
+      "volume": 35933262,
+      "currency": "USD"
+    },
+    {
+      "symbol": "IWM",
+      "last": 279.87,
+      "change_pct": 2.4414,
+      "volume": 31045643,
+      "currency": "USD"
+    },
+    {
+      "symbol": "XLE",
+      "last": 59.8,
+      "change_pct": -2.2077,
+      "volume": 58965584,
+      "currency": "USD"
+    },
+    {
+      "symbol": "XLF",
+      "last": 51.66,
+      "change_pct": 1.0366,
+      "volume": 42136935,
+      "currency": "USD"
+    },
+    {
+      "symbol": "XLK",
+      "last": 177.14,
+      "change_pct": 2.062,
+      "volume": 12594706,
+      "currency": "USD"
+    },
+    {
+      "symbol": "XLI",
+      "last": 170.73,
+      "change_pct": 1.0237,
+      "volume": 10492145,
+      "currency": "USD"
+    },
+    {
+      "symbol": "XLV",
+      "last": 147.13,
+      "change_pct": -0.129,
+      "volume": 10503628,
+      "currency": "USD"
+    },
+    {
+      "symbol": "XLU",
+      "last": 44.51,
+      "change_pct": 0.3381,
+      "volume": 17568456,
+      "currency": "USD"
+    },
+    {
+      "symbol": "NVDA",
+      "last": 223.47,
+      "change_pct": 0.8712,
+      "volume": 171145403,
+      "currency": "USD"
+    },
+    {
+      "symbol": "AMD",
+      "last": 447.58,
+      "change_pct": 7.2613,
+      "volume": 35425772,
+      "currency": "USD"
+    },
+    {
+      "symbol": "MSFT",
+      "last": 421.06,
+      "change_pct": 1.0269,
+      "volume": 27738933,
+      "currency": "USD"
+    },
+    {
+      "symbol": "GOOGL",
+      "last": 388.91,
+      "change_pct": 0.1881,
+      "volume": 30405838,
+      "currency": "USD"
+    },
+    {
+      "symbol": "META",
+      "last": 605.06,
+      "change_pct": 0.3957,
+      "volume": 11270062,
+      "currency": "USD"
+    },
+    {
+      "symbol": "AAPL",
+      "last": 302.25,
+      "change_pct": 1.0986,
+      "volume": 37276629,
+      "currency": "USD"
+    },
+    {
+      "symbol": "AMZN",
+      "last": 265.01,
+      "change_pct": 2.2731,
+      "volume": 34425988,
+      "currency": "USD"
+    },
+    {
+      "symbol": "XOM",
+      "last": 156.28,
+      "change_pct": -3.7507,
+      "volume": 14463312,
+      "currency": "USD"
+    },
+    {
+      "symbol": "CVX",
+      "last": 191.33,
+      "change_pct": -2.9583,
+      "volume": 14531892,
+      "currency": "USD"
+    },
+    {
+      "symbol": "COP",
+      "last": 122.36,
+      "change_pct": -1.9237,
+      "volume": 4666983,
+      "currency": "USD"
+    },
+    {
+      "symbol": "BAM",
+      "last": 48.06,
+      "change_pct": 1.4995,
+      "volume": 1663905,
+      "currency": "USD"
+    },
+    {
+      "symbol": "BN",
+      "last": 45.34,
+      "change_pct": 1.8876,
+      "volume": 3438233,
+      "currency": "USD"
+    },
+    {
+      "symbol": "ENB",
+      "last": 57.08,
+      "change_pct": 1.3854,
+      "volume": 6591317,
+      "currency": "USD"
+    },
+    {
+      "symbol": "TRP",
+      "last": 70.09,
+      "change_pct": 0.5595,
+      "volume": 2610025,
+      "currency": "USD"
+    }
+  ],
+  "symbol_count": 23
+}
