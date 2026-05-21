@@ -1,0 +1,18 @@
+{
+  "report_date": "2026-05-20",
+  "markdown": "# MarketQuest Nightly Review \u2014 2026-05-20\n\nGenerated: 2026-05-21T02:07:31+00:00\n\n## Summary\n\n- Snapshots on disk: 0\n- Recent pick files: 1\n\n## Agent reliability (rolling)\n\n_Insufficient history \u2014 scores populate as outcomes are labeled._\n\n## Event types\n\n_No event-type outcomes yet._\n\n## What worked / failed today\n\n_V0 uses snapshot-diff labeling when history exists. Run again after multiple trading days._\n\n## False positives\n\n- Skeptic agent flags stale data and weak ticker links \u2014 review skeptic picks in UI.\n\n## Beginner explanation\n\nMarketQuest scores **paper predictions** against what actually happened. Agents that beat the random baseline over time get higher ensemble weight. This is educational \u2014 not investment advice.\n",
+  "agent_scores": {
+    "random_baseline": {
+      "wins": 0,
+      "total": 0,
+      "hit_rate": 0.0
+    },
+    "ensemble": {
+      "wins": 0,
+      "total": 0,
+      "hit_rate": 0.0
+    }
+  },
+  "event_types": {},
+  "summary": "Latest learning report loaded"
+}

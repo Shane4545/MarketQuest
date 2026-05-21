@@ -1,0 +1,3955 @@
+{
+  "product": "MarketQuest",
+  "version": "2.0.0",
+  "tagline": "Wall Street intelligence game \u2014 real data, paper scoring, honest learning.",
+  "as_of": "2026-05-21",
+  "timestamp_utc": "2026-05-21T12:00:00+00:00",
+  "market_status": "closed",
+  "data_mode": "offline_training",
+  "offline_training_mode": true,
+  "scoring_data_eligible": false,
+  "stale_warning": null,
+  "disclaimer": "Paper trading simulation only. Not investment advice. No real-money order placement. Past paper scores do not predict future results.",
+  "provider_status": {
+    "fixture": {
+      "status": "OFFLINE",
+      "fallback": true
+    }
+  },
+  "snapshot_age_minutes": 0.0,
+  "watchlist": {
+    "as_of": "2026-05-21",
+    "timestamp_utc": "2026-05-21T12:00:00+00:00",
+    "data_mode": "offline_training",
+    "quotes": [
+      {
+        "symbol": "SPY",
+        "last": 520.1,
+        "change_pct": 0.4,
+        "volume": 65000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 57.0
+      },
+      {
+        "symbol": "QQQ",
+        "last": 445.2,
+        "change_pct": 0.6,
+        "volume": 42000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 57.0
+      },
+      {
+        "symbol": "IWM",
+        "last": 210.5,
+        "change_pct": -0.2,
+        "volume": 28000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 42.0
+      },
+      {
+        "symbol": "NVDA",
+        "last": 132.5,
+        "change_pct": 2.4,
+        "volume": 45000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 57.0
+      },
+      {
+        "symbol": "AMD",
+        "last": 118.3,
+        "change_pct": 3.1,
+        "volume": 38000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 53.2
+      },
+      {
+        "symbol": "MSFT",
+        "last": 425.0,
+        "change_pct": 0.8,
+        "volume": 21000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 47.0
+      },
+      {
+        "symbol": "AAPL",
+        "last": 198.2,
+        "change_pct": 0.5,
+        "volume": 52000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 47.0
+      },
+      {
+        "symbol": "XLE",
+        "last": 88.4,
+        "change_pct": 1.1,
+        "volume": 15000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 47.0
+      },
+      {
+        "symbol": "XLK",
+        "last": 210.0,
+        "change_pct": 0.9,
+        "volume": 12000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 47.0
+      },
+      {
+        "symbol": "BAM",
+        "last": 52.3,
+        "change_pct": -0.3,
+        "volume": 900000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 42.0
+      },
+      {
+        "symbol": "XOM",
+        "last": 112.0,
+        "change_pct": 0.7,
+        "volume": 18000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 47.0
+      },
+      {
+        "symbol": "GOOGL",
+        "last": 175.5,
+        "change_pct": 1.2,
+        "volume": 22000000,
+        "provenance": {
+          "provider": "fixture",
+          "freshness": "OFFLINE",
+          "fallback": true
+        },
+        "reality_score": 47.0
+      }
+    ],
+    "symbol_count": 12,
+    "movers": [],
+    "scoring_data_eligible": false,
+    "stale_warning": null
+  },
+  "picks": {
+    "as_of": "2026-05-21",
+    "data_mode": "offline_training",
+    "picks": [
+      {
+        "symbol": "NVDA",
+        "agent_id": "momentum",
+        "as_of": "2026-05-20",
+        "score": 0.72,
+        "predicted_bias": "bullish",
+        "prediction_type": "paper_long",
+        "horizon": "1d",
+        "confidence": 0.72,
+        "expected_direction": "up",
+        "reasons": [
+          "gap_pct elevated",
+          "rvol above average",
+          "composite score leads watchlist"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Strong gap and relative volume (mock)",
+          "bullets": [
+            "gap_pct elevated",
+            "rvol above average",
+            "composite score leads watchlist"
+          ]
+        },
+        "news": [],
+        "features": {
+          "gap_pct": 4.2,
+          "rvol": 2.1,
+          "ml_predicted_return_1d_pct": 3.5
+        },
+        "data_mode": "mock",
+        "runners_up": [
+          "AMD",
+          "TSLA"
+        ],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "TSLA",
+        "agent_id": "news",
+        "as_of": "2026-05-20",
+        "score": 0.65,
+        "predicted_bias": "bullish",
+        "prediction_type": "paper_long",
+        "horizon": "1d",
+        "confidence": 0.65,
+        "expected_direction": "up",
+        "reasons": [
+          "sentiment_mean elevated",
+          "multiple articles in 48h"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Positive news sentiment cluster (mock)",
+          "bullets": [
+            "sentiment_mean elevated",
+            "multiple articles in 48h"
+          ]
+        },
+        "news": [
+          {
+            "title": "Mock: delivery numbers beat estimates",
+            "sentiment": 0.45,
+            "source": "fixture"
+          }
+        ],
+        "features": {
+          "sentiment_mean": 0.42,
+          "news_count_48h": 5
+        },
+        "data_mode": "mock",
+        "runners_up": [
+          "NVDA",
+          "AAPL"
+        ],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "AMD",
+        "agent_id": "macro_event",
+        "as_of": "2026-05-20",
+        "score": 0.58,
+        "predicted_bias": "neutral",
+        "prediction_type": "paper_long",
+        "horizon": "1d",
+        "confidence": 0.58,
+        "expected_direction": "unclear",
+        "reasons": [
+          "earnings keyword detected",
+          "event-driven catalyst"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Earnings/macro event signal (mock)",
+          "bullets": [
+            "earnings keyword detected",
+            "event-driven catalyst"
+          ]
+        },
+        "news": [
+          {
+            "title": "Mock: earnings preview scheduled",
+            "sentiment": 0.1,
+            "source": "fixture"
+          }
+        ],
+        "features": {
+          "has_earnings_keyword": true,
+          "news_count_48h": 3
+        },
+        "data_mode": "mock",
+        "runners_up": [
+          "NVDA",
+          "MSFT"
+        ],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "filing_event",
+        "as_of": "2026-05-21",
+        "score": 0.0,
+        "predicted_bias": "neutral",
+        "prediction_type": "paper_long",
+        "horizon": "1d",
+        "confidence": 0.1,
+        "expected_direction": "unclear",
+        "reasons": [
+          "EDGAR fetch may be rate-limited"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "No recent SEC filings in snapshot",
+          "bullets": [
+            "EDGAR fetch may be rate-limited"
+          ]
+        },
+        "news": [],
+        "features": {},
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "macro",
+        "as_of": "2026-05-21",
+        "score": 0.5,
+        "predicted_bias": "neutral",
+        "prediction_type": "paper_long",
+        "horizon": "1d",
+        "confidence": 0.5,
+        "expected_direction": "unclear",
+        "reasons": [
+          "No macro series in snapshot \u2014 check FRED_API_KEY"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Macro context pick: SPY",
+          "bullets": [
+            "No macro series in snapshot \u2014 check FRED_API_KEY"
+          ]
+        },
+        "news": [],
+        "features": {
+          "macro_count": 0
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "public_figure",
+        "as_of": "2026-05-21",
+        "score": 0.1,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1h",
+        "confidence": 0.1,
+        "expected_direction": "unclear",
+        "reasons": [
+          "No fresh public figure events"
+        ],
+        "risks": [
+          "Policy statements can move markets quickly when they appear"
+        ],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "No public figure statements in current snapshot",
+          "bullets": [
+            "Monitor government and executive communications"
+          ]
+        },
+        "news": [],
+        "features": {},
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "BAM",
+        "agent_id": "entity_graph",
+        "as_of": "2026-05-21",
+        "score": 0.45,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1d",
+        "confidence": 0.5,
+        "expected_direction": "unclear",
+        "reasons": [
+          "Entity graph linked Mark Carney \u2192 Canada to watchlist tickers",
+          "Educational second-order hypothesis \u2014 not investment advice"
+        ],
+        "risks": [
+          "Correlation \u2260 causation",
+          "Market may have priced narrative already"
+        ],
+        "source_event_ids": [
+          "test1"
+        ],
+        "explanation": {
+          "headline": "Graph chain: Mark Carney \u2192 Canada \u2192 BAM",
+          "bullets": [
+            "Event: Carney infrastructure plan",
+            "Candidate tickers: BAM, ENB"
+          ]
+        },
+        "news": [],
+        "features": {
+          "entities": [
+            "Mark Carney",
+            "Canada"
+          ],
+          "chain_tickers": [
+            "BAM",
+            "ENB"
+          ]
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "fx_agent",
+        "as_of": "2026-05-21",
+        "score": 0.1,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1h",
+        "confidence": 0.1,
+        "expected_direction": "unclear",
+        "reasons": [
+          "No FX quotes in snapshot"
+        ],
+        "risks": [
+          "Currency shocks can move multinationals quickly"
+        ],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "FX data offline \u2014 watch only",
+          "bullets": [
+            "Configure FINNHUB_API_KEY or use yfinance fallback"
+          ]
+        },
+        "news": [],
+        "features": {},
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "cross_asset_agent",
+        "as_of": "2026-05-21",
+        "score": 0.15,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1d",
+        "confidence": 0.15,
+        "expected_direction": "unclear",
+        "reasons": [
+          "Need index/sector/commodity proxies in watchlist"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Cross-asset data sparse \u2014 watch only",
+          "bullets": [
+            "Need index/sector/commodity proxies in watchlist"
+          ]
+        },
+        "news": [],
+        "features": {},
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "regime_agent",
+        "as_of": "2026-05-21",
+        "score": 0.3,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1d",
+        "confidence": 0.3,
+        "expected_direction": "unclear",
+        "reasons": [
+          "Current regime classified as event_uncertain"
+        ],
+        "risks": [
+          "Regime labels can flip intraday \u2014 not investment advice"
+        ],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Regime: event uncertain \u2014 paper watch on SPY",
+          "bullets": [
+            "Mixed signals across indexes and FX"
+          ]
+        },
+        "news": [],
+        "features": {
+          "regime": "event_uncertain",
+          "regime_scores": null
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "divergence_agent",
+        "as_of": "2026-05-21",
+        "score": 0.1,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1h",
+        "confidence": 0.15,
+        "expected_direction": "unclear",
+        "reasons": [
+          "Drivers and stocks moving in expected directions"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "No significant divergences detected",
+          "bullets": [
+            "Drivers and stocks moving in expected directions"
+          ]
+        },
+        "news": [],
+        "features": {},
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "ensemble",
+        "as_of": "2026-05-21",
+        "score": 0.1786,
+        "predicted_bias": "bullish",
+        "prediction_type": "paper_long",
+        "horizon": "1d",
+        "confidence": 0.1786,
+        "expected_direction": "up",
+        "reasons": [
+          "7 agents selected SPY",
+          "Ensemble weighted consensus"
+        ],
+        "risks": [
+          "No direct news/filing link to ticker in current snapshot"
+        ],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Ensemble paper hypothesis: SPY (7 agents agree)",
+          "bullets": [
+            "Votes: 7",
+            "Blended score: 0.179",
+            "Not investment advice \u2014 paper prediction only"
+          ]
+        },
+        "news": [],
+        "features": {
+          "votes": 7,
+          "agents": 11
+        },
+        "data_mode": "mock",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "NVDA",
+        "agent_id": "skeptic",
+        "as_of": "2026-05-21",
+        "score": 0.2,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1h",
+        "confidence": 0.2,
+        "expected_direction": "unclear",
+        "reasons": [
+          "No direct news/filing link to ticker in current snapshot"
+        ],
+        "risks": [
+          "No direct news/filing link to ticker in current snapshot"
+        ],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Skeptic review of NVDA (momentum thesis)",
+          "bullets": [
+            "No direct news/filing link to ticker in current snapshot"
+          ]
+        },
+        "news": [],
+        "features": {
+          "risk_count": 1,
+          "target_agent": "momentum"
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "correlation_skeptic",
+        "as_of": "2026-05-21",
+        "score": 0.2,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1h",
+        "confidence": 0.2,
+        "expected_direction": "unclear",
+        "reasons": [
+          "No correlation data \u2014 cross-asset thesis unverified"
+        ],
+        "risks": [
+          "No correlation data \u2014 cross-asset thesis unverified"
+        ],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Correlation skeptic review of SPY",
+          "bullets": [
+            "No correlation data \u2014 cross-asset thesis unverified"
+          ]
+        },
+        "news": [],
+        "features": {
+          "risk_count": 1,
+          "correlation_count": 0
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "agent"
+      },
+      {
+        "symbol": "NVDA",
+        "agent_id": "human_baseline",
+        "as_of": "2026-05-21",
+        "score": 0.0,
+        "predicted_bias": "neutral",
+        "prediction_type": "paper_long",
+        "horizon": "1d",
+        "confidence": 0.1,
+        "expected_direction": "unclear",
+        "reasons": [
+          "Educational comparator for human players",
+          "Not optimized \u2014 reflects your book"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Human baseline tracks portfolio or SPY: NVDA",
+          "bullets": [
+            "Educational comparator for human players",
+            "Not optimized \u2014 reflects your book"
+          ]
+        },
+        "news": [],
+        "features": {
+          "baseline": "human"
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "benchmark"
+      },
+      {
+        "symbol": "QQQ",
+        "agent_id": "random_baseline",
+        "as_of": "2026-05-21",
+        "score": 0.0,
+        "predicted_bias": "neutral",
+        "prediction_type": "paper_long",
+        "horizon": "1d",
+        "confidence": 0.1,
+        "expected_direction": "unclear",
+        "reasons": [
+          "Uniform random symbol from watchlist",
+          "If AI cannot beat this over time, the UI must show that honestly"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Random baseline pick: QQQ",
+          "bullets": [
+            "Uniform random symbol from watchlist",
+            "If AI cannot beat this over time, the UI must show that honestly"
+          ]
+        },
+        "news": [],
+        "features": {
+          "random": true
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "benchmark"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "spy_baseline",
+        "as_of": "2026-05-21",
+        "score": 0.0,
+        "predicted_bias": "bullish",
+        "prediction_type": "paper_long",
+        "horizon": "1w",
+        "confidence": 0.5,
+        "expected_direction": "up",
+        "reasons": [
+          "Index benchmark \u2014 no stock selection skill"
+        ],
+        "risks": [
+          "Broad market exposure"
+        ],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "SPY Baseline \u2014 S&P 500 proxy",
+          "bullets": [
+            "Passive benchmark: tracks SPY return",
+            "Measures whether players beat the broad market"
+          ]
+        },
+        "news": [],
+        "features": {
+          "change_pct": 0.0,
+          "benchmark": true
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "benchmark"
+      },
+      {
+        "symbol": "QQQ",
+        "agent_id": "qqq_baseline",
+        "as_of": "2026-05-21",
+        "score": 0.0,
+        "predicted_bias": "bullish",
+        "prediction_type": "paper_long",
+        "horizon": "1w",
+        "confidence": 0.5,
+        "expected_direction": "up",
+        "reasons": [
+          "Tech index benchmark"
+        ],
+        "risks": [
+          "Concentrated in mega-cap tech"
+        ],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "QQQ Baseline \u2014 Nasdaq-100 proxy",
+          "bullets": [
+            "Passive benchmark: tracks QQQ return",
+            "Measures whether players beat large-cap tech"
+          ]
+        },
+        "news": [],
+        "features": {
+          "change_pct": 0.0,
+          "benchmark": true
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "benchmark"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "equal_weight_baseline",
+        "as_of": "2026-05-21",
+        "score": 0.0,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1w",
+        "confidence": 0.3,
+        "expected_direction": "unclear",
+        "reasons": [
+          "Equal weight all eligible names"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Equal-weight watchlist (no prices)",
+          "bullets": [
+            "Equal weight all eligible names"
+          ]
+        },
+        "news": [],
+        "features": {
+          "equal_weight": true
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "benchmark"
+      },
+      {
+        "symbol": "SPY",
+        "agent_id": "momentum_baseline",
+        "as_of": "2026-05-21",
+        "score": 0.0,
+        "predicted_bias": "neutral",
+        "prediction_type": "watch",
+        "horizon": "1w",
+        "confidence": 0.3,
+        "expected_direction": "unclear",
+        "reasons": [
+          "Rule: buy top 3 by recent change_pct"
+        ],
+        "risks": [],
+        "source_event_ids": [],
+        "explanation": {
+          "headline": "Momentum baseline (no prices)",
+          "bullets": [
+            "Rule: buy top 3 by recent change_pct"
+          ]
+        },
+        "news": [],
+        "features": {
+          "rule": "top_momentum"
+        },
+        "data_mode": "live",
+        "runners_up": [],
+        "player_type": "benchmark"
+      }
+    ],
+    "reality_scores": [
+      {
+        "symbol": "SPY",
+        "reality_score": 57.0,
+        "reasons": [
+          {
+            "delta": 10,
+            "label": "model agreement (12 agents)"
+          },
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "QQQ",
+        "reality_score": 57.0,
+        "reasons": [
+          {
+            "delta": 10,
+            "label": "model agreement (2 agents)"
+          },
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "NVDA",
+        "reality_score": 57.0,
+        "reasons": [
+          {
+            "delta": 10,
+            "label": "model agreement (3 agents)"
+          },
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "reality_score": 53.2,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 6.2,
+            "label": "gap/move 3.1%"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "reality_score": 47.0,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "AAPL",
+        "reality_score": 47.0,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "XLE",
+        "reality_score": 47.0,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "XLK",
+        "reality_score": 47.0,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "XOM",
+        "reality_score": 47.0,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "reality_score": 47.0,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          },
+          {
+            "delta": 5,
+            "label": "positive intraday trend"
+          }
+        ]
+      },
+      {
+        "symbol": "IWM",
+        "reality_score": 42.0,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          }
+        ]
+      },
+      {
+        "symbol": "BAM",
+        "reality_score": 42.0,
+        "reasons": [
+          {
+            "delta": -8,
+            "label": "fallback/delayed data source"
+          }
+        ]
+      }
+    ],
+    "stale_warning": null
+  },
+  "reality_scores": [
+    {
+      "symbol": "SPY",
+      "reality_score": 57.0,
+      "reasons": [
+        {
+          "delta": 10,
+          "label": "model agreement (12 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "reality_score": 57.0,
+      "reasons": [
+        {
+          "delta": 10,
+          "label": "model agreement (2 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "reality_score": 57.0,
+      "reasons": [
+        {
+          "delta": 10,
+          "label": "model agreement (3 agents)"
+        },
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "reality_score": 53.2,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 6.2,
+          "label": "gap/move 3.1%"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "reality_score": 47.0,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "reality_score": 47.0,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "XLE",
+      "reality_score": 47.0,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "XLK",
+      "reality_score": 47.0,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "XOM",
+      "reality_score": 47.0,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "reality_score": 47.0,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        },
+        {
+          "delta": 5,
+          "label": "positive intraday trend"
+        }
+      ]
+    },
+    {
+      "symbol": "IWM",
+      "reality_score": 42.0,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        }
+      ]
+    },
+    {
+      "symbol": "BAM",
+      "reality_score": 42.0,
+      "reasons": [
+        {
+          "delta": -8,
+          "label": "fallback/delayed data source"
+        }
+      ]
+    }
+  ],
+  "explanations": [
+    {
+      "agent_id": "momentum",
+      "symbol": "NVDA",
+      "reality_reasons": [],
+      "headline": "Strong gap and relative volume (mock)",
+      "bullets": [
+        "gap_pct elevated",
+        "rvol above average",
+        "composite score leads watchlist"
+      ]
+    },
+    {
+      "agent_id": "news",
+      "symbol": "TSLA",
+      "reality_reasons": [],
+      "headline": "Positive news sentiment cluster (mock)",
+      "bullets": [
+        "sentiment_mean elevated",
+        "multiple articles in 48h"
+      ]
+    },
+    {
+      "agent_id": "macro_event",
+      "symbol": "AMD",
+      "reality_reasons": [],
+      "headline": "Earnings/macro event signal (mock)",
+      "bullets": [
+        "earnings keyword detected",
+        "event-driven catalyst"
+      ]
+    },
+    {
+      "agent_id": "filing_event",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "No recent SEC filings in snapshot",
+      "bullets": [
+        "EDGAR fetch may be rate-limited"
+      ]
+    },
+    {
+      "agent_id": "macro",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "Macro context pick: SPY",
+      "bullets": [
+        "No macro series in snapshot \u2014 check FRED_API_KEY"
+      ]
+    },
+    {
+      "agent_id": "public_figure",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "No public figure statements in current snapshot",
+      "bullets": [
+        "Monitor government and executive communications"
+      ]
+    },
+    {
+      "agent_id": "entity_graph",
+      "symbol": "BAM",
+      "reality_reasons": [],
+      "headline": "Graph chain: Mark Carney \u2192 Canada \u2192 BAM",
+      "bullets": [
+        "Event: Carney infrastructure plan",
+        "Candidate tickers: BAM, ENB"
+      ]
+    },
+    {
+      "agent_id": "fx_agent",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "FX data offline \u2014 watch only",
+      "bullets": [
+        "Configure FINNHUB_API_KEY or use yfinance fallback"
+      ]
+    },
+    {
+      "agent_id": "cross_asset_agent",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "Cross-asset data sparse \u2014 watch only",
+      "bullets": [
+        "Need index/sector/commodity proxies in watchlist"
+      ]
+    },
+    {
+      "agent_id": "regime_agent",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "Regime: event uncertain \u2014 paper watch on SPY",
+      "bullets": [
+        "Mixed signals across indexes and FX"
+      ]
+    },
+    {
+      "agent_id": "divergence_agent",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "No significant divergences detected",
+      "bullets": [
+        "Drivers and stocks moving in expected directions"
+      ]
+    },
+    {
+      "agent_id": "ensemble",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "Ensemble paper hypothesis: SPY (7 agents agree)",
+      "bullets": [
+        "Votes: 7",
+        "Blended score: 0.179",
+        "Not investment advice \u2014 paper prediction only"
+      ]
+    },
+    {
+      "agent_id": "skeptic",
+      "symbol": "NVDA",
+      "reality_reasons": [],
+      "headline": "Skeptic review of NVDA (momentum thesis)",
+      "bullets": [
+        "No direct news/filing link to ticker in current snapshot"
+      ]
+    },
+    {
+      "agent_id": "correlation_skeptic",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "Correlation skeptic review of SPY",
+      "bullets": [
+        "No correlation data \u2014 cross-asset thesis unverified"
+      ]
+    },
+    {
+      "agent_id": "human_baseline",
+      "symbol": "NVDA",
+      "reality_reasons": [],
+      "headline": "Human baseline tracks portfolio or SPY: NVDA",
+      "bullets": [
+        "Educational comparator for human players",
+        "Not optimized \u2014 reflects your book"
+      ]
+    },
+    {
+      "agent_id": "random_baseline",
+      "symbol": "QQQ",
+      "reality_reasons": [],
+      "headline": "Random baseline pick: QQQ",
+      "bullets": [
+        "Uniform random symbol from watchlist",
+        "If AI cannot beat this over time, the UI must show that honestly"
+      ]
+    },
+    {
+      "agent_id": "spy_baseline",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "SPY Baseline \u2014 S&P 500 proxy",
+      "bullets": [
+        "Passive benchmark: tracks SPY return",
+        "Measures whether players beat the broad market"
+      ]
+    },
+    {
+      "agent_id": "qqq_baseline",
+      "symbol": "QQQ",
+      "reality_reasons": [],
+      "headline": "QQQ Baseline \u2014 Nasdaq-100 proxy",
+      "bullets": [
+        "Passive benchmark: tracks QQQ return",
+        "Measures whether players beat large-cap tech"
+      ]
+    },
+    {
+      "agent_id": "equal_weight_baseline",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "Equal-weight watchlist (no prices)",
+      "bullets": [
+        "Equal weight all eligible names"
+      ]
+    },
+    {
+      "agent_id": "momentum_baseline",
+      "symbol": "SPY",
+      "reality_reasons": [],
+      "headline": "Momentum baseline (no prices)",
+      "bullets": [
+        "Rule: buy top 3 by recent change_pct"
+      ]
+    }
+  ],
+  "news_by_pick": [
+    {
+      "agent_id": "momentum",
+      "symbol": "NVDA",
+      "articles": []
+    },
+    {
+      "agent_id": "news",
+      "symbol": "TSLA",
+      "articles": [
+        {
+          "title": "Mock: delivery numbers beat estimates",
+          "sentiment": 0.45,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "agent_id": "macro_event",
+      "symbol": "AMD",
+      "articles": [
+        {
+          "title": "Mock: earnings preview scheduled",
+          "sentiment": 0.1,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "agent_id": "filing_event",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "macro",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "public_figure",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "entity_graph",
+      "symbol": "BAM",
+      "articles": []
+    },
+    {
+      "agent_id": "fx_agent",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "cross_asset_agent",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "regime_agent",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "divergence_agent",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "ensemble",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "skeptic",
+      "symbol": "NVDA",
+      "articles": []
+    },
+    {
+      "agent_id": "correlation_skeptic",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "human_baseline",
+      "symbol": "NVDA",
+      "articles": []
+    },
+    {
+      "agent_id": "random_baseline",
+      "symbol": "QQQ",
+      "articles": []
+    },
+    {
+      "agent_id": "spy_baseline",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "qqq_baseline",
+      "symbol": "QQQ",
+      "articles": []
+    },
+    {
+      "agent_id": "equal_weight_baseline",
+      "symbol": "SPY",
+      "articles": []
+    },
+    {
+      "agent_id": "momentum_baseline",
+      "symbol": "SPY",
+      "articles": []
+    }
+  ],
+  "news_events": [
+    {
+      "event_id": "fixture-1",
+      "title": "Fed officials discuss inflation path \u2014 educational signal only",
+      "event_type": "macro_rates",
+      "source": "fixture_rss",
+      "importance_score": 55,
+      "candidate_tickers": [
+        "SPY",
+        "XLF"
+      ],
+      "freshness_minutes": 30
+    },
+    {
+      "event_id": "fixture-2",
+      "title": "Energy sector monitors oil supply headlines",
+      "event_type": "energy_oil_shock",
+      "source": "fixture_rss",
+      "importance_score": 48,
+      "candidate_tickers": [
+        "XLE",
+        "XOM"
+      ],
+      "freshness_minutes": 45
+    },
+    {
+      "event_id": "fixture-3",
+      "title": "Infrastructure names watch CAD and policy context",
+      "event_type": "infrastructure_project",
+      "source": "fixture_rss",
+      "importance_score": 42,
+      "candidate_tickers": [
+        "BAM",
+        "BN"
+      ],
+      "freshness_minutes": 60
+    }
+  ],
+  "public_figure_events": [],
+  "entity_graph": {
+    "people": [
+      "Donald Trump",
+      "Mark Carney",
+      "Jerome Powell",
+      "Elon Musk",
+      "Tim Cook",
+      "Jensen Huang"
+    ],
+    "organizations": [
+      "Brookfield",
+      "Federal Reserve",
+      "Bank of Canada",
+      "OPEC",
+      "SEC"
+    ],
+    "themes": [
+      "tariffs",
+      "oil",
+      "AI",
+      "data centers",
+      "infrastructure",
+      "renewables",
+      "defense",
+      "housing",
+      "interest rates",
+      "inflation",
+      "mergers",
+      "regulation"
+    ],
+    "relationships": [
+      {
+        "from": "Mark Carney",
+        "to": "Brookfield",
+        "type": "past_employment",
+        "note": "Vice Chair ESG and Impact Fund Investing, appointed 2020"
+      },
+      {
+        "from": "Mark Carney",
+        "to": "Bank of Canada",
+        "type": "policy",
+        "note": "Former Governor; current Canadian PM policy context"
+      },
+      {
+        "from": "Mark Carney",
+        "to": "infrastructure",
+        "type": "theme",
+        "note": "Canadian infrastructure and energy policy"
+      },
+      {
+        "from": "Brookfield",
+        "to": "infrastructure",
+        "type": "theme"
+      },
+      {
+        "from": "Brookfield",
+        "to": "renewables",
+        "type": "theme"
+      },
+      {
+        "from": "Brookfield",
+        "to": [
+          "BAM",
+          "BN"
+        ],
+        "type": "org_tickers"
+      },
+      {
+        "from": "tariffs",
+        "to": [
+          "XLE",
+          "XLI",
+          "XLY",
+          "XLB"
+        ],
+        "type": "theme_tickers"
+      },
+      {
+        "from": "oil",
+        "to": [
+          "XLE",
+          "XOM",
+          "CVX",
+          "COP"
+        ],
+        "type": "theme_tickers"
+      },
+      {
+        "from": "AI",
+        "to": [
+          "NVDA",
+          "AMD",
+          "MSFT",
+          "GOOGL",
+          "META"
+        ],
+        "type": "theme_tickers"
+      },
+      {
+        "from": "infrastructure",
+        "to": [
+          "BAM",
+          "BN",
+          "ENB",
+          "TRP",
+          "XLI"
+        ],
+        "type": "theme_tickers"
+      },
+      {
+        "from": "interest rates",
+        "to": [
+          "XLF",
+          "XLU",
+          "SPY"
+        ],
+        "type": "theme_tickers"
+      },
+      {
+        "from": "Donald Trump",
+        "to": "tariffs",
+        "type": "policy_theme"
+      },
+      {
+        "from": "Jerome Powell",
+        "to": "Federal Reserve",
+        "type": "employment"
+      },
+      {
+        "from": "Federal Reserve",
+        "to": "interest rates",
+        "type": "policy_theme"
+      },
+      {
+        "from": "Mark Carney",
+        "to": "BAM",
+        "type": "event_link"
+      },
+      {
+        "from": "Mark Carney",
+        "to": "ENB",
+        "type": "event_link"
+      },
+      {
+        "from": "Canada",
+        "to": "BAM",
+        "type": "event_link"
+      },
+      {
+        "from": "Canada",
+        "to": "ENB",
+        "type": "event_link"
+      },
+      {
+        "from": "SEC",
+        "to": "SPY",
+        "type": "event_link"
+      },
+      {
+        "from": "SEC",
+        "to": "QQQ",
+        "type": "event_link"
+      }
+    ],
+    "recent_chains": [
+      {
+        "event_id": "test1",
+        "title": "Carney infrastructure plan",
+        "entities": [
+          "Mark Carney",
+          "Canada"
+        ],
+        "candidate_tickers": [
+          "BAM",
+          "ENB"
+        ],
+        "event_type": "government_policy"
+      },
+      {
+        "event_id": "4401498c05d4ab05",
+        "title": "QQQ filed 40-17G",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "2e35f25537ad43b7",
+        "title": "QQQ filed NPORT-P",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "sec_filing"
+      },
+      {
+        "event_id": "37f819429a0bdd55",
+        "title": "QQQ filed N-CEN",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "sec_filing"
+      },
+      {
+        "event_id": "21e1d6e979f64f07",
+        "title": "QQQ filed 497",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "a3938353abf0f3ee",
+        "title": "QQQ filed 497K",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "c3e2ed208c55656f",
+        "title": "SPY filed 485BPOS",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "SPY"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "f9663ec176d2d591",
+        "title": "SPY filed 497",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "SPY"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "12d9a3b2a9d0bf89",
+        "title": "SPY filed NPORT-P",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "SPY"
+        ],
+        "event_type": "sec_filing"
+      },
+      {
+        "event_id": "4917fef52457ec64",
+        "title": "SPY filed N-CEN",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "SPY"
+        ],
+        "event_type": "sec_filing"
+      },
+      {
+        "event_id": "4401498c05d4ab05",
+        "title": "QQQ filed 40-17G",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "2e35f25537ad43b7",
+        "title": "QQQ filed NPORT-P",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "sec_filing"
+      },
+      {
+        "event_id": "37f819429a0bdd55",
+        "title": "QQQ filed N-CEN",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "sec_filing"
+      },
+      {
+        "event_id": "21e1d6e979f64f07",
+        "title": "QQQ filed 497",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "a3938353abf0f3ee",
+        "title": "QQQ filed 497K",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "c3e2ed208c55656f",
+        "title": "SPY filed 485BPOS",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "SPY"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "f9663ec176d2d591",
+        "title": "SPY filed 497",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "SPY"
+        ],
+        "event_type": "insider_transaction"
+      },
+      {
+        "event_id": "12d9a3b2a9d0bf89",
+        "title": "SPY filed NPORT-P",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "SPY"
+        ],
+        "event_type": "sec_filing"
+      },
+      {
+        "event_id": "4917fef52457ec64",
+        "title": "SPY filed N-CEN",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "SPY"
+        ],
+        "event_type": "sec_filing"
+      },
+      {
+        "event_id": "4401498c05d4ab05",
+        "title": "QQQ filed 40-17G",
+        "entities": [
+          "SEC"
+        ],
+        "candidate_tickers": [
+          "QQQ"
+        ],
+        "event_type": "insider_transaction"
+      }
+    ]
+  },
+  "entity_graph_updates": [],
+  "freshness": {},
+  "next_refresh_seconds": 3600,
+  "sec_filings": [],
+  "macro_indicators": [],
+  "cross_asset": {
+    "forex": [
+      {
+        "pair": "USD/CAD",
+        "last": 1.36,
+        "change_pct_1d": 0.12,
+        "freshness": "OFFLINE",
+        "status": "OFFLINE",
+        "provider": "fixture",
+        "why_it_matters": "CAD tracks oil and trade."
+      },
+      {
+        "pair": "EUR/USD",
+        "last": 1.08,
+        "change_pct_1d": -0.05,
+        "freshness": "OFFLINE",
+        "status": "OFFLINE",
+        "provider": "fixture"
+      },
+      {
+        "pair": "GBP/USD",
+        "last": 1.27,
+        "change_pct_1d": 0.03,
+        "freshness": "OFFLINE",
+        "status": "OFFLINE",
+        "provider": "fixture"
+      },
+      {
+        "pair": "USD/JPY",
+        "last": 148.5,
+        "change_pct_1d": 0.08,
+        "freshness": "OFFLINE",
+        "status": "OFFLINE",
+        "provider": "fixture"
+      },
+      {
+        "pair": "AUD/USD",
+        "last": 0.65,
+        "change_pct_1d": -0.1,
+        "freshness": "OFFLINE",
+        "status": "OFFLINE",
+        "provider": "fixture"
+      },
+      {
+        "pair": "NZD/USD",
+        "last": 0.6,
+        "change_pct_1d": 0.02,
+        "freshness": "OFFLINE",
+        "status": "OFFLINE",
+        "provider": "fixture"
+      },
+      {
+        "pair": "USD/CHF",
+        "last": 0.88,
+        "change_pct_1d": 0.04,
+        "freshness": "OFFLINE",
+        "status": "OFFLINE",
+        "provider": "fixture"
+      }
+    ],
+    "macro": [
+      {
+        "series_id": "FEDFUNDS",
+        "name": "Fed Funds Rate",
+        "value": 5.25
+      }
+    ],
+    "oil": {
+      "series_id": "DCOILWTICO",
+      "name": "WTI Crude Oil",
+      "value": 72.5
+    },
+    "regime": {
+      "regime": "event_uncertain",
+      "confidence": 0.4,
+      "evidence": [
+        "Offline training fixture"
+      ],
+      "likely_sensitive_groups": [
+        "watchlist broad"
+      ]
+    }
+  },
+  "regime": {
+    "regime": "event_uncertain",
+    "confidence": 0.4,
+    "evidence": [
+      "Offline training fixture"
+    ],
+    "likely_sensitive_groups": [
+      "watchlist broad"
+    ]
+  },
+  "currencies": [
+    {
+      "pair": "USD/CAD",
+      "last": 1.36,
+      "change_pct_1d": 0.12,
+      "freshness": "OFFLINE",
+      "status": "OFFLINE",
+      "provider": "fixture",
+      "why_it_matters": "CAD tracks oil and trade."
+    },
+    {
+      "pair": "EUR/USD",
+      "last": 1.08,
+      "change_pct_1d": -0.05,
+      "freshness": "OFFLINE",
+      "status": "OFFLINE",
+      "provider": "fixture"
+    },
+    {
+      "pair": "GBP/USD",
+      "last": 1.27,
+      "change_pct_1d": 0.03,
+      "freshness": "OFFLINE",
+      "status": "OFFLINE",
+      "provider": "fixture"
+    },
+    {
+      "pair": "USD/JPY",
+      "last": 148.5,
+      "change_pct_1d": 0.08,
+      "freshness": "OFFLINE",
+      "status": "OFFLINE",
+      "provider": "fixture"
+    },
+    {
+      "pair": "AUD/USD",
+      "last": 0.65,
+      "change_pct_1d": -0.1,
+      "freshness": "OFFLINE",
+      "status": "OFFLINE",
+      "provider": "fixture"
+    },
+    {
+      "pair": "NZD/USD",
+      "last": 0.6,
+      "change_pct_1d": 0.02,
+      "freshness": "OFFLINE",
+      "status": "OFFLINE",
+      "provider": "fixture"
+    },
+    {
+      "pair": "USD/CHF",
+      "last": 0.88,
+      "change_pct_1d": 0.04,
+      "freshness": "OFFLINE",
+      "status": "OFFLINE",
+      "provider": "fixture"
+    }
+  ],
+  "portfolio": {
+    "user_id": "default",
+    "cash_usd": 8500.0,
+    "starting_value_usd": 10000.0,
+    "positions": [
+      {
+        "symbol": "NVDA",
+        "qty": 5,
+        "entry_price": 128.0,
+        "last_price": 132.5,
+        "market_value_usd": 662.5,
+        "unrealized_pnl_usd": 22.5
+      },
+      {
+        "symbol": "AAPL",
+        "qty": 10,
+        "entry_price": 195.0,
+        "last_price": 198.2,
+        "market_value_usd": 1982.0,
+        "unrealized_pnl_usd": 32.0
+      }
+    ],
+    "day_pnl_usd": 1144.5,
+    "as_of": "2026-05-20",
+    "total_value_usd": 11144.5,
+    "positions_market_value_usd": 2644.5
+  },
+  "leaderboard": {
+    "week": "2026-W21",
+    "as_of": "2026-05-21",
+    "data_mode": "offline_training",
+    "entries": [
+      {
+        "rank": 1,
+        "id": "default",
+        "display_name": "You (Human Player)",
+        "type": "human",
+        "weekly_return_pct": 11.45,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": null,
+        "worst_pick": null,
+        "explanation_score": 0.0,
+        "last_updated": "2026-05-20",
+        "score_pct": 11.45,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 2,
+        "id": "momentum",
+        "display_name": "Momentum Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.07,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.4,
+        "best_pick": "NVDA",
+        "worst_pick": null,
+        "explanation_score": 6,
+        "last_updated": "2026-05-20",
+        "score_pct": 0.07,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 3,
+        "id": "ensemble",
+        "display_name": "Ensemble Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.02,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 6,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.02,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 4,
+        "id": "news",
+        "display_name": "News Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.07,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.3,
+        "best_pick": "TSLA",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-20",
+        "score_pct": 0.07,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 5,
+        "id": "macro_event",
+        "display_name": "Macro Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.06,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.3,
+        "best_pick": "AMD",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-20",
+        "score_pct": 0.06,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 6,
+        "id": "entity_graph",
+        "display_name": "Entity Graph Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.04,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.2,
+        "best_pick": "BAM",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.04,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 7,
+        "id": "random_baseline",
+        "display_name": "Random Baseline",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "QQQ",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": true
+      },
+      {
+        "rank": 8,
+        "id": "spy_baseline",
+        "display_name": "SPY Baseline",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 9,
+        "id": "qqq_baseline",
+        "display_name": "QQQ Baseline",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "QQQ",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 10,
+        "id": "macro",
+        "display_name": "Macro Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.05,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.2,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.05,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 11,
+        "id": "regime_agent",
+        "display_name": "regime_agent",
+        "type": "agent",
+        "weekly_return_pct": 0.03,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.03,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 12,
+        "id": "skeptic",
+        "display_name": "Skeptic Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.02,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "NVDA",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.02,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 13,
+        "id": "correlation_skeptic",
+        "display_name": "correlation_skeptic",
+        "type": "agent",
+        "weekly_return_pct": 0.02,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.02,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 14,
+        "id": "cross_asset_agent",
+        "display_name": "cross_asset_agent",
+        "type": "agent",
+        "weekly_return_pct": 0.01,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.01,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 15,
+        "id": "public_figure",
+        "display_name": "Public Figure Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.01,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.01,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 16,
+        "id": "fx_agent",
+        "display_name": "fx_agent",
+        "type": "agent",
+        "weekly_return_pct": 0.01,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.01,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 17,
+        "id": "divergence_agent",
+        "display_name": "divergence_agent",
+        "type": "agent",
+        "weekly_return_pct": 0.01,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.01,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 18,
+        "id": "filing_event",
+        "display_name": "Filing Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 19,
+        "id": "equal_weight_baseline",
+        "display_name": "Equal-Weight Watchlist",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 20,
+        "id": "momentum_baseline",
+        "display_name": "Simple Momentum Baseline",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      }
+    ],
+    "players": [
+      {
+        "rank": 1,
+        "id": "default",
+        "display_name": "You (Human Player)",
+        "type": "human",
+        "weekly_return_pct": 11.45,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": null,
+        "worst_pick": null,
+        "explanation_score": 0.0,
+        "last_updated": "2026-05-20",
+        "score_pct": 11.45,
+        "random_beats_ai": false
+      }
+    ],
+    "benchmarks": [
+      {
+        "rank": 7,
+        "id": "random_baseline",
+        "display_name": "Random Baseline",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "QQQ",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": true
+      },
+      {
+        "rank": 8,
+        "id": "spy_baseline",
+        "display_name": "SPY Baseline",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 9,
+        "id": "qqq_baseline",
+        "display_name": "QQQ Baseline",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "QQQ",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 19,
+        "id": "equal_weight_baseline",
+        "display_name": "Equal-Weight Watchlist",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 20,
+        "id": "momentum_baseline",
+        "display_name": "Simple Momentum Baseline",
+        "type": "benchmark",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      }
+    ],
+    "agents": [
+      {
+        "rank": 2,
+        "id": "momentum",
+        "display_name": "Momentum Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.07,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.4,
+        "best_pick": "NVDA",
+        "worst_pick": null,
+        "explanation_score": 6,
+        "last_updated": "2026-05-20",
+        "score_pct": 0.07,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 3,
+        "id": "ensemble",
+        "display_name": "Ensemble Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.02,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 6,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.02,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 4,
+        "id": "news",
+        "display_name": "News Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.07,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.3,
+        "best_pick": "TSLA",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-20",
+        "score_pct": 0.07,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 5,
+        "id": "macro_event",
+        "display_name": "Macro Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.06,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.3,
+        "best_pick": "AMD",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-20",
+        "score_pct": 0.06,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 6,
+        "id": "entity_graph",
+        "display_name": "Entity Graph Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.04,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.2,
+        "best_pick": "BAM",
+        "worst_pick": null,
+        "explanation_score": 4,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.04,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 10,
+        "id": "macro",
+        "display_name": "Macro Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.05,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.2,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.05,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 11,
+        "id": "regime_agent",
+        "display_name": "regime_agent",
+        "type": "agent",
+        "weekly_return_pct": 0.03,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.03,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 12,
+        "id": "skeptic",
+        "display_name": "Skeptic Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.02,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "NVDA",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.02,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 13,
+        "id": "correlation_skeptic",
+        "display_name": "correlation_skeptic",
+        "type": "agent",
+        "weekly_return_pct": 0.02,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.02,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 14,
+        "id": "cross_asset_agent",
+        "display_name": "cross_asset_agent",
+        "type": "agent",
+        "weekly_return_pct": 0.01,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.1,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.01,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 15,
+        "id": "public_figure",
+        "display_name": "Public Figure Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.01,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.01,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 16,
+        "id": "fx_agent",
+        "display_name": "fx_agent",
+        "type": "agent",
+        "weekly_return_pct": 0.01,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.01,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 17,
+        "id": "divergence_agent",
+        "display_name": "divergence_agent",
+        "type": "agent",
+        "weekly_return_pct": 0.01,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.01,
+        "random_beats_ai": false
+      },
+      {
+        "rank": 18,
+        "id": "filing_event",
+        "display_name": "Filing Agent",
+        "type": "agent",
+        "weekly_return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "hit_rate": 50.0,
+        "best_pick": "SPY",
+        "worst_pick": null,
+        "explanation_score": 2,
+        "last_updated": "2026-05-21",
+        "score_pct": 0.0,
+        "random_beats_ai": false
+      }
+    ],
+    "benchmark_comparisons": {
+      "ensemble_vs_random_baseline": {
+        "winner": "ensemble",
+        "delta_pct": 0.02,
+        "period": "2026-W21",
+        "a_id": "ensemble",
+        "b_id": "random_baseline",
+        "a_score": 0.02,
+        "b_score": 0.0
+      },
+      "ensemble_vs_spy_baseline": {
+        "winner": "ensemble",
+        "delta_pct": 0.02,
+        "period": "2026-W21",
+        "a_id": "ensemble",
+        "b_id": "spy_baseline",
+        "a_score": 0.02,
+        "b_score": 0.0
+      },
+      "ensemble_vs_qqq_baseline": {
+        "winner": "ensemble",
+        "delta_pct": 0.02,
+        "period": "2026-W21",
+        "a_id": "ensemble",
+        "b_id": "qqq_baseline",
+        "a_score": 0.02,
+        "b_score": 0.0
+      },
+      "ensemble_vs_momentum_baseline": {
+        "winner": "ensemble",
+        "delta_pct": 0.02,
+        "period": "2026-W21",
+        "a_id": "ensemble",
+        "b_id": "momentum_baseline",
+        "a_score": 0.02,
+        "b_score": 0.0
+      },
+      "macro_vs_spy_baseline": {
+        "winner": "macro",
+        "delta_pct": 0.05,
+        "period": "2026-W21",
+        "a_id": "macro",
+        "b_id": "spy_baseline",
+        "a_score": 0.05,
+        "b_score": 0.0
+      }
+    },
+    "benchmark_disclosures": [
+      "Ensemble Agent beat Random Baseline this week in paper scoring (+0.02%).",
+      "Ensemble Agent beat SPY Baseline this week in paper scoring (+0.02%).",
+      "Ensemble Agent beat QQQ Baseline this week in paper scoring (+0.02%).",
+      "Ensemble Agent beat Simple Momentum Baseline this week in paper scoring (+0.02%).",
+      "Macro Agent beat SPY Baseline this week in paper scoring (+0.05%)."
+    ],
+    "ai_disclosure": null
+  },
+  "benchmark_picks": [
+    {
+      "symbol": "NVDA",
+      "agent_id": "human_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Educational comparator for human players",
+        "Not optimized \u2014 reflects your book"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Human baseline tracks portfolio or SPY: NVDA",
+        "bullets": [
+          "Educational comparator for human players",
+          "Not optimized \u2014 reflects your book"
+        ]
+      },
+      "news": [],
+      "features": {
+        "baseline": "human"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "random_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "paper_long",
+      "horizon": "1d",
+      "confidence": 0.1,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Uniform random symbol from watchlist",
+        "If AI cannot beat this over time, the UI must show that honestly"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Random baseline pick: QQQ",
+        "bullets": [
+          "Uniform random symbol from watchlist",
+          "If AI cannot beat this over time, the UI must show that honestly"
+        ]
+      },
+      "news": [],
+      "features": {
+        "random": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "spy_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.5,
+      "expected_direction": "up",
+      "reasons": [
+        "Index benchmark \u2014 no stock selection skill"
+      ],
+      "risks": [
+        "Broad market exposure"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "SPY Baseline \u2014 S&P 500 proxy",
+        "bullets": [
+          "Passive benchmark: tracks SPY return",
+          "Measures whether players beat the broad market"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 0.0,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "QQQ",
+      "agent_id": "qqq_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "bullish",
+      "prediction_type": "paper_long",
+      "horizon": "1w",
+      "confidence": 0.5,
+      "expected_direction": "up",
+      "reasons": [
+        "Tech index benchmark"
+      ],
+      "risks": [
+        "Concentrated in mega-cap tech"
+      ],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "QQQ Baseline \u2014 Nasdaq-100 proxy",
+        "bullets": [
+          "Passive benchmark: tracks QQQ return",
+          "Measures whether players beat large-cap tech"
+        ]
+      },
+      "news": [],
+      "features": {
+        "change_pct": 0.0,
+        "benchmark": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "equal_weight_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1w",
+      "confidence": 0.3,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Equal weight all eligible names"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Equal-weight watchlist (no prices)",
+        "bullets": [
+          "Equal weight all eligible names"
+        ]
+      },
+      "news": [],
+      "features": {
+        "equal_weight": true
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    },
+    {
+      "symbol": "SPY",
+      "agent_id": "momentum_baseline",
+      "as_of": "2026-05-21",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "prediction_type": "watch",
+      "horizon": "1w",
+      "confidence": 0.3,
+      "expected_direction": "unclear",
+      "reasons": [
+        "Rule: buy top 3 by recent change_pct"
+      ],
+      "risks": [],
+      "source_event_ids": [],
+      "explanation": {
+        "headline": "Momentum baseline (no prices)",
+        "bullets": [
+          "Rule: buy top 3 by recent change_pct"
+        ]
+      },
+      "news": [],
+      "features": {
+        "rule": "top_momentum"
+      },
+      "data_mode": "live",
+      "runners_up": [],
+      "player_type": "benchmark"
+    }
+  ],
+  "benchmark_comparisons": {
+    "ensemble_vs_random_baseline": {
+      "winner": "ensemble",
+      "delta_pct": 0.02,
+      "period": "2026-W21",
+      "a_id": "ensemble",
+      "b_id": "random_baseline",
+      "a_score": 0.02,
+      "b_score": 0.0
+    },
+    "ensemble_vs_spy_baseline": {
+      "winner": "ensemble",
+      "delta_pct": 0.02,
+      "period": "2026-W21",
+      "a_id": "ensemble",
+      "b_id": "spy_baseline",
+      "a_score": 0.02,
+      "b_score": 0.0
+    },
+    "ensemble_vs_qqq_baseline": {
+      "winner": "ensemble",
+      "delta_pct": 0.02,
+      "period": "2026-W21",
+      "a_id": "ensemble",
+      "b_id": "qqq_baseline",
+      "a_score": 0.02,
+      "b_score": 0.0
+    },
+    "ensemble_vs_momentum_baseline": {
+      "winner": "ensemble",
+      "delta_pct": 0.02,
+      "period": "2026-W21",
+      "a_id": "ensemble",
+      "b_id": "momentum_baseline",
+      "a_score": 0.02,
+      "b_score": 0.0
+    },
+    "macro_vs_spy_baseline": {
+      "winner": "macro",
+      "delta_pct": 0.05,
+      "period": "2026-W21",
+      "a_id": "macro",
+      "b_id": "spy_baseline",
+      "a_score": 0.05,
+      "b_score": 0.0
+    }
+  },
+  "benchmark_disclosures": [
+    "Ensemble Agent beat Random Baseline this week in paper scoring (+0.02%).",
+    "Ensemble Agent beat SPY Baseline this week in paper scoring (+0.02%).",
+    "Ensemble Agent beat QQQ Baseline this week in paper scoring (+0.02%).",
+    "Ensemble Agent beat Simple Momentum Baseline this week in paper scoring (+0.02%).",
+    "Macro Agent beat SPY Baseline this week in paper scoring (+0.05%)."
+  ],
+  "agents_arena": [
+    {
+      "agent_id": "momentum",
+      "display_name": "Momentum Agent",
+      "pick_symbol": "NVDA",
+      "score": 0.72,
+      "predicted_bias": "bullish",
+      "status": "stale"
+    },
+    {
+      "agent_id": "news",
+      "display_name": "News Agent",
+      "pick_symbol": "TSLA",
+      "score": 0.65,
+      "predicted_bias": "bullish",
+      "status": "stale"
+    },
+    {
+      "agent_id": "macro_event",
+      "display_name": "Macro Agent",
+      "pick_symbol": "AMD",
+      "score": 0.58,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "filing_event",
+      "display_name": "Filing/Event Agent",
+      "pick_symbol": "SPY",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "macro",
+      "display_name": "Macro Agent",
+      "pick_symbol": "SPY",
+      "score": 0.5,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "public_figure",
+      "display_name": "Public Figure Agent",
+      "pick_symbol": "SPY",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "entity_graph",
+      "display_name": "Entity Graph Agent",
+      "pick_symbol": "BAM",
+      "score": 0.45,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "fx_agent",
+      "display_name": "FX Agent",
+      "pick_symbol": "SPY",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "cross_asset_agent",
+      "display_name": "Cross-Asset Agent",
+      "pick_symbol": "SPY",
+      "score": 0.15,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "regime_agent",
+      "display_name": "Regime Agent",
+      "pick_symbol": "SPY",
+      "score": 0.3,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "divergence_agent",
+      "display_name": "Divergence Agent",
+      "pick_symbol": "SPY",
+      "score": 0.1,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "ensemble",
+      "display_name": "Ensemble Agent",
+      "pick_symbol": "SPY",
+      "score": 0.1786,
+      "predicted_bias": "bullish",
+      "status": "stale"
+    },
+    {
+      "agent_id": "skeptic",
+      "display_name": "Skeptic Agent",
+      "pick_symbol": "NVDA",
+      "score": 0.2,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "correlation_skeptic",
+      "display_name": "Correlation Skeptic Agent",
+      "pick_symbol": "SPY",
+      "score": 0.2,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "human_baseline",
+      "display_name": "Human Baseline",
+      "pick_symbol": "NVDA",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "random_baseline",
+      "display_name": "Random Baseline",
+      "pick_symbol": "QQQ",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "spy_baseline",
+      "display_name": "SPY Baseline",
+      "pick_symbol": "SPY",
+      "score": 0.0,
+      "predicted_bias": "bullish",
+      "status": "stale"
+    },
+    {
+      "agent_id": "qqq_baseline",
+      "display_name": "QQQ Baseline",
+      "pick_symbol": "QQQ",
+      "score": 0.0,
+      "predicted_bias": "bullish",
+      "status": "stale"
+    },
+    {
+      "agent_id": "equal_weight_baseline",
+      "display_name": "Equal-Weight Watchlist",
+      "pick_symbol": "SPY",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    },
+    {
+      "agent_id": "momentum_baseline",
+      "display_name": "Simple Momentum Baseline",
+      "pick_symbol": "SPY",
+      "score": 0.0,
+      "predicted_bias": "neutral",
+      "status": "stale"
+    }
+  ],
+  "education": {
+    "glossary": [
+      {
+        "term": "Stock",
+        "definition": "A share of ownership in a company. When you own a stock, you own a small piece of that business and may benefit if the company grows."
+      },
+      {
+        "term": "Ticker",
+        "definition": "A short symbol (like AAPL or NVDA) used to identify a stock on exchanges. Tickers make it easy to look up prices and news."
+      },
+      {
+        "term": "Market Cap",
+        "definition": "Market capitalization = share price \u00d7 total shares. It measures how big a company is in dollar terms."
+      },
+      {
+        "term": "Volume",
+        "definition": "How many shares traded in a period. High volume means many buyers and sellers were active."
+      },
+      {
+        "term": "Relative Volume (RVOL)",
+        "definition": "Today's volume compared to recent average. Unusual activity (RVOL > 1) can signal attention or news."
+      },
+      {
+        "term": "Sector",
+        "definition": "A group of companies in the same industry (e.g. Technology, Energy, Financials). Events often affect whole sectors."
+      },
+      {
+        "term": "Catalyst",
+        "definition": "An event that could move a stock \u2014 earnings, FDA approval, merger, rate decision, or major news."
+      },
+      {
+        "term": "SEC Filing",
+        "definition": "Official documents companies submit to the U.S. Securities and Exchange Commission. Public and free via EDGAR."
+      },
+      {
+        "term": "8-K",
+        "definition": "A current report filed when something important happens between quarterly reports \u2014 acquisitions, CEO changes, material events."
+      },
+      {
+        "term": "Gap %",
+        "definition": "Percent change from prior close to current price. Large gaps often follow overnight news."
+      },
+      {
+        "term": "USD/CAD",
+        "definition": "How many Canadian dollars one U.S. dollar buys. Matters for trade, oil, and Canadian companies."
+      },
+      {
+        "term": "Oil and Markets",
+        "definition": "Oil prices affect energy stocks, airlines, inflation, and currencies like CAD. Energy shocks ripple across sectors."
+      },
+      {
+        "term": "Interest Rates",
+        "definition": "Higher rates tend to hurt growth/tech and real estate; help banks; affect bond prices and borrowing costs."
+      },
+      {
+        "term": "Correlation vs Causation",
+        "definition": "Two things moving together does not prove one caused the other. Always ask for the mechanism."
+      },
+      {
+        "term": "Strong Story, Bad Trade",
+        "definition": "A compelling narrative can still be a poor trade if the news is priced in or the risk/reward is poor."
+      },
+      {
+        "term": "AI Overfitting",
+        "definition": "When a model memorizes past data instead of learning patterns that generalize. It can look great in backtests and fail live."
+      },
+      {
+        "term": "Random Baseline",
+        "definition": "Picking stocks at random. If AI cannot beat random over time, the system must show that honestly."
+      },
+      {
+        "term": "One Week Wins",
+        "definition": "Winning one week does not prove a strategy works. Sample size and regime matter."
+      },
+      {
+        "term": "Paper P&L",
+        "definition": "Simulated profit/loss using real delayed quotes \u2014 no real orders or money at risk."
+      },
+      {
+        "term": "Sentiment (VADER)",
+        "definition": "NLP compound score on news headlines. Positive/negative tone \u2014 not a guarantee of price direction."
+      }
+    ],
+    "symbol_guides": [
+      {
+        "symbol": "NVDA",
+        "agents": [
+          "human_baseline",
+          "momentum",
+          "skeptic"
+        ],
+        "features_explained": [
+          {
+            "name": "baseline",
+            "value": "human"
+          }
+        ],
+        "headline": "Human baseline tracks portfolio or SPY: NVDA"
+      },
+      {
+        "symbol": "TSLA",
+        "agents": [
+          "news"
+        ],
+        "features_explained": [
+          {
+            "name": "sentiment_mean",
+            "value": 0.42
+          },
+          {
+            "name": "news_count_48h",
+            "value": 5
+          }
+        ],
+        "headline": "Positive news sentiment cluster (mock)"
+      },
+      {
+        "symbol": "AMD",
+        "agents": [
+          "macro_event"
+        ],
+        "features_explained": [
+          {
+            "name": "has_earnings_keyword",
+            "value": true
+          },
+          {
+            "name": "news_count_48h",
+            "value": 3
+          }
+        ],
+        "headline": "Earnings/macro event signal (mock)"
+      },
+      {
+        "symbol": "SPY",
+        "agents": [
+          "momentum_baseline",
+          "filing_event",
+          "macro",
+          "public_figure",
+          "fx_agent",
+          "cross_asset_agent",
+          "regime_agent",
+          "divergence_agent",
+          "ensemble",
+          "correlation_skeptic",
+          "spy_baseline",
+          "equal_weight_baseline"
+        ],
+        "features_explained": [
+          {
+            "name": "rule",
+            "value": "top_momentum"
+          }
+        ],
+        "headline": "Momentum baseline (no prices)"
+      },
+      {
+        "symbol": "BAM",
+        "agents": [
+          "entity_graph"
+        ],
+        "features_explained": [
+          {
+            "name": "entities",
+            "value": [
+              "Mark Carney",
+              "Canada"
+            ]
+          },
+          {
+            "name": "chain_tickers",
+            "value": [
+              "BAM",
+              "ENB"
+            ]
+          }
+        ],
+        "headline": "Graph chain: Mark Carney \u2192 Canada \u2192 BAM"
+      },
+      {
+        "symbol": "QQQ",
+        "agents": [
+          "qqq_baseline",
+          "random_baseline"
+        ],
+        "features_explained": [
+          {
+            "name": "change_pct",
+            "value": 0.0
+          },
+          {
+            "name": "benchmark",
+            "value": true
+          }
+        ],
+        "headline": "QQQ Baseline \u2014 Nasdaq-100 proxy"
+      }
+    ],
+    "models_overview": "Ten benchmark players compete on the same watchlist: Random, SPY, QQQ, Equal-Weight, Momentum, News-Only, Macro, Filing, Entity Graph, and Ensemble. Humans paper-trade alongside them. Paper scoring only \u2014 not investment advice."
+  },
+  "lessons": {
+    "cards": [
+      {
+        "id": "filing_8k",
+        "context": "filing",
+        "title": "SEC 8-K \u2014 Material Events",
+        "what_happened": "A company filed an 8-K current report with the SEC.",
+        "why_it_matters": "8-Ks disclose events that shareholders should know about between quarterly reports.",
+        "what_to_watch": "Read the form type, check if it mentions earnings, leadership, acquisitions, or financing."
+      },
+      {
+        "id": "macro_rates",
+        "context": "macro",
+        "title": "Interest Rates and Markets",
+        "what_happened": "Macro data shows Fed Funds rate, yields, or inflation readings.",
+        "why_it_matters": "Rates affect borrowing costs, stock valuations, and sector rotation.",
+        "what_to_watch": "Tech vs banks vs utilities \u2014 different sectors react differently to rate changes."
+      },
+      {
+        "id": "energy_oil",
+        "context": "energy",
+        "title": "Oil Price Connections",
+        "what_happened": "Oil prices moved or energy-related news appeared.",
+        "why_it_matters": "Oil affects energy producers, airlines, inflation, and currencies like CAD.",
+        "what_to_watch": "XLE, airlines, Canadian exporters, and inflation-sensitive sectors."
+      },
+      {
+        "id": "currency_usdcad",
+        "context": "currency",
+        "title": "USD/CAD and Global Trade",
+        "what_happened": "The U.S. dollar moved against the Canadian dollar.",
+        "why_it_matters": "Canada is a major commodity exporter \u2014 CAD often tracks oil and trade flows.",
+        "what_to_watch": "Canadian banks, energy names, and multinationals with cross-border revenue."
+      },
+      {
+        "id": "news_headline",
+        "context": "news",
+        "title": "Reading a Headline",
+        "what_happened": "A fresh headline hit the news radar.",
+        "why_it_matters": "News can move prices \u2014 but markets may have already priced it in.",
+        "what_to_watch": "Which tickers and sectors are tagged? Is the source credible? How fresh is it?"
+      },
+      {
+        "id": "ai_prediction",
+        "context": "ai",
+        "title": "AI Paper Predictions",
+        "what_happened": "An AI agent made a paper hypothesis \u2014 not investment advice.",
+        "why_it_matters": "Agents compete on the same data. Compare them to random and SPY baselines.",
+        "what_to_watch": "Confidence, reasons, risks, and whether the Skeptic flagged stale data."
+      }
+    ],
+    "count": 6
+  },
+  "active_challenge": {
+    "challenge_id": "2026-05-21_filing",
+    "type": "filing_detective",
+    "title": "Filing Detective Challenge",
+    "prompt": "Does this SEC filing look important or routine? 8-K for ???",
+    "filing": {},
+    "hint": "8-K material events vs routine N-CEN/NPORT filings."
+  },
+  "careers": {
+    "title": "Future Builder",
+    "subtitle": "Careers this game teaches \u2014 no real money required.",
+    "careers": [
+      {
+        "id": "ai_engineer",
+        "title": "AI Engineer",
+        "description": "Builds AI systems that process data, make predictions, and power intelligent applications.",
+        "skills": [
+          "Python",
+          "machine learning",
+          "APIs",
+          "prompt engineering"
+        ],
+        "marketquest_teaches": "Agent Debate, Ensemble Agent, AI Tool Scout, Reality Engine",
+        "beginner_project": "Build a simple news sentiment scorer for one ticker",
+        "school_subjects": [
+          "Computer Science",
+          "Mathematics",
+          "Statistics"
+        ]
+      },
+      {
+        "id": "data_scientist",
+        "title": "Data Scientist",
+        "description": "Analyzes data to find patterns, build models, and communicate insights.",
+        "skills": [
+          "Statistics",
+          "Python/R",
+          "visualization",
+          "experiment design"
+        ],
+        "marketquest_teaches": "Reality Scores, Learning Lab, benchmark comparisons, event radar",
+        "beginner_project": "Compare agent hit rates vs random baseline over 2 weeks of snapshots",
+        "school_subjects": [
+          "Statistics",
+          "Mathematics",
+          "Computer Science"
+        ]
+      },
+      {
+        "id": "quant_researcher",
+        "title": "Quant Researcher",
+        "description": "Develops systematic trading strategies using math, data, and backtesting.",
+        "skills": [
+          "Statistics",
+          "programming",
+          "market microstructure",
+          "backtesting"
+        ],
+        "marketquest_teaches": "Benchmark players, momentum baseline, multi-horizon outcomes",
+        "beginner_project": "Implement a transparent momentum rule and compare to SPY",
+        "school_subjects": [
+          "Mathematics",
+          "Physics",
+          "Computer Science",
+          "Economics"
+        ]
+      },
+      {
+        "id": "business_analyst",
+        "title": "Business Analyst",
+        "description": "Connects business problems to data and helps teams make better decisions.",
+        "skills": [
+          "Excel/SQL",
+          "communication",
+          "domain knowledge",
+          "requirements gathering"
+        ],
+        "marketquest_teaches": "Event Radar, entity graph, lesson cards, filing events",
+        "beginner_project": "Write a one-page brief on how an 8-K filing affects a sector",
+        "school_subjects": [
+          "Business",
+          "Economics",
+          "Communications"
+        ]
+      },
+      {
+        "id": "portfolio_analyst",
+        "title": "Portfolio Analyst",
+        "description": "Tracks holdings, performance, and risk for investment portfolios.",
+        "skills": [
+          "Finance",
+          "Excel",
+          "risk metrics",
+          "reporting"
+        ],
+        "marketquest_teaches": "Paper Portfolio, leaderboard, SPY/QQQ baselines",
+        "beginner_project": "Track a paper portfolio vs SPY for one month",
+        "school_subjects": [
+          "Finance",
+          "Economics",
+          "Mathematics"
+        ]
+      },
+      {
+        "id": "economist",
+        "title": "Economist",
+        "description": "Studies how economies work \u2014 growth, inflation, employment, and policy.",
+        "skills": [
+          "Economic theory",
+          "data analysis",
+          "writing",
+          "forecasting"
+        ],
+        "marketquest_teaches": "Macro Agent, FRED data, cross-asset strip, currency connections",
+        "beginner_project": "Explain how a Fed rate change might affect three different sectors",
+        "school_subjects": [
+          "Economics",
+          "Mathematics",
+          "History",
+          "Political Science"
+        ]
+      },
+      {
+        "id": "risk_manager",
+        "title": "Risk Manager",
+        "description": "Identifies and measures risks in portfolios and trading operations.",
+        "skills": [
+          "Statistics",
+          "regulation",
+          "stress testing",
+          "communication"
+        ],
+        "marketquest_teaches": "Skeptic Agent, stale-data flags, drawdown scoring, honesty disclosures",
+        "beginner_project": "List 5 reasons a hyped headline trade could fail",
+        "school_subjects": [
+          "Finance",
+          "Mathematics",
+          "Economics"
+        ]
+      },
+      {
+        "id": "financial_software_dev",
+        "title": "Financial Software Developer",
+        "description": "Builds trading platforms, data pipelines, and financial applications.",
+        "skills": [
+          "Programming",
+          "APIs",
+          "databases",
+          "system design"
+        ],
+        "marketquest_teaches": "Reality Engine, data providers, API routes, freshness layer",
+        "beginner_project": "Build a watchlist dashboard that shows data freshness badges",
+        "school_subjects": [
+          "Computer Science",
+          "Finance",
+          "Mathematics"
+        ]
+      },
+      {
+        "id": "product_manager",
+        "title": "Product Manager",
+        "description": "Defines what to build, prioritizes features, and connects users to value.",
+        "skills": [
+          "Communication",
+          "user research",
+          "prioritization",
+          "technical literacy"
+        ],
+        "marketquest_teaches": "Full game loop \u2014 events to picks to scoring to learning",
+        "beginner_project": "Design a new mini-challenge and write acceptance criteria",
+        "school_subjects": [
+          "Business",
+          "Computer Science",
+          "Design",
+          "Economics"
+        ]
+      },
+      {
+        "id": "entrepreneur",
+        "title": "Entrepreneur",
+        "description": "Starts businesses by identifying problems and building solutions people need.",
+        "skills": [
+          "Creativity",
+          "sales",
+          "finance basics",
+          "resilience"
+        ],
+        "marketquest_teaches": "AI Tool Scout, research registries, building with free tools",
+        "beginner_project": "Research 3 free market data APIs and pitch a student-friendly app idea",
+        "school_subjects": [
+          "Business",
+          "Economics",
+          "Computer Science",
+          "Communications"
+        ]
+      },
+      {
+        "id": "public_policy_analyst",
+        "title": "Public Policy Analyst",
+        "description": "Studies how government decisions affect economies, industries, and people.",
+        "skills": [
+          "Research",
+          "writing",
+          "economics",
+          "political awareness"
+        ],
+        "marketquest_teaches": "Government feeds, macro events, public figure agent, entity graph",
+        "beginner_project": "Trace how a policy headline connects to sector tickers via entity graph",
+        "school_subjects": [
+          "Political Science",
+          "Economics",
+          "History",
+          "Law"
+        ]
+      },
+      {
+        "id": "market_research_analyst",
+        "title": "Market Research Analyst",
+        "description": "Studies markets, competitors, and consumer trends to guide business strategy.",
+        "skills": [
+          "Research",
+          "surveys",
+          "data analysis",
+          "presentation"
+        ],
+        "marketquest_teaches": "News radar, sentiment, sector mapping, lesson cards",
+        "beginner_project": "Map 5 headlines to affected sectors with reasoning",
+        "school_subjects": [
+          "Business",
+          "Marketing",
+          "Economics",
+          "Statistics"
+        ]
+      }
+    ],
+    "count": 12,
+    "footer_note": "You can learn valuable skills and build useful tools without trading real money."
+  },
+  "research_registry": {
+    "entries": [
+      {
+        "name": "Cursor",
+        "category": "ai_coding_tools",
+        "url": "https://cursor.com",
+        "description": "AI-powered IDE for building apps with agent assistance.",
+        "free": false,
+        "needs_api_key": false,
+        "student_safe": true,
+        "tier": "future_optional",
+        "ideas_to_borrow": [
+          "Agent workflows",
+          "MCP integrations",
+          "inline code generation"
+        ],
+        "integration_status": "evaluated",
+        "notes": "Primary development environment for MarketQuest."
+      },
+      {
+        "name": "Local LLM (Ollama)",
+        "category": "ai_coding_tools",
+        "url": "https://ollama.com",
+        "description": "Run open models locally for privacy and experimentation.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Offline sentiment scoring",
+          "Local agent experiments"
+        ],
+        "integration_status": "not_started",
+        "notes": "Good for student labs without cloud API costs."
+      },
+      {
+        "name": "MCP Servers",
+        "category": "ai_coding_tools",
+        "url": "https://modelcontextprotocol.io",
+        "description": "Standard for connecting AI agents to data sources and tools.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Browser automation",
+          "File system access",
+          "Custom data connectors"
+        ],
+        "integration_status": "evaluated",
+        "notes": "Used in Cursor for browser and backend control."
+      },
+      {
+        "name": "FinRL",
+        "category": "reinforcement_learning",
+        "url": "https://github.com/AI4Finance-Foundation/FinRL",
+        "description": "Open-source framework for financial reinforcement learning \u2014 educational, not financial advice.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "RL agent environments",
+          "Paper trading gym",
+          "Multi-agent competition"
+        ],
+        "integration_status": "evaluated",
+        "notes": "Explicitly not a recommendation to trade real money."
+      },
+      {
+        "name": "Qlib",
+        "category": "reinforcement_learning",
+        "url": "https://github.com/microsoft/qlib",
+        "description": "Microsoft AI-oriented quantitative investment platform.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Feature store patterns",
+          "Model training pipelines"
+        ],
+        "integration_status": "not_started",
+        "notes": "Research-oriented; good for advanced students."
+      },
+      {
+        "name": "FinGPT",
+        "category": "financial_llms",
+        "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+        "description": "Open-source financial large language models.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Finance-tuned sentiment",
+          "News summarization"
+        ],
+        "integration_status": "not_started",
+        "notes": "Requires GPU for full models; smaller variants for demos."
+      },
+      {
+        "name": "backtesting.py",
+        "category": "backtesting_engines",
+        "url": "https://kernc.github.io/backtesting.py/",
+        "description": "Lightweight Python backtesting library.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Simple strategy backtests",
+          "Transparent rule evaluation"
+        ],
+        "integration_status": "not_started",
+        "notes": "Good for momentum baseline validation."
+      },
+      {
+        "name": "Backtrader",
+        "category": "backtesting_engines",
+        "url": "https://www.backtrader.com/",
+        "description": "Feature-rich Python backtesting framework.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Event-driven backtesting",
+          "Multi-data feeds"
+        ],
+        "integration_status": "not_started",
+        "notes": "Heavier than backtesting.py."
+      },
+      {
+        "name": "VADER Sentiment",
+        "category": "sentiment_models",
+        "url": "https://github.com/cjhutto/vaderSentiment",
+        "description": "Rule-based sentiment analysis for social/text \u2014 used in News Agent.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Headline sentiment scoring"
+        ],
+        "integration_status": "integrated",
+        "notes": "Already used via news/sentiment_scorer in repo."
+      },
+      {
+        "name": "FinBERT",
+        "category": "sentiment_models",
+        "url": "https://huggingface.co/ProsusAI/finbert",
+        "description": "BERT fine-tuned on financial text for sentiment.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Finance-specific headline sentiment"
+        ],
+        "integration_status": "not_started",
+        "notes": "Upgrade path from VADER for News-Only Agent."
+      },
+      {
+        "name": "Llama 3 (local)",
+        "category": "financial_llms",
+        "url": "https://ollama.com/library/llama3",
+        "description": "General-purpose local LLM for explanation and reasoning tasks.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Challenge grading",
+          "Agent debate summaries"
+        ],
+        "integration_status": "not_started",
+        "notes": "Run via Ollama for student-safe local inference."
+      },
+      {
+        "name": "Finnhub",
+        "category": "market_data_apis",
+        "url": "https://finnhub.io",
+        "description": "Free tier: stock quotes, forex, crypto, news, fundamentals.",
+        "free": true,
+        "needs_api_key": true,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Real-time quotes",
+          "Forex rates",
+          "Company news"
+        ],
+        "integration_status": "integrated",
+        "notes": "FINNHUB_API_KEY required for live data."
+      },
+      {
+        "name": "FRED",
+        "category": "macro_data_tools",
+        "url": "https://fred.stlouisfed.org",
+        "description": "Official U.S. economic data \u2014 rates, inflation, oil, USD/CAD.",
+        "free": true,
+        "needs_api_key": true,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Macro Agent inputs",
+          "Cross-asset strip"
+        ],
+        "integration_status": "integrated",
+        "notes": "FRED_API_KEY optional; some series need key."
+      },
+      {
+        "name": "SEC EDGAR",
+        "category": "sec_filing_tools",
+        "url": "https://www.sec.gov/edgar/sec-api-documentation",
+        "description": "Official SEC APIs for company filings and XBRL data.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Filing events as game events",
+          "8-K detection"
+        ],
+        "integration_status": "integrated",
+        "notes": "Public API \u2014 no key required."
+      },
+      {
+        "name": "Alpha Vantage",
+        "category": "market_data_apis",
+        "url": "https://www.alphavantage.co",
+        "description": "Stock, forex, crypto APIs with free tier.",
+        "free": true,
+        "needs_api_key": true,
+        "student_safe": true,
+        "tier": "future_optional",
+        "ideas_to_borrow": [
+          "Backup quote provider",
+          "Technical indicators"
+        ],
+        "integration_status": "not_started",
+        "notes": "Rate limits on free tier."
+      },
+      {
+        "name": "OpenBB",
+        "category": "market_data_apis",
+        "url": "https://openbb.co",
+        "description": "Open financial data platform \u2014 used in Pencil/acquisition track.",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Unified data access",
+          "Provenance patterns"
+        ],
+        "integration_status": "evaluated",
+        "notes": "Separate from MarketQuest providers; potential future unify."
+      },
+      {
+        "name": "yfinance",
+        "category": "market_data_apis",
+        "url": "https://github.com/ranaroussi/yfinance",
+        "description": "Unofficial Yahoo Finance data \u2014 fallback quotes (DELAYED).",
+        "free": true,
+        "needs_api_key": false,
+        "student_safe": true,
+        "ideas_to_borrow": [
+          "Fallback when primary providers offline"
+        ],
+        "integration_status": "integrated",
+        "notes": "Used as DELAYED fallback in MarketQuest."
+      }
+    ],
+    "count": 17,
+    "category": null
+  },
+  "research_report": {
+    "report": "# MarketQuest Research Scout \u2014 2026-05-20\n\nTotal registry entries: 17\n- Integrated: 5\n- Evaluated: 4\n- Not started: 8\n\n## Integrated\n- **VADER Sentiment** (sentiment_models) \u2014 Rule-based sentiment analysis for social/text \u2014 used in News Agent.\n- **Finnhub** (market_data_apis) \u2014 Free tier: stock quotes, forex, crypto, news, fundamentals.\n- **FRED** (macro_data_tools) \u2014 Official U.S. economic data \u2014 rates, inflation, oil, USD/CAD.\n- **SEC EDGAR** (sec_filing_tools) \u2014 Official SEC APIs for company filings and XBRL data.\n- **yfinance** (market_data_apis) \u2014 Unofficial Yahoo Finance data \u2014 fallback quotes (DELAYED).\n\n## Ideas to explore next\n- Local LLM (Ollama): Offline sentiment scoring, Local agent experiments\n- Qlib: Feature store patterns, Model training pipelines\n- FinGPT: Finance-tuned sentiment, News summarization\n- backtesting.py: Simple strategy backtests, Transparent rule evaluation\n- Backtrader: Event-driven backtesting, Multi-data feeds",
+    "path": "/home/runner/work/MarketQuest/MarketQuest/app/data/marketquest/reports/2026-05-20_research_scout.md"
+  },
+  "horizon_outcomes": [],
+  "wording": {
+    "allowed": [
+      "beat the random baseline this week",
+      "beat SPY this week in paper scoring",
+      "lost to the Human Baseline this week",
+      "performed poorly during stale-data periods"
+    ],
+    "forbidden": [
+      "guaranteed to beat brokers",
+      "better than Edward Jones",
+      "best stocks ever",
+      "always wins",
+      "use this with real money"
+    ]
+  },
+  "ai_disclosure": null,
+  "static_pages_mode": true
+}
